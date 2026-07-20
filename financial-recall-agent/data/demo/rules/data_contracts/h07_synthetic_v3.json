@@ -1,0 +1,234 @@
+{
+  "schema_version": "2.0",
+  "data_contract_id": "H07_SYNTHETIC_V3",
+  "source_type": "CSV_DEMO_ADAPTER",
+  "base_path": "data/demo/datasets/jb_h07_synthetic_dataset_v3",
+  "base_table": "card_purchases",
+  "production_replacement": "BANK_INTERNAL_SOURCE_ADAPTERS",
+  "runtime_principle": "Use card_purchases as the base table. LEFT JOIN expected_rewards and reward_ledger so missing rows are detectable.",
+  "prohibited_runtime_sources": [
+    "eval_only/private_ground_truth.csv",
+    "eval_only/v3_injected_anomaly_manifest.csv"
+  ],
+  "tables": {
+    "customers": {
+      "file_name": "customers.csv",
+      "required_columns": [
+        "customer_id",
+        "customer_name_masked",
+        "customer_segment",
+        "age_band",
+        "home_region",
+        "created_at",
+        "is_synthetic"
+      ],
+      "primary_key": [
+        "customer_id"
+      ],
+      "row_count_v3": 73
+    },
+    "card_contracts": {
+      "file_name": "card_contracts.csv",
+      "required_columns": [
+        "card_id",
+        "customer_id",
+        "product_id",
+        "product_name",
+        "card_opened_at",
+        "status",
+        "processing_route",
+        "settlement_account_id"
+      ],
+      "primary_key": [
+        "card_id"
+      ],
+      "row_count_v3": 73
+    },
+    "merchant_master": {
+      "file_name": "merchant_master.csv",
+      "required_columns": [
+        "merchant_id",
+        "merchant_name",
+        "merchant_category",
+        "is_cashback_excluded",
+        "merchant_region"
+      ],
+      "primary_key": [
+        "merchant_id"
+      ],
+      "row_count_v3": 92
+    },
+    "card_purchases": {
+      "file_name": "card_purchases.csv",
+      "required_columns": [
+        "purchase_id",
+        "card_id",
+        "customer_id",
+        "product_id",
+        "purchase_date",
+        "purchase_month",
+        "amount",
+        "merchant_id",
+        "status",
+        "cancelled_at",
+        "processing_route",
+        "source_system"
+      ],
+      "primary_key": [
+        "purchase_id"
+      ],
+      "row_count_v3": 75
+    },
+    "expected_rewards": {
+      "file_name": "expected_rewards.csv",
+      "required_columns": [
+        "reward_id",
+        "purchase_id",
+        "customer_id",
+        "card_id",
+        "product_id",
+        "purchase_month",
+        "expected_payment_date",
+        "reward_batch_id",
+        "purchase_amount",
+        "merchant_category",
+        "purchase_status",
+        "reward_rate",
+        "gross_reward_amount",
+        "expected_reward_amount",
+        "monthly_cap_amount",
+        "eligibility_reason",
+        "included_in_monthly_cap",
+        "processing_route",
+        "source_system",
+        "v3_anomaly_flag",
+        "v3_original_expected_reward_amount"
+      ],
+      "primary_key": [
+        "reward_id"
+      ],
+      "row_count_v3": 70
+    },
+    "reward_ledger": {
+      "file_name": "reward_ledger.csv",
+      "required_columns": [
+        "ledger_id",
+        "reward_id",
+        "purchase_id",
+        "customer_id",
+        "card_id",
+        "product_id",
+        "reward_batch_id",
+        "processing_route",
+        "expected_payment_date",
+        "paid_reward_amount",
+        "paid_at",
+        "payment_status",
+        "incident_id",
+        "source_system"
+      ],
+      "primary_key": [
+        "ledger_id"
+      ],
+      "row_count_v3": 65
+    },
+    "reward_batch_logs": {
+      "file_name": "reward_batch_logs.csv",
+      "required_columns": [
+        "reward_batch_id",
+        "batch_date",
+        "purchase_month",
+        "product_id",
+        "processing_route",
+        "status",
+        "incident_id",
+        "error_message",
+        "source_system"
+      ],
+      "primary_key": [
+        "reward_batch_id",
+        "product_id",
+        "processing_route"
+      ],
+      "row_count_v3": 16
+    },
+    "complaints": {
+      "file_name": "complaints.csv",
+      "required_columns": [
+        "complaint_id",
+        "customer_id",
+        "received_at",
+        "channel",
+        "product_id_claimed",
+        "narrative_ko",
+        "claim_label_for_demo",
+        "source_system"
+      ],
+      "primary_key": [
+        "complaint_id"
+      ],
+      "row_count_v3": 50
+    }
+  },
+  "join_contracts": [
+    {
+      "left": "card_purchases",
+      "right": "merchant_master",
+      "join_type": "LEFT_JOIN",
+      "keys": [
+        "merchant_id"
+      ],
+      "expected_cardinality": "MANY_TO_ONE",
+      "on_missing_right_row": "FLAG_FOR_HUMAN_REVIEW"
+    },
+    {
+      "left": "card_purchases",
+      "right": "card_contracts",
+      "join_type": "LEFT_JOIN",
+      "keys": [
+        "card_id",
+        "customer_id",
+        "product_id"
+      ],
+      "expected_cardinality": "MANY_TO_ONE",
+      "on_missing_right_row": "FLAG_FOR_HUMAN_REVIEW"
+    },
+    {
+      "left": "card_purchases",
+      "right": "expected_rewards",
+      "join_type": "LEFT_JOIN",
+      "keys": [
+        "purchase_id",
+        "customer_id",
+        "card_id",
+        "product_id"
+      ],
+      "expected_cardinality": "ZERO_OR_ONE",
+      "on_missing_right_row": "DETECT_EXPECTED_REWARD_ROW_MISSING"
+    },
+    {
+      "left": "expected_rewards",
+      "right": "reward_ledger",
+      "join_type": "LEFT_JOIN",
+      "keys": [
+        "reward_id",
+        "purchase_id",
+        "customer_id",
+        "card_id",
+        "product_id",
+        "reward_batch_id"
+      ],
+      "expected_cardinality": "ZERO_OR_ONE",
+      "on_missing_right_row": "DETECT_REWARD_LEDGER_ROW_MISSING"
+    }
+  ],
+  "validation_rules": [
+    "purchase_id must be unique in card_purchases",
+    "reward_id must be unique in expected_rewards when present",
+    "ledger_id must be unique in reward_ledger when present",
+    "amount must be non-negative",
+    "expected_reward_amount must be non-negative when present",
+    "paid_reward_amount must be non-negative when present",
+    "runtime must not read eval_only/private_ground_truth.csv or eval_only/v3_injected_anomaly_manifest.csv"
+  ]
+}

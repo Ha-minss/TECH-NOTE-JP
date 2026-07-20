@@ -1,0 +1,45 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Local environments
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# Raw and generated data artifacts
+*.zip
+data/raw/
+data/interim/
+data/processed/*.parquet
+data/processed/*.csv
+data/processed/*.json
+data/processed/*.pkl
+data/experiments/*.parquet
+data/experiments/*.csv
+data/experiments/*.json
+data/experiments/*.pkl
+
+# Model artifacts
+models/*.joblib
+models/*.pkl
+models/*.json
+
+# Local OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Keep report markdown and source code tracked.
+!reports/**/*.md
+!reports/**/*.json
+!data/processed/.gitkeep
+!data/experiments/.gitkeep
+!models/.gitkeep

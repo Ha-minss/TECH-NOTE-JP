@@ -1,0 +1,4 @@
+﻿category,specification,reason
+none,robustness_grid,No failed or skipped robustness specifications were recorded.
+sensitivity_only,PCI/services controls,"These controls may be affected by policy shocks, so they are not main specifications."
+sensitivity_only,delivery-intensity lags,"Delivery intensity applies only to the 2025 block, so it is not included in every main DLM."

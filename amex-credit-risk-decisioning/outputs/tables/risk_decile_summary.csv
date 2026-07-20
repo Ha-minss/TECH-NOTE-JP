@@ -1,0 +1,12 @@
+risk_decile,customers,observed_defaults,avg_risk_score,observed_default_rate,risk_decile_label,source_notebook_section
+1,45892,44326,0.9641955363271104,0.9658764054737209,D1 Highest,"Untitled41.ipynb cell 45 monitoring and public output; public notebook 03_validation"
+2,45891,36850,0.8047754026512743,0.8029896929681201,D2,"Untitled41.ipynb cell 45 monitoring and public output; public notebook 03_validation"
+3,45891,23940,0.5254911879424173,0.521670915865856,D3,"Untitled41.ipynb cell 45 monitoring and public output; public notebook 03_validation"
+4,45892,10123,0.2155618643120175,0.22058310816700077,D4,"Untitled41.ipynb cell 45 monitoring and public output; public notebook 03_validation"
+5,45891,2549,0.05434887788948732,0.05554466017301867,D5,"Untitled41.ipynb cell 45 monitoring and public output; public notebook 03_validation"
+6,45891,662,0.014554205197189625,0.014425486478830272,D6,"Untitled41.ipynb cell 45 monitoring and public output; public notebook 03_validation"
+7,45892,219,0.005336588947809348,0.004772073564019872,D7,"Untitled41.ipynb cell 45 monitoring and public output; public notebook 03_validation"
+8,45891,96,0.0025091812080270445,0.002091913447081127,D8,"Untitled41.ipynb cell 45 monitoring and public output; public notebook 03_validation"
+9,45891,45,0.0013749504079589075,0.0009805844283192783,D9,"Untitled41.ipynb cell 45 monitoring and public output; public notebook 03_validation"
+10,45891,18,0.000732841263153298,0.0003922337713277113,D10 Lowest,"Untitled41.ipynb cell 45 monitoring and public output; public notebook 03_validation"
+

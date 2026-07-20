@@ -1,0 +1,4 @@
+﻿scenario,modeling_sample_cutoff,review_rate,review_count,tp,fp,effective_fp,effective_review_count,effective_review_rate,observed_precision,weighted_scenario_precision,avoided_loss,review_cost_total,friction_cost_total,operating_cost_total,net_benefit,cost_assumption,interpretation_boundary,source_notebook_section
+Base,Top 17%,0.17,78016,71205,6811,136220,207425,0.452008305495157,0.9126973954060704,0.3432843196336025,7120.5,2074.25,681.1,2755.35,4365.15,"EAD=1.0; LGD=0.5; intervention_effect=0.2; review_cost=0.01; friction_cost=0.005","modeling sample cutoff with maximum simulated net benefit under stated Base assumptions; not an automatic operating rule","Untitled41.ipynb cell 45 Best Threshold by Scenario"
+
+

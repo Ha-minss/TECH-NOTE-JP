@@ -1,0 +1,14 @@
+run_name: full_xgb_gpu
+source_notebook_section: Untitled41.ipynb cell 30
+input_table: train_feat_no_diffmono_v1.parquet
+rows: 458913
+features_after_cleaning: 3409
+cv:
+  type: StratifiedKFold
+  n_splits: 5
+  shuffle: true
+  random_state: 42
+notes:
+  - Original run used GPU XGBoost and early stopping.
+  - Public repository records verified aggregate metrics only.
+

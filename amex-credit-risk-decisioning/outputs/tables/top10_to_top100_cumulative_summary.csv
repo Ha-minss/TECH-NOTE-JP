@@ -1,0 +1,12 @@
+review_scope,review_count,captured_defaults,capture_rate,default_rate_among_reviewed,source_notebook_section
+10,45891,44325,0.3730181438718147,0.9658756618944891,"Untitled41.ipynb public aggregate output"
+20,91783,81176,0.6831386541892484,0.884433936567774,"Untitled41.ipynb public aggregate output"
+30,137674,105116,0.8846063217423503,0.763513807981173,"Untitled41.ipynb public aggregate output"
+40,183565,115239,0.9697966809169556,0.627783074115436,"Untitled41.ipynb public aggregate output"
+50,229456,117788,0.9912478540411351,0.5133358901052926,"Untitled41.ipynb public aggregate output"
+60,275348,118450,0.996818931564951,0.4301828958263724,"Untitled41.ipynb public aggregate output"
+70,321239,118669,0.9986619315312889,0.36941031443878236,"Untitled41.ipynb public aggregate output"
+80,367130,118765,0.9994698219274918,0.3234957644431128,"Untitled41.ipynb public aggregate output"
+90,413022,118810,0.9998485205507119,0.28766022148941217,"Untitled41.ipynb public aggregate output"
+100,458913,118828,1.0,0.2589336105100531,"Untitled41.ipynb public aggregate output"
+

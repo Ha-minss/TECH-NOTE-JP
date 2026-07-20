@@ -1,0 +1,82 @@
+[
+  {
+    "tool_name": "get_store_info",
+    "description": "매장 기본 정보와 운영 상태를 조회한다.",
+    "provides_data_needs": ["store_profile"],
+    "input_schema": {"store_id": "string"},
+    "read_only": true,
+    "stage": "baseline"
+  },
+  {
+    "tool_name": "get_terminals",
+    "description": "매장에 등록된 단말기 목록과 단말기 역할, 설치·활성화 시각을 조회한다.",
+    "provides_data_needs": ["terminal_inventory"],
+    "input_schema": {"store_id": "string"},
+    "read_only": true,
+    "stage": "baseline"
+  },
+  {
+    "tool_name": "get_tid_config",
+    "description": "단말기별 현재 또는 과거 결제 식별 설정을 조회한다.",
+    "provides_data_needs": ["payment_identifier_config", "tid_configuration", "historical_identifier_config"],
+    "input_schema": {"store_id": "string"},
+    "read_only": true,
+    "stage": "conditional"
+  },
+  {
+    "tool_name": "get_terminal_identity",
+    "description": "현장 단말기 식별자와 등록 시스템의 식별자 정보를 조회한다.",
+    "provides_data_needs": ["terminal_identity_record"],
+    "input_schema": {"store_id": "string"},
+    "read_only": true,
+    "stage": "conditional"
+  },
+  {
+    "tool_name": "get_installation_history",
+    "description": "단말기 설치, 교체, 제거, 설정 변경 이력을 조회한다.",
+    "provides_data_needs": ["recent_change_summary", "installation_history"],
+    "input_schema": {"store_id": "string"},
+    "read_only": true,
+    "stage": "baseline"
+  },
+  {
+    "tool_name": "get_activation_history",
+    "description": "단말기 개시, 활성화, 결제 테스트 이력을 조회한다.",
+    "provides_data_needs": ["activation_timeline"],
+    "input_schema": {"store_id": "string"},
+    "read_only": true,
+    "stage": "conditional"
+  },
+  {
+    "tool_name": "get_recent_approval_errors",
+    "description": "오류 발생 전후의 최근 승인 실패 내역과 응답 문구를 조회한다.",
+    "provides_data_needs": ["approval_failure_history"],
+    "input_schema": {"store_id": "string", "time_window": "string"},
+    "read_only": true,
+    "stage": "baseline"
+  },
+  {
+    "tool_name": "get_van_registration",
+    "description": "가맹점 번호 및 외부 결제망 또는 VAN 등록 상태를 조회한다.",
+    "provides_data_needs": ["merchant_registration_status", "van_registration_status"],
+    "input_schema": {"store_id": "string"},
+    "read_only": true,
+    "stage": "conditional"
+  },
+  {
+    "tool_name": "get_pos_front_connection_logs",
+    "description": "POS와 결제 단말기 또는 Front 시스템 사이의 연결, 요청 전달, 타임아웃 이력을 조회한다.",
+    "provides_data_needs": ["pos_front_connection_history", "request_delivery_history", "key_recovery_state"],
+    "input_schema": {"store_id": "string", "time_window": "string"},
+    "read_only": true,
+    "stage": "conditional"
+  },
+  {
+    "tool_name": "get_support_route",
+    "description": "원인 평가 이후 사람이 검토할 지원 경로 후보를 조회한다.",
+    "provides_data_needs": ["support_route"],
+    "input_schema": {"store_id": "string", "issue_type": "string"},
+    "read_only": true,
+    "stage": "post_assessment"
+  }
+]

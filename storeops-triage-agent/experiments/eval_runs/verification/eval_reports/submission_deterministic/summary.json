@@ -1,0 +1,10 @@
+{
+  "total_cases": 50,
+  "passed_cases": 38,
+  "state_accuracy": 0.9,
+  "cause_accuracy": 0.98,
+  "abstention_safety_accuracy": 1.0,
+  "unsupported_claim_count": 0,
+  "tool_failure_recovery_rate": 1.0,
+  "operator_correction_candidate_count": 12
+}

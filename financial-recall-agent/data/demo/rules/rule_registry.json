@@ -1,0 +1,474 @@
+{
+  "schema_version": "2.0",
+  "registry_type": "RECALL_RULE_REGISTRY",
+  "registry_id": "JB_FINANCIAL_RECALL_RULE_REGISTRY__MVP",
+  "registry_status": "APPROVED_FOR_MVP_DEMO",
+  "production_approval_status": "NOT_APPROVED_FOR_PRODUCTION",
+  "execution_mode": "MVP_DEMO",
+  "description": "Financial Recall Agent MVP에서 실행 가능한 승인 룰 목록입니다. LLM Router는 rule_id를 추천할 수 있지만, 실제 실행은 이 Rule Registry에 등록된 active 룰만 허용됩니다.",
+  "global_controls": {
+    "llm_can_recommend_rule_id": true,
+    "llm_can_execute_rule_directly": false,
+    "llm_can_generate_sql": false,
+    "llm_can_calculate_refund_amount": false,
+    "rag_can_determine_harm": false,
+    "rag_can_calculate_refund_amount": false,
+    "deterministic_rule_engine_required": true,
+    "human_review_required_before_refund": true,
+    "automatic_refund_allowed": false,
+    "audit_log_required": true
+  },
+  "allowed_config_approval_statuses_by_execution_mode": {
+    "MVP_DEMO": [
+      "APPROVED_FOR_MVP_DEMO"
+    ],
+    "PRODUCTION": [
+      "APPROVED_FOR_PRODUCTION"
+    ]
+  },
+  "rules": [
+    {
+      "rule_id": "H07-REWARD-MISSING-TEMPLATE",
+      "rule_name": "H07 Reward/Cashback/Point/Mileage 미지급 공통 Rule Template",
+      "rule_version": "2.0.0",
+      "rule_status": "ACTIVE_FOR_MVP_DEMO",
+      "approval_status": "APPROVED_FOR_MVP_DEMO",
+      "production_approval_status": "NOT_APPROVED_FOR_PRODUCTION",
+      "harm_type": "H07",
+      "harm_type_name": "리워드·캐시백·포인트·마일리지 미지급",
+      "severity": "MEDIUM",
+      "product_scope": {
+        "product_family_id": "REWARD_CASHBACK_POINT_MILEAGE",
+        "product_family_name": "Reward / Cashback / Point / Mileage products",
+        "product_policy_config_selection": "FROM_APPROVED_BUNDLE_ALLOWED_PRODUCT_CONFIGS",
+        "product_policy_config_id": null,
+        "product_policy_config_path": null,
+        "note": "Rule Template은 상품별로 생성하지 않는다. 실제 product_id/config_id/path는 승인 bundle의 allowed_product_configs에서 선택한다."
+      },
+      "rule_execution": {
+        "rule_template": "reward_policy_recalculate_and_reconcile",
+        "orchestrator_name": "h07_reward_missing_template_orchestrator",
+        "repository_name": "h07_reward_missing_repository",
+        "data_contract_id": "H07_SYNTHETIC_V3",
+        "policy_calculator_name": "reward_policy_calculator_from_product_config",
+        "reconciliation_calculator_name": "reward_reconciliation_calculator",
+        "result_schema_name": "h07_investigation_result_v2",
+        "execution_entrypoint": "run_rule",
+        "required_input_fields": [
+          "complaint_id",
+          "customer_id",
+          "narrative_ko",
+          "product_config_id"
+        ],
+        "rule_template_id": "H07_REWARD_MISSING"
+      },
+      "routing_conditions": {
+        "llm_router_may_recommend_when": [
+          "민원 내용이 캐시백, 리워드, 혜택, 포인트, 마일리지, 적립, 입금 누락과 관련됨",
+          "고객 내부 데이터상 승인 bundle의 allowed_product_configs 중 하나에 해당하는 상품 보유가 확인됨",
+          "명확한 정상 제외 사유가 민원 단계에서 확정되지 않음"
+        ],
+        "do_not_run_when": [
+          "고객이 선택 product_config_id의 상품을 보유하지 않음",
+          "해당 고객 또는 거래가 상품설정의 유효기간 밖에 있음",
+          "rule_status가 ACTIVE_FOR_MVP_DEMO 또는 ACTIVE_FOR_PRODUCTION이 아님",
+          "상품설정 approval_status가 현재 execution_mode에서 허용되지 않음",
+          "필수 데이터 계약 검증에 실패함"
+        ],
+        "requires_human_review_when": [
+          "merchant_category와 merchant_master.is_cashback_excluded가 충돌함",
+          "상품설정에 MVP 가정값이 포함되어 운영 판단이 필요한 경우",
+          "거래 당시 카드계약 유효성 확인이 불완전한 경우",
+          "정책 계산 오류와 지급 실행 오류가 동시에 의심되는 경우"
+        ]
+      },
+      "data_access_policy": {
+        "free_form_sql_allowed": false,
+        "approved_repository_only": true,
+        "repository_type_for_mvp": "CSV_DEMO_ADAPTER",
+        "production_replacement": "BANK_INTERNAL_SOURCE_ADAPTERS",
+        "required_tables": [
+          "customers",
+          "card_contracts",
+          "card_purchases",
+          "merchant_master",
+          "expected_rewards",
+          "reward_ledger",
+          "reward_batch_logs",
+          "complaints"
+        ],
+        "prohibited_runtime_sources": [
+          "private_ground_truth"
+        ],
+        "join_policy": {
+          "card_purchases_to_merchant_master": {
+            "join_type": "LEFT_JOIN",
+            "expected_cardinality": "MANY_TO_ONE",
+            "on_missing_right_row": "FLAG_FOR_HUMAN_REVIEW"
+          },
+          "card_purchases_to_expected_rewards": {
+            "join_type": "LEFT_JOIN",
+            "expected_cardinality": "ZERO_OR_ONE",
+            "on_missing_right_row": "DETECT_EXPECTED_REWARD_ROW_MISSING"
+          },
+          "expected_rewards_to_reward_ledger": {
+            "join_type": "LEFT_JOIN",
+            "expected_cardinality": "ZERO_OR_ONE",
+            "on_missing_right_row": "DETECT_REWARD_LEDGER_ROW_MISSING"
+          }
+        }
+      },
+      "calculation_policy": {
+        "independent_policy_calculation_required": true,
+        "may_trust_expected_rewards_without_recalculation": false,
+        "policy_calculation_inputs": [
+          "card_purchases",
+          "merchant_master",
+          "card_contracts",
+          "product_policy_config"
+        ],
+        "reconciliation_inputs": [
+          "policy_calculated_expected_reward",
+          "expected_rewards",
+          "reward_ledger"
+        ],
+        "detectable_error_types": [
+          "POLICY_CALCULATION_ERROR",
+          "PAYMENT_EXECUTION_ERROR",
+          "EXPECTED_REWARD_ROW_MISSING",
+          "REWARD_LEDGER_ROW_MISSING"
+        ],
+        "normal_exclusion_outputs_required": true,
+        "unreported_affected_customer_search_required": true,
+        "same_incident_scope_fields": [
+          "reward_batch_id",
+          "processing_route",
+          "product_id",
+          "product_config_id",
+          "purchase_month"
+        ],
+        "rule_template_id": "H07_REWARD_MISSING",
+        "product_specific_logic_location": "PRODUCT_CONFIG_ONLY"
+      },
+      "policy_basis_policy": {
+        "rag_usage": "POLICY_BASIS_RETRIEVAL_ONLY",
+        "required_policy_basis_ids": [
+          "H07-BASIS-RATE",
+          "H07-BASIS-MONTHLY-CAP",
+          "H07-BASIS-EXCLUSION",
+          "H07-BASIS-PAYMENT-DATE"
+        ],
+        "basis_attachment_method": "REQUIRED_BASIS_ID_LOOKUP",
+        "dynamic_rag_search_optional": true,
+        "policy_basis_must_be_in_result": true
+      },
+      "output_requirements": {
+        "result_must_include": [
+          "execution_id",
+          "complaint_id",
+          "customer_id",
+          "rule_id",
+          "rule_version",
+          "product_id",
+          "product_policy_config_id",
+          "harm_type",
+          "complainant_confirmed",
+          "affected_customer_count",
+          "unreported_customer_count",
+          "total_harm_amount",
+          "affected_customers",
+          "normal_exclusions",
+          "detectable_error_summary",
+          "policy_basis",
+          "audit",
+          "rule_template_id",
+          "product_config_id",
+          "product_policy_version"
+        ],
+        "customer_refund_decision": "HUMAN_REVIEW_REQUIRED",
+        "status_on_success": "REQUIRES_HUMAN_CONFIRMATION"
+      },
+      "audit_policy": {
+        "audit_log_required": true,
+        "capture_execution_timestamp": true,
+        "capture_rule_id": true,
+        "capture_rule_version": true,
+        "capture_product_config_id": true,
+        "capture_product_config_hash": true,
+        "capture_data_contract_id": true,
+        "capture_policy_basis_ids": true,
+        "capture_input_complaint_snapshot": true,
+        "capture_repository_query_names": true,
+        "capture_calculator_names": true,
+        "capture_detected_error_types": true,
+        "capture_human_review_required_reason": true,
+        "capture_rule_template_id": true,
+        "capture_product_policy_version": true
+      },
+      "failure_policy": {
+        "on_missing_rule": "STOP_AND_ESCALATE",
+        "on_inactive_rule": "STOP_AND_ESCALATE",
+        "on_unapproved_rule": "STOP_AND_ESCALATE",
+        "on_missing_product_config": "STOP_AND_ESCALATE",
+        "on_unapproved_product_config": "STOP_AND_ESCALATE",
+        "on_data_contract_violation": "STOP_AND_ESCALATE",
+        "on_repository_error": "STOP_AND_ESCALATE",
+        "on_calculation_error": "STOP_AND_ESCALATE",
+        "on_missing_policy_basis": "STOP_AND_ESCALATE"
+      },
+      "governance_notes": [
+        "H07은 상품별 Rule이 아니라 reward/cashback/point/mileage 미지급 공통 Rule Template이다. Smart Cashback은 Product Config 인스턴스다.",
+        "LLM Router는 이 rule_id를 추천할 수 있지만 직접 실행하거나 SQL을 생성할 수 없습니다.",
+        "RAG는 상품설명서 근거를 첨부하는 데만 사용되며 피해 판단이나 환급액 계산에 사용되지 않습니다.",
+        "Rule Engine은 expected_rewards를 그대로 신뢰하지 않고 상품설정 기반으로 예상 캐시백을 독립 재계산해야 합니다.",
+        "본 룰은 MVP 데모 승인 상태이며 운영 적용 전 상품정책, MCC 매핑, 월 한도 배분, 영업일 달력 기준에 대한 내부 검수가 필요합니다."
+      ],
+      "legacy_rule_ids": [
+        "H07-SMART-CASHBACK-001"
+      ],
+      "rule_template_id": "H07_REWARD_MISSING",
+      "rule_description": "상품별 캐시백/포인트/마일리지 정책은 Product Config로 주입하고, Rule은 expected reward와 actual reward ledger를 대사하는 공통 계산 패턴만 담당한다."
+    },
+    {
+      "rule_version": "0.1.0-placeholder",
+      "rule_status": "PLACEHOLDER_NOT_EXECUTABLE",
+      "approval_status": "DRAFT",
+      "production_approval_status": "NOT_APPROVED_FOR_PRODUCTION",
+      "severity": "MEDIUM",
+      "data_access_policy": {
+        "free_form_sql_allowed": false,
+        "approved_repository_only": true,
+        "repository_type_for_mvp": "PLACEHOLDER_ONLY",
+        "production_replacement": "BANK_INTERNAL_SOURCE_ADAPTERS",
+        "required_tables": [
+          "customers",
+          "accounts",
+          "fee_ledger",
+          "fee_policy",
+          "transactions"
+        ],
+        "prohibited_runtime_sources": [
+          "private_ground_truth"
+        ]
+      },
+      "calculation_policy": {
+        "independent_policy_calculation_required": true,
+        "may_trust_source_ledger_without_recalculation": false,
+        "normal_exclusion_outputs_required": true,
+        "unreported_affected_customer_search_required": true,
+        "detectable_error_types": [
+          "FEE_EXEMPTION_NOT_APPLIED",
+          "FEE_POLICY_VERSION_MISMATCH",
+          "FEE_LEDGER_ROW_OVERCHARGED"
+        ]
+      },
+      "policy_basis_policy": {
+        "rag_usage": "POLICY_BASIS_RETRIEVAL_ONLY",
+        "required_policy_basis_ids": [],
+        "basis_attachment_method": "REQUIRED_BASIS_ID_LOOKUP",
+        "dynamic_rag_search_optional": true,
+        "policy_basis_must_be_in_result": true
+      },
+      "output_requirements": {
+        "result_must_include": [
+          "execution_id",
+          "complaint_id",
+          "rule_id",
+          "rule_version",
+          "harm_type",
+          "audit"
+        ],
+        "customer_refund_decision": "HUMAN_REVIEW_REQUIRED",
+        "status_on_success": "PLACEHOLDER_NOT_EXECUTABLE"
+      },
+      "audit_policy": {
+        "audit_log_required": true,
+        "capture_execution_timestamp": true,
+        "capture_rule_id": true,
+        "capture_rule_version": true,
+        "capture_data_contract_id": true,
+        "capture_policy_basis_ids": true,
+        "capture_input_complaint_snapshot": true,
+        "capture_repository_query_names": true,
+        "capture_calculator_names": true,
+        "capture_detected_error_types": true,
+        "capture_human_review_required_reason": true
+      },
+      "failure_policy": {
+        "on_placeholder_rule_selected": "STOP_AND_ESCALATE",
+        "on_missing_rule": "STOP_AND_ESCALATE",
+        "on_inactive_rule": "STOP_AND_ESCALATE",
+        "on_unapproved_rule": "STOP_AND_ESCALATE"
+      },
+      "rule_id": "H02-FEE-WAIVER-OVERCHARGE-001",
+      "rule_name": "수수료 면제 조건 미적용 오청구 조사 룰",
+      "harm_type": "H02",
+      "harm_type_name": "수수료 면제 대상 오청구",
+      "product_scope": {
+        "product_id": "JB_FEE_WAIVER_PLACEHOLDER",
+        "product_name": "수수료 면제 조건 적용 상품군",
+        "product_policy_config_id": "H02_PLACEHOLDER_CONFIG",
+        "product_policy_config_path": null
+      },
+      "rule_execution": {
+        "rule_template": "fee_policy_recalculate_and_reconcile",
+        "orchestrator_name": "placeholder_rule_card_only",
+        "repository_name": "placeholder_repository_not_implemented",
+        "data_contract_id": "H02_PLACEHOLDER_FEE_WAIVER_V1",
+        "policy_calculator_name": "placeholder_policy_calculator",
+        "reconciliation_calculator_name": "placeholder_reconciliation_calculator",
+        "result_schema_name": "h02_placeholder_result",
+        "execution_entrypoint": "run_rule",
+        "required_input_fields": [
+          "complaint_id",
+          "customer_id",
+          "narrative_ko"
+        ]
+      },
+      "routing_conditions": {
+        "llm_router_may_recommend_when": [
+          "민원 내용이 수수료 면제 대상 오청구 유형과 관련될 가능성이 있음",
+          "고객 내부 데이터로 상품/거래 관련성이 추가 확인되어야 함",
+          "명확한 정상 제외 사유가 민원 단계에서 확정되지 않음"
+        ],
+        "do_not_run_when": [
+          "placeholder rule card는 실행 불가",
+          "승인된 실행 SQL과 Source Adapter가 아직 연결되지 않음"
+        ],
+        "requires_human_review_when": [
+          "placeholder 상태이므로 모든 결과는 사람 검토 필요"
+        ]
+      },
+      "governance_notes": [
+        "이 룰은 H01~H08 확장 슬롯을 보여주기 위한 placeholder Rule Card입니다.",
+        "LLM은 rule_id 후보 추천까지만 가능하며 SQL 생성/피해액 계산/환급 판단은 금지됩니다.",
+        "실행 가능 상태로 전환하려면 Data Contract, Product Config, 승인 SQL hash, Evidence Template, Source Adapter를 등록해야 합니다."
+      ]
+    },
+    {
+      "rule_version": "0.1.0-placeholder",
+      "rule_status": "PLACEHOLDER_NOT_EXECUTABLE",
+      "approval_status": "DRAFT",
+      "production_approval_status": "NOT_APPROVED_FOR_PRODUCTION",
+      "severity": "MEDIUM",
+      "data_access_policy": {
+        "free_form_sql_allowed": false,
+        "approved_repository_only": true,
+        "repository_type_for_mvp": "PLACEHOLDER_ONLY",
+        "production_replacement": "BANK_INTERNAL_SOURCE_ADAPTERS",
+        "required_tables": [
+          "customers",
+          "accounts",
+          "auto_debit_mandates",
+          "debit_transactions",
+          "reversal_ledger"
+        ],
+        "prohibited_runtime_sources": [
+          "private_ground_truth"
+        ]
+      },
+      "calculation_policy": {
+        "independent_policy_calculation_required": true,
+        "may_trust_source_ledger_without_recalculation": false,
+        "normal_exclusion_outputs_required": true,
+        "unreported_affected_customer_search_required": true,
+        "detectable_error_types": [
+          "DUPLICATE_DEBIT",
+          "MISSING_REVERSAL",
+          "MANDATE_STATUS_MISMATCH"
+        ]
+      },
+      "policy_basis_policy": {
+        "rag_usage": "POLICY_BASIS_RETRIEVAL_ONLY",
+        "required_policy_basis_ids": [],
+        "basis_attachment_method": "REQUIRED_BASIS_ID_LOOKUP",
+        "dynamic_rag_search_optional": true,
+        "policy_basis_must_be_in_result": true
+      },
+      "output_requirements": {
+        "result_must_include": [
+          "execution_id",
+          "complaint_id",
+          "rule_id",
+          "rule_version",
+          "harm_type",
+          "audit"
+        ],
+        "customer_refund_decision": "HUMAN_REVIEW_REQUIRED",
+        "status_on_success": "PLACEHOLDER_NOT_EXECUTABLE"
+      },
+      "audit_policy": {
+        "audit_log_required": true,
+        "capture_execution_timestamp": true,
+        "capture_rule_id": true,
+        "capture_rule_version": true,
+        "capture_data_contract_id": true,
+        "capture_policy_basis_ids": true,
+        "capture_input_complaint_snapshot": true,
+        "capture_repository_query_names": true,
+        "capture_calculator_names": true,
+        "capture_detected_error_types": true,
+        "capture_human_review_required_reason": true
+      },
+      "failure_policy": {
+        "on_placeholder_rule_selected": "STOP_AND_ESCALATE",
+        "on_missing_rule": "STOP_AND_ESCALATE",
+        "on_inactive_rule": "STOP_AND_ESCALATE",
+        "on_unapproved_rule": "STOP_AND_ESCALATE"
+      },
+      "rule_id": "H06-AUTO-DEBIT-DUPLICATE-001",
+      "rule_name": "자동이체/자동납부 중복 출금 조사 룰",
+      "harm_type": "H06",
+      "harm_type_name": "자동이체/자동납부 중복 출금",
+      "product_scope": {
+        "product_id": "JB_AUTO_DEBIT_PLACEHOLDER",
+        "product_name": "자동이체/자동납부 서비스",
+        "product_policy_config_id": "H06_PLACEHOLDER_CONFIG",
+        "product_policy_config_path": null
+      },
+      "rule_execution": {
+        "rule_template": "auto_debit_duplicate_reconcile",
+        "orchestrator_name": "placeholder_rule_card_only",
+        "repository_name": "placeholder_repository_not_implemented",
+        "data_contract_id": "H06_PLACEHOLDER_AUTO_DEBIT_V1",
+        "policy_calculator_name": "placeholder_policy_calculator",
+        "reconciliation_calculator_name": "placeholder_reconciliation_calculator",
+        "result_schema_name": "h06_placeholder_result",
+        "execution_entrypoint": "run_rule",
+        "required_input_fields": [
+          "complaint_id",
+          "customer_id",
+          "narrative_ko"
+        ]
+      },
+      "routing_conditions": {
+        "llm_router_may_recommend_when": [
+          "민원 내용이 자동이체/자동납부 중복 출금 유형과 관련될 가능성이 있음",
+          "고객 내부 데이터로 상품/거래 관련성이 추가 확인되어야 함",
+          "명확한 정상 제외 사유가 민원 단계에서 확정되지 않음"
+        ],
+        "do_not_run_when": [
+          "placeholder rule card는 실행 불가",
+          "승인된 실행 SQL과 Source Adapter가 아직 연결되지 않음"
+        ],
+        "requires_human_review_when": [
+          "placeholder 상태이므로 모든 결과는 사람 검토 필요"
+        ]
+      },
+      "governance_notes": [
+        "이 룰은 H01~H08 확장 슬롯을 보여주기 위한 placeholder Rule Card입니다.",
+        "LLM은 rule_id 후보 추천까지만 가능하며 SQL 생성/피해액 계산/환급 판단은 금지됩니다.",
+        "실행 가능 상태로 전환하려면 Data Contract, Product Config, 승인 SQL hash, Evidence Template, Source Adapter를 등록해야 합니다."
+      ]
+    }
+  ],
+  "change_control": {
+    "immutable_after_mvp_approval": true,
+    "changes_require_new_rule_version": true,
+    "approved_for_mvp_by": "PROJECT_OWNER",
+    "approved_for_mvp_at": "2026-06-13T00:00:00+09:00",
+    "production_approval_required": true,
+    "production_approved_by": null,
+    "production_approved_at": null
+  }
+}

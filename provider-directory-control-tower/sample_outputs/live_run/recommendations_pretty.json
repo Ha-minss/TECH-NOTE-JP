@@ -1,0 +1,220 @@
+[
+  {
+    "provider_id": "NPI1_00001",
+    "npi": "1598284069",
+    "change_detected": false,
+    "changes": [],
+    "overall_confidence": 0.9,
+    "recommended_action": "no_change",
+    "reason": "Record confirmed as accurate against collected evidence.",
+    "audit_id": "AUD_cc76cf610d9d646c"
+  },
+  {
+    "provider_id": "NPI1_00002",
+    "npi": "1831841188",
+    "change_detected": false,
+    "changes": [],
+    "overall_confidence": 0.9,
+    "recommended_action": "no_change",
+    "reason": "Record confirmed as accurate against collected evidence.",
+    "audit_id": "AUD_db0a8f9ee479b080"
+  },
+  {
+    "provider_id": "NPI1_00003",
+    "npi": "1891082467",
+    "change_detected": false,
+    "changes": [],
+    "overall_confidence": 0.9,
+    "recommended_action": "no_change",
+    "reason": "Record confirmed as accurate against collected evidence.",
+    "audit_id": "AUD_f81e340f4aebe2ba"
+  },
+  {
+    "provider_id": "NPI1_00004",
+    "npi": "1104434562",
+    "change_detected": false,
+    "changes": [],
+    "overall_confidence": 0.9,
+    "recommended_action": "no_change",
+    "reason": "Record confirmed as accurate against collected evidence.",
+    "audit_id": "AUD_e98846e5ec5104ba"
+  },
+  {
+    "provider_id": "NPI1_00005",
+    "npi": "1235432303",
+    "change_detected": false,
+    "changes": [],
+    "overall_confidence": 0.9,
+    "recommended_action": "no_change",
+    "reason": "Record confirmed as accurate against collected evidence.",
+    "audit_id": "AUD_8debbaf6ed632a0f"
+  },
+  {
+    "provider_id": "NPI1_00006",
+    "npi": "1295363927",
+    "change_detected": false,
+    "changes": [],
+    "overall_confidence": 0.9,
+    "recommended_action": "no_change",
+    "reason": "Record confirmed as accurate against collected evidence.",
+    "audit_id": "AUD_f9a3ad452c36553c"
+  },
+  {
+    "provider_id": "NPI1_00007",
+    "npi": "1356844617",
+    "change_detected": false,
+    "changes": [],
+    "overall_confidence": 0.9,
+    "recommended_action": "no_change",
+    "reason": "Record confirmed as accurate against collected evidence.",
+    "audit_id": "AUD_aaaa4fa7b613d576"
+  },
+  {
+    "provider_id": "NPI1_00008",
+    "npi": "1952976995",
+    "change_detected": false,
+    "changes": [],
+    "overall_confidence": 0.9,
+    "recommended_action": "no_change",
+    "reason": "Record confirmed as accurate against collected evidence.",
+    "audit_id": "AUD_9d3defe872ceeee6"
+  },
+  {
+    "provider_id": "NPI1_00009",
+    "npi": "1184253296",
+    "change_detected": false,
+    "changes": [],
+    "overall_confidence": 0.9,
+    "recommended_action": "no_change",
+    "reason": "Record confirmed as accurate against collected evidence.",
+    "audit_id": "AUD_e62900e0117127b0"
+  },
+  {
+    "provider_id": "NPI1_00010",
+    "npi": "1912870478",
+    "change_detected": false,
+    "changes": [],
+    "overall_confidence": 0.9,
+    "recommended_action": "no_change",
+    "reason": "Record confirmed as accurate against collected evidence.",
+    "audit_id": "AUD_fc37e0291d11d52e"
+  },
+  {
+    "provider_id": "NPI1_00011",
+    "npi": "1043218977",
+    "change_detected": false,
+    "changes": [],
+    "overall_confidence": 0.9,
+    "recommended_action": "no_change",
+    "reason": "Record confirmed as accurate against collected evidence.",
+    "audit_id": "AUD_b2ed06f16dd2bb3b"
+  },
+  {
+    "provider_id": "NPI1_00012",
+    "npi": "1669224457",
+    "change_detected": false,
+    "changes": [],
+    "overall_confidence": 0.9,
+    "recommended_action": "no_change",
+    "reason": "Record confirmed as accurate against collected evidence.",
+    "audit_id": "AUD_fb6780ce09f03d32"
+  },
+  {
+    "provider_id": "NPI1_00013",
+    "npi": "1073482121",
+    "change_detected": false,
+    "changes": [],
+    "overall_confidence": 0.9,
+    "recommended_action": "no_change",
+    "reason": "Record confirmed as accurate against collected evidence.",
+    "audit_id": "AUD_eaeba7e4feb78ca8"
+  },
+  {
+    "provider_id": "NPI1_00014",
+    "npi": "1215425319",
+    "change_detected": false,
+    "changes": [],
+    "overall_confidence": 0.9,
+    "recommended_action": "no_change",
+    "reason": "Record confirmed as accurate against collected evidence.",
+    "audit_id": "AUD_1f6d4b62ccbc96b5"
+  },
+  {
+    "provider_id": "NPI1_00015",
+    "npi": "1386606325",
+    "change_detected": true,
+    "changes": [
+      {
+        "field": "active_status",
+        "old_value": "active",
+        "new_value": "revoked",
+        "confidence_score": 0.704,
+        "supporting_sources": [
+          "CMS Revoked Medicare Providers and Suppliers"
+        ],
+        "evidence_urls": [
+          "https://data.cms.gov/data-api/v1/dataset/a6496a7d-4e19-479a-a9ad-d4c0a49e07c3/data"
+        ],
+        "evidence_snippets": [
+          "CMS Revoked Medicare Providers and Suppliers lists this NPI as revoked; reason: 424.535(A)(3) Felonies; effective date: 2021-07-06; re-enrollment bar expiration: 2031-07-06."
+        ],
+        "source_conflict": true,
+        "requires_human_review": true
+      }
+    ],
+    "overall_confidence": 0.704,
+    "recommended_action": "human_review",
+    "reason": "Conflicting sources found. Manual verification recommended.",
+    "audit_id": "AUD_858aad76f8fec85e"
+  },
+  {
+    "provider_id": "NPI1_00016",
+    "npi": "1174883722",
+    "change_detected": false,
+    "changes": [],
+    "overall_confidence": 0.9,
+    "recommended_action": "no_change",
+    "reason": "Record confirmed as accurate against collected evidence.",
+    "audit_id": "AUD_843ce835df9d5a1f"
+  },
+  {
+    "provider_id": "NPI1_00017",
+    "npi": "1306672092",
+    "change_detected": false,
+    "changes": [],
+    "overall_confidence": 0.9,
+    "recommended_action": "no_change",
+    "reason": "Record confirmed as accurate against collected evidence.",
+    "audit_id": "AUD_ab8d741d2eea6429"
+  },
+  {
+    "provider_id": "NPI1_00018",
+    "npi": "1053020784",
+    "change_detected": false,
+    "changes": [],
+    "overall_confidence": 0.9,
+    "recommended_action": "no_change",
+    "reason": "Record confirmed as accurate against collected evidence.",
+    "audit_id": "AUD_8d6fd625722c624f"
+  },
+  {
+    "provider_id": "NPI1_00019",
+    "npi": "1679163695",
+    "change_detected": false,
+    "changes": [],
+    "overall_confidence": 0.9,
+    "recommended_action": "no_change",
+    "reason": "Record confirmed as accurate against collected evidence.",
+    "audit_id": "AUD_89c909cac780f145"
+  },
+  {
+    "provider_id": "NPI1_00020",
+    "npi": "1629873302",
+    "change_detected": false,
+    "changes": [],
+    "overall_confidence": 0.9,
+    "recommended_action": "no_change",
+    "reason": "Record confirmed as accurate against collected evidence.",
+    "audit_id": "AUD_e8f3dec9917a0282"
+  }
+]

@@ -1,0 +1,2318 @@
+{
+  "summary": {
+    "dataset": "offline_payment_ops_synthetic_50",
+    "total_cases": 50,
+    "passed_cases": 50,
+    "failed_cases": 0,
+    "case_distribution": {
+      "S1": 10,
+      "S2": 7,
+      "S3": 7,
+      "S4": 7,
+      "S5": 7,
+      "S6A": 4,
+      "S6B": 3,
+      "S7": 5
+    },
+    "row_counts": {
+      "stores": 50,
+      "store_operator_access": 50,
+      "terminals": 86,
+      "tid_assignments": 91,
+      "activation_events": 22,
+      "approval_events": 53,
+      "support_routes": 38,
+      "terminal_identities": 86,
+      "installation_events": 12,
+      "van_registrations": 14,
+      "pos_front_links": 7,
+      "pos_front_connection_events": 7,
+      "tool_failure_injections": 7,
+      "scenarios": 50,
+      "scenario_stores": 50
+    },
+    "validation_scope": "Row-level evidence validation: checks that each synthetic case contains the operational facts required for its intended state/cause and avoids obvious conflicting evidence."
+  },
+  "cases": [
+    {
+      "case_id": "SYN-001",
+      "scenario_family": "S1",
+      "scenario_type": "duplicate_tid",
+      "store_id": "STR-SYN-001",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "duplicate_tid",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "active_duplicate_tid_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "activation_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_identity_mismatch_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_duplicate_tid",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-002",
+      "scenario_family": "S1",
+      "scenario_type": "duplicate_tid",
+      "store_id": "STR-SYN-002",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "duplicate_tid",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "active_duplicate_tid_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "activation_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_identity_mismatch_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_duplicate_tid",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-003",
+      "scenario_family": "S1",
+      "scenario_type": "duplicate_tid",
+      "store_id": "STR-SYN-003",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "duplicate_tid",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "active_duplicate_tid_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "activation_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_identity_mismatch_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_duplicate_tid",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-004",
+      "scenario_family": "S1",
+      "scenario_type": "duplicate_tid",
+      "store_id": "STR-SYN-004",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "duplicate_tid",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "active_duplicate_tid_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "activation_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_identity_mismatch_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_duplicate_tid",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-005",
+      "scenario_family": "S1",
+      "scenario_type": "duplicate_tid",
+      "store_id": "STR-SYN-005",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "duplicate_tid",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "active_duplicate_tid_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "activation_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_identity_mismatch_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_duplicate_tid",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-006",
+      "scenario_family": "S1",
+      "scenario_type": "duplicate_tid",
+      "store_id": "STR-SYN-006",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "duplicate_tid",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "active_duplicate_tid_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "activation_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_identity_mismatch_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_duplicate_tid",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-007",
+      "scenario_family": "S1",
+      "scenario_type": "duplicate_tid",
+      "store_id": "STR-SYN-007",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "duplicate_tid",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "active_duplicate_tid_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "activation_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_identity_mismatch_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_duplicate_tid",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-008",
+      "scenario_family": "S1",
+      "scenario_type": "duplicate_tid",
+      "store_id": "STR-SYN-008",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "duplicate_tid",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "active_duplicate_tid_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "activation_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_identity_mismatch_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_duplicate_tid",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-009",
+      "scenario_family": "S1",
+      "scenario_type": "duplicate_tid",
+      "store_id": "STR-SYN-009",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "duplicate_tid",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "active_duplicate_tid_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "activation_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_identity_mismatch_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_duplicate_tid",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-010",
+      "scenario_family": "S1",
+      "scenario_type": "duplicate_tid",
+      "store_id": "STR-SYN-010",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "duplicate_tid",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "active_duplicate_tid_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "activation_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_identity_mismatch_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_duplicate_tid",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-011",
+      "scenario_family": "S2",
+      "scenario_type": "terminal_identifier_mismatch",
+      "store_id": "STR-SYN-011",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "terminal_identifier_mismatch",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "identity_mismatch_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_identity_mismatch",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-012",
+      "scenario_family": "S2",
+      "scenario_type": "terminal_identifier_mismatch",
+      "store_id": "STR-SYN-012",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "terminal_identifier_mismatch",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "identity_mismatch_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_identity_mismatch",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-013",
+      "scenario_family": "S2",
+      "scenario_type": "terminal_identifier_mismatch",
+      "store_id": "STR-SYN-013",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "terminal_identifier_mismatch",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "identity_mismatch_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_identity_mismatch",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-014",
+      "scenario_family": "S2",
+      "scenario_type": "terminal_identifier_mismatch",
+      "store_id": "STR-SYN-014",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "terminal_identifier_mismatch",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "identity_mismatch_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_identity_mismatch",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-015",
+      "scenario_family": "S2",
+      "scenario_type": "terminal_identifier_mismatch",
+      "store_id": "STR-SYN-015",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "terminal_identifier_mismatch",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "identity_mismatch_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_identity_mismatch",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-016",
+      "scenario_family": "S2",
+      "scenario_type": "terminal_identifier_mismatch",
+      "store_id": "STR-SYN-016",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "terminal_identifier_mismatch",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "identity_mismatch_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_identity_mismatch",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-017",
+      "scenario_family": "S2",
+      "scenario_type": "terminal_identifier_mismatch",
+      "store_id": "STR-SYN-017",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "terminal_identifier_mismatch",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "identity_mismatch_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_identity_mismatch",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-018",
+      "scenario_family": "S3",
+      "scenario_type": "van_merchant_registration_missing",
+      "store_id": "STR-SYN-018",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "van_merchant_registration_missing",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "van_registration_incomplete_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "terminal_identity_present",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "tid_config_present",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_van_missing",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-019",
+      "scenario_family": "S3",
+      "scenario_type": "van_merchant_registration_missing",
+      "store_id": "STR-SYN-019",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "van_merchant_registration_missing",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "van_registration_incomplete_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "terminal_identity_present",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "tid_config_present",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_van_missing",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-020",
+      "scenario_family": "S3",
+      "scenario_type": "van_merchant_registration_missing",
+      "store_id": "STR-SYN-020",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "van_merchant_registration_missing",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "van_registration_incomplete_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "terminal_identity_present",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "tid_config_present",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_van_missing",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-021",
+      "scenario_family": "S3",
+      "scenario_type": "van_merchant_registration_missing",
+      "store_id": "STR-SYN-021",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "van_merchant_registration_missing",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "van_registration_incomplete_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "terminal_identity_present",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "tid_config_present",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_van_missing",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-022",
+      "scenario_family": "S3",
+      "scenario_type": "van_merchant_registration_missing",
+      "store_id": "STR-SYN-022",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "van_merchant_registration_missing",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "van_registration_incomplete_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "terminal_identity_present",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "tid_config_present",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_van_missing",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-023",
+      "scenario_family": "S3",
+      "scenario_type": "van_merchant_registration_missing",
+      "store_id": "STR-SYN-023",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "van_merchant_registration_missing",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "van_registration_incomplete_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "terminal_identity_present",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "tid_config_present",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_van_missing",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-024",
+      "scenario_family": "S3",
+      "scenario_type": "van_merchant_registration_missing",
+      "store_id": "STR-SYN-024",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "van_merchant_registration_missing",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "van_registration_incomplete_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "terminal_identity_present",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "tid_config_present",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_van_missing",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-025",
+      "scenario_family": "S4",
+      "scenario_type": "pos_front_connection_issue",
+      "store_id": "STR-SYN-025",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "pos_front_connection_issue",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pos_abnormal_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "van_registration_active_or_absent_not_pending",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_pos_front",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-026",
+      "scenario_family": "S4",
+      "scenario_type": "pos_front_connection_issue",
+      "store_id": "STR-SYN-026",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "pos_front_connection_issue",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pos_abnormal_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "van_registration_active_or_absent_not_pending",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_pos_front",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-027",
+      "scenario_family": "S4",
+      "scenario_type": "pos_front_connection_issue",
+      "store_id": "STR-SYN-027",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "pos_front_connection_issue",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pos_abnormal_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "van_registration_active_or_absent_not_pending",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_pos_front",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-028",
+      "scenario_family": "S4",
+      "scenario_type": "pos_front_connection_issue",
+      "store_id": "STR-SYN-028",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "pos_front_connection_issue",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pos_abnormal_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "van_registration_active_or_absent_not_pending",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_pos_front",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-029",
+      "scenario_family": "S4",
+      "scenario_type": "pos_front_connection_issue",
+      "store_id": "STR-SYN-029",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "pos_front_connection_issue",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pos_abnormal_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "van_registration_active_or_absent_not_pending",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_pos_front",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-030",
+      "scenario_family": "S4",
+      "scenario_type": "pos_front_connection_issue",
+      "store_id": "STR-SYN-030",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "pos_front_connection_issue",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pos_abnormal_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "van_registration_active_or_absent_not_pending",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_pos_front",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-031",
+      "scenario_family": "S4",
+      "scenario_type": "pos_front_connection_issue",
+      "store_id": "STR-SYN-031",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "pos_front_connection_issue",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "pos_abnormal_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "van_registration_active_or_absent_not_pending",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid_interference",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_cause_pos_front",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-032",
+      "scenario_family": "S5",
+      "scenario_type": "clarification_required",
+      "store_id": "STR-SYN-032",
+      "expected_state": "NEEDS_CLARIFICATION",
+      "expected_primary_cause": null,
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_identity_mismatch",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_van_incomplete",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_pos_abnormal",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_approval_error",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_needs_clarification_no_cause",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-033",
+      "scenario_family": "S5",
+      "scenario_type": "clarification_required",
+      "store_id": "STR-SYN-033",
+      "expected_state": "NEEDS_CLARIFICATION",
+      "expected_primary_cause": null,
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_identity_mismatch",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_van_incomplete",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_pos_abnormal",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_approval_error",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_needs_clarification_no_cause",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-034",
+      "scenario_family": "S5",
+      "scenario_type": "clarification_required",
+      "store_id": "STR-SYN-034",
+      "expected_state": "NEEDS_CLARIFICATION",
+      "expected_primary_cause": null,
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_identity_mismatch",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_van_incomplete",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_pos_abnormal",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_approval_error",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_needs_clarification_no_cause",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-035",
+      "scenario_family": "S5",
+      "scenario_type": "clarification_required",
+      "store_id": "STR-SYN-035",
+      "expected_state": "NEEDS_CLARIFICATION",
+      "expected_primary_cause": null,
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_identity_mismatch",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_van_incomplete",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_pos_abnormal",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_approval_error",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_needs_clarification_no_cause",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-036",
+      "scenario_family": "S5",
+      "scenario_type": "clarification_required",
+      "store_id": "STR-SYN-036",
+      "expected_state": "NEEDS_CLARIFICATION",
+      "expected_primary_cause": null,
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_identity_mismatch",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_van_incomplete",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_pos_abnormal",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_approval_error",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_needs_clarification_no_cause",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-037",
+      "scenario_family": "S5",
+      "scenario_type": "clarification_required",
+      "store_id": "STR-SYN-037",
+      "expected_state": "NEEDS_CLARIFICATION",
+      "expected_primary_cause": null,
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_identity_mismatch",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_van_incomplete",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_pos_abnormal",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_approval_error",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_needs_clarification_no_cause",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-038",
+      "scenario_family": "S5",
+      "scenario_type": "clarification_required",
+      "store_id": "STR-SYN-038",
+      "expected_state": "NEEDS_CLARIFICATION",
+      "expected_primary_cause": null,
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_active_duplicate_tid",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_identity_mismatch",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_van_incomplete",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_pos_abnormal",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "no_approval_error",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_needs_clarification_no_cause",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-039",
+      "scenario_family": "S6A",
+      "scenario_type": "required_tool_failure",
+      "store_id": "STR-SYN-039",
+      "expected_state": "DEGRADED_REVIEW",
+      "expected_primary_cause": null,
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "underlying_duplicate_tid_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "required_tool_failure_get_tid_config",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_degraded_no_cause",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-040",
+      "scenario_family": "S6A",
+      "scenario_type": "required_tool_failure",
+      "store_id": "STR-SYN-040",
+      "expected_state": "DEGRADED_REVIEW",
+      "expected_primary_cause": null,
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "underlying_duplicate_tid_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "required_tool_failure_get_tid_config",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_degraded_no_cause",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-041",
+      "scenario_family": "S6A",
+      "scenario_type": "required_tool_failure",
+      "store_id": "STR-SYN-041",
+      "expected_state": "DEGRADED_REVIEW",
+      "expected_primary_cause": null,
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "underlying_duplicate_tid_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "required_tool_failure_get_tid_config",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_degraded_no_cause",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-042",
+      "scenario_family": "S6A",
+      "scenario_type": "required_tool_failure",
+      "store_id": "STR-SYN-042",
+      "expected_state": "DEGRADED_REVIEW",
+      "expected_primary_cause": null,
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "underlying_duplicate_tid_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "required_tool_failure_get_tid_config",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_degraded_no_cause",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-043",
+      "scenario_family": "S6B",
+      "scenario_type": "optional_tool_failure",
+      "store_id": "STR-SYN-043",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "duplicate_tid",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "underlying_duplicate_tid_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "optional_tool_failure_get_support_route",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "required_tid_tool_not_failed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_ready_duplicate_tid",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-044",
+      "scenario_family": "S6B",
+      "scenario_type": "optional_tool_failure",
+      "store_id": "STR-SYN-044",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "duplicate_tid",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "underlying_duplicate_tid_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "optional_tool_failure_get_support_route",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "required_tid_tool_not_failed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_ready_duplicate_tid",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-045",
+      "scenario_family": "S6B",
+      "scenario_type": "optional_tool_failure",
+      "store_id": "STR-SYN-045",
+      "expected_state": "READY_FOR_REVIEW",
+      "expected_primary_cause": "duplicate_tid",
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "underlying_duplicate_tid_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "optional_tool_failure_get_support_route",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "required_tid_tool_not_failed",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_ready_duplicate_tid",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-046",
+      "scenario_family": "S7",
+      "scenario_type": "temporal_conflict",
+      "store_id": "STR-SYN-046",
+      "expected_state": "CONFLICT_REVIEW",
+      "expected_primary_cause": null,
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "current_active_tids_not_duplicate",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "incident_time_duplicate_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "post_incident_reconfiguration_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_conflict_no_cause",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-047",
+      "scenario_family": "S7",
+      "scenario_type": "temporal_conflict",
+      "store_id": "STR-SYN-047",
+      "expected_state": "CONFLICT_REVIEW",
+      "expected_primary_cause": null,
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "current_active_tids_not_duplicate",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "incident_time_duplicate_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "post_incident_reconfiguration_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_conflict_no_cause",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-048",
+      "scenario_family": "S7",
+      "scenario_type": "temporal_conflict",
+      "store_id": "STR-SYN-048",
+      "expected_state": "CONFLICT_REVIEW",
+      "expected_primary_cause": null,
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "current_active_tids_not_duplicate",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "incident_time_duplicate_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "post_incident_reconfiguration_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_conflict_no_cause",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-049",
+      "scenario_family": "S7",
+      "scenario_type": "temporal_conflict",
+      "store_id": "STR-SYN-049",
+      "expected_state": "CONFLICT_REVIEW",
+      "expected_primary_cause": null,
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "current_active_tids_not_duplicate",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "incident_time_duplicate_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "post_incident_reconfiguration_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_conflict_no_cause",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    },
+    {
+      "case_id": "SYN-050",
+      "scenario_family": "S7",
+      "scenario_type": "temporal_conflict",
+      "store_id": "STR-SYN-050",
+      "expected_state": "CONFLICT_REVIEW",
+      "expected_primary_cause": null,
+      "passed": true,
+      "checks": [
+        {
+          "name": "scenario_to_store_link",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "operator_authorized",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "current_active_tids_not_duplicate",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "incident_time_duplicate_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "post_incident_reconfiguration_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "approval_error_exists",
+          "passed": true,
+          "detail": ""
+        },
+        {
+          "name": "expected_conflict_no_cause",
+          "passed": true,
+          "detail": ""
+        }
+      ]
+    }
+  ]
+}

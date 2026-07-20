@@ -1,0 +1,12 @@
+[project]
+name = "storeops-triage-agent"
+version = "0.1.0"
+description = "Evidence-based synthetic StoreOps incident investigation agent"
+requires-python = ">=3.11"
+dependencies = ["numpy>=1.26", "pydantic>=2"]
+
+[project.optional-dependencies]
+retrieval = ["faiss-cpu>=1.8"]
+
+[tool.unittest]
+start-directory = "tests"

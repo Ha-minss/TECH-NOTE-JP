@@ -1,0 +1,44 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+dist/
+data/audit/*.jsonl
+work/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Logs / runtime artifacts
+*.log
+data/audit/*.jsonl
+data/audit/*.log
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Temporary outputs
+outputs/tmp/
+*.tmp
+
+# Runtime/demo outputs
+outputs/
+data/demo/audit/*.jsonl
+data/demo/audit/*.log

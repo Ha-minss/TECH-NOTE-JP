@@ -1,0 +1,9 @@
+﻿check,pass,detail
+period_range_2016_01_to_2026_03,True,"2016-01 to 2026-03, n=123"
+no_duplicate_period_rows,True,0
+no_missing_monthly_periods,True,
+no_missing_afs_or_main_low_spi,True,0
+no_missing_policy_intensity,True,0
+no_missing_values_in_policy_windows,True,{}
+no_buddhist_era_or_invalid_dates,True,invalid=0; max_year=2026
+finite_gap_variables,True,finite

@@ -1,0 +1,6 @@
+risk_band,customer_count,default_count,default_rate,avg_risk_score,min_risk_score,max_risk_score,capture_share,score_month,model_version,policy_version,source_notebook_section
+Critical,4589,4588,0.9997821350762527,0.997642,0.996460,0.999092,0.038610,2018-03-31,best_equal_8models,policy_v1,"Untitled41.ipynb cell 45 Monitoring Bucket Summary"
+High Risk,18356,18153,0.988941,0.986248,0.970803,0.996460,0.152767,2018-03-31,best_equal_8models,policy_v1,"Untitled41.ipynb cell 45 Monitoring Bucket Summary"
+Watchlist,22946,21584,0.940643,0.939868,0.904279,0.970801,0.181641,2018-03-31,best_equal_8models,policy_v1,"Untitled41.ipynb cell 45 Monitoring Bucket Summary"
+Standard,413022,74503,0.180385,0.180522,0.000249,0.904275,0.626982,2018-03-31,best_equal_8models,policy_v1,"Untitled41.ipynb cell 45 Monitoring Bucket Summary"
+

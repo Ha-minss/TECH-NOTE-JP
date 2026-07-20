@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "registry_id": "POLICY_BASIS_MAP_H01_H08_MVP",
+  "description": "Maps harm types H01-H08 to required policy basis IDs. RAG retrieves evidence only; it must not calculate harm or refund amounts.",
+  "rag_policy": {
+    "usage": "POLICY_BASIS_RETRIEVAL_ONLY",
+    "may_determine_harm": false,
+    "may_calculate_refund": false,
+    "may_generate_sql": false,
+    "missing_basis_behavior": "RETURN_MISSING_BASIS_RECORD_AND_REQUIRE_HUMAN_REVIEW"
+  },
+  "harm_types": {
+    "H01": {
+      "harm_type_name": "interest_after_loan_close",
+      "ko_name": "대출 종료/상환 이후 이자 부과",
+      "required_policy_basis_ids": [
+        "H01-BASIS-LOAN-CLOSE-DATE",
+        "H01-BASIS-INTEREST-ACCRUAL-END",
+        "H01-BASIS-POST-CLOSE-INTEREST-EXCEPTION"
+      ]
+    },
+    "H02": {
+      "harm_type_name": "fee_waiver_wrongly_charged",
+      "ko_name": "수수료 면제 대상 오청구",
+      "required_policy_basis_ids": [
+        "H02-BASIS-FEE-WAIVER-ELIGIBILITY",
+        "H02-BASIS-FEE-SCHEDULE",
+        "H02-BASIS-WAIVER-EFFECTIVE-DATE"
+      ]
+    },
+    "H03": {
+      "harm_type_name": "card_refund_missing",
+      "ko_name": "카드 취소/환불 미반영",
+      "required_policy_basis_ids": [
+        "H03-BASIS-REFUND-POSTING",
+        "H03-BASIS-CANCELLED-TRANSACTION",
+        "H03-BASIS-REFUND-EXCEPTION"
+      ]
+    },
+    "H04": {
+      "harm_type_name": "preferential_rate_not_applied",
+      "ko_name": "우대금리/프로모션 금리 미적용",
+      "required_policy_basis_ids": [
+        "H04-BASIS-PREFERENTIAL-RATE-CONDITION",
+        "H04-BASIS-RATE-EFFECTIVE-DATE",
+        "H04-BASIS-RATE-CALCULATION"
+      ]
+    },
+    "H05": {
+      "harm_type_name": "early_repayment_fee_wrongly_charged",
+      "ko_name": "중도상환수수료 오청구",
+      "required_policy_basis_ids": [
+        "H05-BASIS-EARLY-REPAYMENT-FEE-FORMULA",
+        "H05-BASIS-EARLY-REPAYMENT-FEE-EXEMPTION",
+        "H05-BASIS-REMAINING-DAYS"
+      ]
+    },
+    "H06": {
+      "harm_type_name": "duplicate_autopay_withdrawal",
+      "ko_name": "자동이체/자동납부 중복 출금",
+      "required_policy_basis_ids": [
+        "H06-BASIS-AUTOPAY-AUTHORIZATION",
+        "H06-BASIS-DUPLICATE-DEBIT-DEFINITION",
+        "H06-BASIS-REVERSAL-REFUND"
+      ]
+    },
+    "H07": {
+      "harm_type_name": "cashback_missing",
+      "ko_name": "캐시백/리워드 미지급",
+      "required_policy_basis_ids": [
+        "H07-BASIS-RATE",
+        "H07-BASIS-MONTHLY-CAP",
+        "H07-BASIS-EXCLUSION",
+        "H07-BASIS-PAYMENT-DATE"
+      ]
+    },
+    "H08": {
+      "harm_type_name": "fee_after_account_close",
+      "ko_name": "해지 완료 후 수수료 부과",
+      "required_policy_basis_ids": [
+        "H08-BASIS-POST-CLOSE-FEE-RULE",
+        "H08-BASIS-POST-CLOSE-FEE-EXCEPTION",
+        "H08-BASIS-FEE-SCHEDULE-AND-WAIVER"
+      ]
+    }
+  }
+}

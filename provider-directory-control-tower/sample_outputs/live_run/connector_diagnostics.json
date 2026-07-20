@@ -1,0 +1,2907 @@
+[
+  {
+    "provider_id": "NPI1_00001",
+    "node": "npi_registry_lookup",
+    "status": "ok",
+    "evidence_count": 6,
+    "reason": "",
+    "detail": {
+      "evidence_count": 6
+    },
+    "timestamp": "2026-06-29T19:07:01Z"
+  },
+  {
+    "provider_id": "NPI1_00001",
+    "node": "cms_care_compare_lookup",
+    "status": "ok",
+    "evidence_count": 0,
+    "reason": "no_cms_rows_found_for_npi_in_whitelist",
+    "detail": {
+      "evidence_count": 0,
+      "connector": "CMS Provider Data Whitelist",
+      "provider_id": "NPI1_00001",
+      "npi": "1598284069",
+      "configured_data_url": "",
+      "source_mode": "minimal",
+      "strategy": "v08_whitelist_aggregate_dataset_configs",
+      "dataset_runs": [
+        {
+          "source_name": "CMS Medicare FFS Public Provider Enrollment",
+          "role": "medicare_enrollment_provider_type",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/2457ea29-fc82-48b0-86ec-3b0755de7515/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1598284069",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1598284069",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1598284069",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Medicare FFS Public Provider Enrollment",
+          "landingPage": ""
+        },
+        {
+          "source_name": "CMS Revoked Medicare Providers and Suppliers",
+          "role": "revoked_status",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/a6496a7d-4e19-479a-a9ad-d4c0a49e07c3/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1598284069",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1598284069",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1598284069",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Revoked Medicare Providers and Suppliers",
+          "landingPage": ""
+        }
+      ],
+      "reason": "no_cms_rows_found_for_npi_in_whitelist",
+      "sources_with_rows": [],
+      "sources_with_evidence": []
+    },
+    "timestamp": "2026-06-29T19:07:03Z"
+  },
+  {
+    "provider_id": "NPI1_00002",
+    "node": "npi_registry_lookup",
+    "status": "ok",
+    "evidence_count": 6,
+    "reason": "",
+    "detail": {
+      "evidence_count": 6
+    },
+    "timestamp": "2026-06-29T19:07:04Z"
+  },
+  {
+    "provider_id": "NPI1_00002",
+    "node": "cms_care_compare_lookup",
+    "status": "ok",
+    "evidence_count": 4,
+    "reason": "ok",
+    "detail": {
+      "evidence_count": 4,
+      "connector": "CMS Provider Data Whitelist",
+      "provider_id": "NPI1_00002",
+      "npi": "1831841188",
+      "configured_data_url": "",
+      "source_mode": "minimal",
+      "strategy": "v08_whitelist_aggregate_dataset_configs",
+      "dataset_runs": [
+        {
+          "source_name": "CMS Medicare FFS Public Provider Enrollment",
+          "role": "medicare_enrollment_provider_type",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/2457ea29-fc82-48b0-86ec-3b0755de7515/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1831841188",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 1,
+              "matched_rows": 1
+            }
+          ],
+          "rows_found": 1,
+          "evidence_count": 4,
+          "reason": "ok",
+          "dataset_title": "CMS Medicare FFS Public Provider Enrollment",
+          "landingPage": "",
+          "sample_row_keys": [
+            "NPI",
+            "MULTIPLE_NPI_FLAG",
+            "PECOS_ASCT_CNTL_ID",
+            "ENRLMT_ID",
+            "PROVIDER_TYPE_CD",
+            "PROVIDER_TYPE_DESC",
+            "STATE_CD",
+            "FIRST_NAME",
+            "MDL_NAME",
+            "LAST_NAME",
+            "ORG_NAME"
+          ],
+          "sample_row_keys_normalized": [
+            "enrlmt_id",
+            "first_name",
+            "last_name",
+            "mdl_name",
+            "multiple_npi_flag",
+            "npi",
+            "org_name",
+            "pecos_asct_cntl_id",
+            "provider_type_cd",
+            "provider_type_desc",
+            "state_cd"
+          ],
+          "sample_row_preview": {
+            "NPI": "1831841188",
+            "MULTIPLE_NPI_FLAG": "N",
+            "PECOS_ASCT_CNTL_ID": "0648663229",
+            "ENRLMT_ID": "I20220202002560",
+            "PROVIDER_TYPE_CD": "14-50",
+            "PROVIDER_TYPE_DESC": "PRACTITIONER - NURSE PRACTITIONER",
+            "STATE_CD": "FL",
+            "FIRST_NAME": "MARIO",
+            "MDL_NAME": "",
+            "LAST_NAME": "ABALLE MOSQUEDA",
+            "ORG_NAME": ""
+          }
+        },
+        {
+          "source_name": "CMS Revoked Medicare Providers and Suppliers",
+          "role": "revoked_status",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/a6496a7d-4e19-479a-a9ad-d4c0a49e07c3/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1831841188",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1831841188",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1831841188",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Revoked Medicare Providers and Suppliers",
+          "landingPage": ""
+        }
+      ],
+      "reason": "ok",
+      "sources_with_rows": [
+        "CMS Medicare FFS Public Provider Enrollment"
+      ],
+      "sources_with_evidence": [
+        "CMS Medicare FFS Public Provider Enrollment"
+      ]
+    },
+    "timestamp": "2026-06-29T19:07:05Z"
+  },
+  {
+    "provider_id": "NPI1_00003",
+    "node": "npi_registry_lookup",
+    "status": "ok",
+    "evidence_count": 6,
+    "reason": "",
+    "detail": {
+      "evidence_count": 6
+    },
+    "timestamp": "2026-06-29T19:07:05Z"
+  },
+  {
+    "provider_id": "NPI1_00003",
+    "node": "cms_care_compare_lookup",
+    "status": "ok",
+    "evidence_count": 0,
+    "reason": "no_cms_rows_found_for_npi_in_whitelist",
+    "detail": {
+      "evidence_count": 0,
+      "connector": "CMS Provider Data Whitelist",
+      "provider_id": "NPI1_00003",
+      "npi": "1891082467",
+      "configured_data_url": "",
+      "source_mode": "minimal",
+      "strategy": "v08_whitelist_aggregate_dataset_configs",
+      "dataset_runs": [
+        {
+          "source_name": "CMS Medicare FFS Public Provider Enrollment",
+          "role": "medicare_enrollment_provider_type",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/2457ea29-fc82-48b0-86ec-3b0755de7515/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1891082467",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1891082467",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1891082467",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Medicare FFS Public Provider Enrollment",
+          "landingPage": ""
+        },
+        {
+          "source_name": "CMS Revoked Medicare Providers and Suppliers",
+          "role": "revoked_status",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/a6496a7d-4e19-479a-a9ad-d4c0a49e07c3/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1891082467",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1891082467",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1891082467",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Revoked Medicare Providers and Suppliers",
+          "landingPage": ""
+        }
+      ],
+      "reason": "no_cms_rows_found_for_npi_in_whitelist",
+      "sources_with_rows": [],
+      "sources_with_evidence": []
+    },
+    "timestamp": "2026-06-29T19:07:06Z"
+  },
+  {
+    "provider_id": "NPI1_00004",
+    "node": "npi_registry_lookup",
+    "status": "ok",
+    "evidence_count": 6,
+    "reason": "",
+    "detail": {
+      "evidence_count": 6
+    },
+    "timestamp": "2026-06-29T19:07:06Z"
+  },
+  {
+    "provider_id": "NPI1_00004",
+    "node": "cms_care_compare_lookup",
+    "status": "ok",
+    "evidence_count": 0,
+    "reason": "no_cms_rows_found_for_npi_in_whitelist",
+    "detail": {
+      "evidence_count": 0,
+      "connector": "CMS Provider Data Whitelist",
+      "provider_id": "NPI1_00004",
+      "npi": "1104434562",
+      "configured_data_url": "",
+      "source_mode": "minimal",
+      "strategy": "v08_whitelist_aggregate_dataset_configs",
+      "dataset_runs": [
+        {
+          "source_name": "CMS Medicare FFS Public Provider Enrollment",
+          "role": "medicare_enrollment_provider_type",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/2457ea29-fc82-48b0-86ec-3b0755de7515/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1104434562",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1104434562",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1104434562",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Medicare FFS Public Provider Enrollment",
+          "landingPage": ""
+        },
+        {
+          "source_name": "CMS Revoked Medicare Providers and Suppliers",
+          "role": "revoked_status",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/a6496a7d-4e19-479a-a9ad-d4c0a49e07c3/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1104434562",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1104434562",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1104434562",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Revoked Medicare Providers and Suppliers",
+          "landingPage": ""
+        }
+      ],
+      "reason": "no_cms_rows_found_for_npi_in_whitelist",
+      "sources_with_rows": [],
+      "sources_with_evidence": []
+    },
+    "timestamp": "2026-06-29T19:07:08Z"
+  },
+  {
+    "provider_id": "NPI1_00005",
+    "node": "npi_registry_lookup",
+    "status": "ok",
+    "evidence_count": 6,
+    "reason": "",
+    "detail": {
+      "evidence_count": 6
+    },
+    "timestamp": "2026-06-29T19:07:08Z"
+  },
+  {
+    "provider_id": "NPI1_00005",
+    "node": "cms_care_compare_lookup",
+    "status": "ok",
+    "evidence_count": 4,
+    "reason": "ok",
+    "detail": {
+      "evidence_count": 4,
+      "connector": "CMS Provider Data Whitelist",
+      "provider_id": "NPI1_00005",
+      "npi": "1235432303",
+      "configured_data_url": "",
+      "source_mode": "minimal",
+      "strategy": "v08_whitelist_aggregate_dataset_configs",
+      "dataset_runs": [
+        {
+          "source_name": "CMS Medicare FFS Public Provider Enrollment",
+          "role": "medicare_enrollment_provider_type",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/2457ea29-fc82-48b0-86ec-3b0755de7515/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1235432303",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 1,
+              "matched_rows": 1
+            }
+          ],
+          "rows_found": 1,
+          "evidence_count": 4,
+          "reason": "ok",
+          "dataset_title": "CMS Medicare FFS Public Provider Enrollment",
+          "landingPage": "",
+          "sample_row_keys": [
+            "NPI",
+            "MULTIPLE_NPI_FLAG",
+            "PECOS_ASCT_CNTL_ID",
+            "ENRLMT_ID",
+            "PROVIDER_TYPE_CD",
+            "PROVIDER_TYPE_DESC",
+            "STATE_CD",
+            "FIRST_NAME",
+            "MDL_NAME",
+            "LAST_NAME",
+            "ORG_NAME"
+          ],
+          "sample_row_keys_normalized": [
+            "enrlmt_id",
+            "first_name",
+            "last_name",
+            "mdl_name",
+            "multiple_npi_flag",
+            "npi",
+            "org_name",
+            "pecos_asct_cntl_id",
+            "provider_type_cd",
+            "provider_type_desc",
+            "state_cd"
+          ],
+          "sample_row_preview": {
+            "NPI": "1235432303",
+            "MULTIPLE_NPI_FLAG": "N",
+            "PECOS_ASCT_CNTL_ID": "4486874211",
+            "ENRLMT_ID": "I20140930000950",
+            "PROVIDER_TYPE_CD": "14-11",
+            "PROVIDER_TYPE_DESC": "PRACTITIONER - INTERNAL MEDICINE",
+            "STATE_CD": "FL",
+            "FIRST_NAME": "ANARA",
+            "MDL_NAME": "K",
+            "LAST_NAME": "ABBAY",
+            "ORG_NAME": ""
+          }
+        },
+        {
+          "source_name": "CMS Revoked Medicare Providers and Suppliers",
+          "role": "revoked_status",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/a6496a7d-4e19-479a-a9ad-d4c0a49e07c3/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1235432303",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1235432303",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1235432303",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Revoked Medicare Providers and Suppliers",
+          "landingPage": ""
+        }
+      ],
+      "reason": "ok",
+      "sources_with_rows": [
+        "CMS Medicare FFS Public Provider Enrollment"
+      ],
+      "sources_with_evidence": [
+        "CMS Medicare FFS Public Provider Enrollment"
+      ]
+    },
+    "timestamp": "2026-06-29T19:07:09Z"
+  },
+  {
+    "provider_id": "NPI1_00006",
+    "node": "npi_registry_lookup",
+    "status": "ok",
+    "evidence_count": 6,
+    "reason": "",
+    "detail": {
+      "evidence_count": 6
+    },
+    "timestamp": "2026-06-29T19:07:09Z"
+  },
+  {
+    "provider_id": "NPI1_00006",
+    "node": "cms_care_compare_lookup",
+    "status": "ok",
+    "evidence_count": 4,
+    "reason": "ok",
+    "detail": {
+      "evidence_count": 4,
+      "connector": "CMS Provider Data Whitelist",
+      "provider_id": "NPI1_00006",
+      "npi": "1295363927",
+      "configured_data_url": "",
+      "source_mode": "minimal",
+      "strategy": "v08_whitelist_aggregate_dataset_configs",
+      "dataset_runs": [
+        {
+          "source_name": "CMS Medicare FFS Public Provider Enrollment",
+          "role": "medicare_enrollment_provider_type",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/2457ea29-fc82-48b0-86ec-3b0755de7515/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1295363927",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 1,
+              "matched_rows": 1
+            }
+          ],
+          "rows_found": 1,
+          "evidence_count": 4,
+          "reason": "ok",
+          "dataset_title": "CMS Medicare FFS Public Provider Enrollment",
+          "landingPage": "",
+          "sample_row_keys": [
+            "NPI",
+            "MULTIPLE_NPI_FLAG",
+            "PECOS_ASCT_CNTL_ID",
+            "ENRLMT_ID",
+            "PROVIDER_TYPE_CD",
+            "PROVIDER_TYPE_DESC",
+            "STATE_CD",
+            "FIRST_NAME",
+            "MDL_NAME",
+            "LAST_NAME",
+            "ORG_NAME"
+          ],
+          "sample_row_keys_normalized": [
+            "enrlmt_id",
+            "first_name",
+            "last_name",
+            "mdl_name",
+            "multiple_npi_flag",
+            "npi",
+            "org_name",
+            "pecos_asct_cntl_id",
+            "provider_type_cd",
+            "provider_type_desc",
+            "state_cd"
+          ],
+          "sample_row_preview": {
+            "NPI": "1295363927",
+            "MULTIPLE_NPI_FLAG": "N",
+            "PECOS_ASCT_CNTL_ID": "3476976697",
+            "ENRLMT_ID": "I20230922000090",
+            "PROVIDER_TYPE_CD": "14-11",
+            "PROVIDER_TYPE_DESC": "PRACTITIONER - INTERNAL MEDICINE",
+            "STATE_CD": "AZ",
+            "FIRST_NAME": "AMR",
+            "MDL_NAME": "SAMY",
+            "LAST_NAME": "ABDELMOHSEN",
+            "ORG_NAME": ""
+          }
+        },
+        {
+          "source_name": "CMS Revoked Medicare Providers and Suppliers",
+          "role": "revoked_status",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/a6496a7d-4e19-479a-a9ad-d4c0a49e07c3/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1295363927",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1295363927",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1295363927",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Revoked Medicare Providers and Suppliers",
+          "landingPage": ""
+        }
+      ],
+      "reason": "ok",
+      "sources_with_rows": [
+        "CMS Medicare FFS Public Provider Enrollment"
+      ],
+      "sources_with_evidence": [
+        "CMS Medicare FFS Public Provider Enrollment"
+      ]
+    },
+    "timestamp": "2026-06-29T19:07:10Z"
+  },
+  {
+    "provider_id": "NPI1_00007",
+    "node": "npi_registry_lookup",
+    "status": "ok",
+    "evidence_count": 6,
+    "reason": "",
+    "detail": {
+      "evidence_count": 6
+    },
+    "timestamp": "2026-06-29T19:07:10Z"
+  },
+  {
+    "provider_id": "NPI1_00007",
+    "node": "cms_care_compare_lookup",
+    "status": "ok",
+    "evidence_count": 0,
+    "reason": "no_cms_rows_found_for_npi_in_whitelist",
+    "detail": {
+      "evidence_count": 0,
+      "connector": "CMS Provider Data Whitelist",
+      "provider_id": "NPI1_00007",
+      "npi": "1356844617",
+      "configured_data_url": "",
+      "source_mode": "minimal",
+      "strategy": "v08_whitelist_aggregate_dataset_configs",
+      "dataset_runs": [
+        {
+          "source_name": "CMS Medicare FFS Public Provider Enrollment",
+          "role": "medicare_enrollment_provider_type",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/2457ea29-fc82-48b0-86ec-3b0755de7515/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1356844617",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1356844617",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1356844617",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Medicare FFS Public Provider Enrollment",
+          "landingPage": ""
+        },
+        {
+          "source_name": "CMS Revoked Medicare Providers and Suppliers",
+          "role": "revoked_status",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/a6496a7d-4e19-479a-a9ad-d4c0a49e07c3/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1356844617",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1356844617",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1356844617",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Revoked Medicare Providers and Suppliers",
+          "landingPage": ""
+        }
+      ],
+      "reason": "no_cms_rows_found_for_npi_in_whitelist",
+      "sources_with_rows": [],
+      "sources_with_evidence": []
+    },
+    "timestamp": "2026-06-29T19:07:11Z"
+  },
+  {
+    "provider_id": "NPI1_00008",
+    "node": "npi_registry_lookup",
+    "status": "ok",
+    "evidence_count": 6,
+    "reason": "",
+    "detail": {
+      "evidence_count": 6
+    },
+    "timestamp": "2026-06-29T19:07:12Z"
+  },
+  {
+    "provider_id": "NPI1_00008",
+    "node": "cms_care_compare_lookup",
+    "status": "ok",
+    "evidence_count": 0,
+    "reason": "no_cms_rows_found_for_npi_in_whitelist",
+    "detail": {
+      "evidence_count": 0,
+      "connector": "CMS Provider Data Whitelist",
+      "provider_id": "NPI1_00008",
+      "npi": "1952976995",
+      "configured_data_url": "",
+      "source_mode": "minimal",
+      "strategy": "v08_whitelist_aggregate_dataset_configs",
+      "dataset_runs": [
+        {
+          "source_name": "CMS Medicare FFS Public Provider Enrollment",
+          "role": "medicare_enrollment_provider_type",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/2457ea29-fc82-48b0-86ec-3b0755de7515/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1952976995",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1952976995",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1952976995",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Medicare FFS Public Provider Enrollment",
+          "landingPage": ""
+        },
+        {
+          "source_name": "CMS Revoked Medicare Providers and Suppliers",
+          "role": "revoked_status",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/a6496a7d-4e19-479a-a9ad-d4c0a49e07c3/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1952976995",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1952976995",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1952976995",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Revoked Medicare Providers and Suppliers",
+          "landingPage": ""
+        }
+      ],
+      "reason": "no_cms_rows_found_for_npi_in_whitelist",
+      "sources_with_rows": [],
+      "sources_with_evidence": []
+    },
+    "timestamp": "2026-06-29T19:07:13Z"
+  },
+  {
+    "provider_id": "NPI1_00009",
+    "node": "npi_registry_lookup",
+    "status": "ok",
+    "evidence_count": 6,
+    "reason": "",
+    "detail": {
+      "evidence_count": 6
+    },
+    "timestamp": "2026-06-29T19:07:14Z"
+  },
+  {
+    "provider_id": "NPI1_00009",
+    "node": "cms_care_compare_lookup",
+    "status": "ok",
+    "evidence_count": 4,
+    "reason": "ok",
+    "detail": {
+      "evidence_count": 4,
+      "connector": "CMS Provider Data Whitelist",
+      "provider_id": "NPI1_00009",
+      "npi": "1184253296",
+      "configured_data_url": "",
+      "source_mode": "minimal",
+      "strategy": "v08_whitelist_aggregate_dataset_configs",
+      "dataset_runs": [
+        {
+          "source_name": "CMS Medicare FFS Public Provider Enrollment",
+          "role": "medicare_enrollment_provider_type",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/2457ea29-fc82-48b0-86ec-3b0755de7515/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1184253296",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 1,
+              "matched_rows": 1
+            }
+          ],
+          "rows_found": 1,
+          "evidence_count": 4,
+          "reason": "ok",
+          "dataset_title": "CMS Medicare FFS Public Provider Enrollment",
+          "landingPage": "",
+          "sample_row_keys": [
+            "NPI",
+            "MULTIPLE_NPI_FLAG",
+            "PECOS_ASCT_CNTL_ID",
+            "ENRLMT_ID",
+            "PROVIDER_TYPE_CD",
+            "PROVIDER_TYPE_DESC",
+            "STATE_CD",
+            "FIRST_NAME",
+            "MDL_NAME",
+            "LAST_NAME",
+            "ORG_NAME"
+          ],
+          "sample_row_keys_normalized": [
+            "enrlmt_id",
+            "first_name",
+            "last_name",
+            "mdl_name",
+            "multiple_npi_flag",
+            "npi",
+            "org_name",
+            "pecos_asct_cntl_id",
+            "provider_type_cd",
+            "provider_type_desc",
+            "state_cd"
+          ],
+          "sample_row_preview": {
+            "NPI": "1184253296",
+            "MULTIPLE_NPI_FLAG": "N",
+            "PECOS_ASCT_CNTL_ID": "8729455647",
+            "ENRLMT_ID": "I20230526001479",
+            "PROVIDER_TYPE_CD": "14-11",
+            "PROVIDER_TYPE_DESC": "PRACTITIONER - INTERNAL MEDICINE",
+            "STATE_CD": "FL",
+            "FIRST_NAME": "ANGELO",
+            "MDL_NAME": "",
+            "LAST_NAME": "ABELLI",
+            "ORG_NAME": ""
+          }
+        },
+        {
+          "source_name": "CMS Revoked Medicare Providers and Suppliers",
+          "role": "revoked_status",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/a6496a7d-4e19-479a-a9ad-d4c0a49e07c3/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1184253296",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1184253296",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1184253296",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Revoked Medicare Providers and Suppliers",
+          "landingPage": ""
+        }
+      ],
+      "reason": "ok",
+      "sources_with_rows": [
+        "CMS Medicare FFS Public Provider Enrollment"
+      ],
+      "sources_with_evidence": [
+        "CMS Medicare FFS Public Provider Enrollment"
+      ]
+    },
+    "timestamp": "2026-06-29T19:07:14Z"
+  },
+  {
+    "provider_id": "NPI1_00010",
+    "node": "npi_registry_lookup",
+    "status": "ok",
+    "evidence_count": 6,
+    "reason": "",
+    "detail": {
+      "evidence_count": 6
+    },
+    "timestamp": "2026-06-29T19:07:15Z"
+  },
+  {
+    "provider_id": "NPI1_00010",
+    "node": "cms_care_compare_lookup",
+    "status": "ok",
+    "evidence_count": 0,
+    "reason": "no_cms_rows_found_for_npi_in_whitelist",
+    "detail": {
+      "evidence_count": 0,
+      "connector": "CMS Provider Data Whitelist",
+      "provider_id": "NPI1_00010",
+      "npi": "1912870478",
+      "configured_data_url": "",
+      "source_mode": "minimal",
+      "strategy": "v08_whitelist_aggregate_dataset_configs",
+      "dataset_runs": [
+        {
+          "source_name": "CMS Medicare FFS Public Provider Enrollment",
+          "role": "medicare_enrollment_provider_type",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/2457ea29-fc82-48b0-86ec-3b0755de7515/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1912870478",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1912870478",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1912870478",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Medicare FFS Public Provider Enrollment",
+          "landingPage": ""
+        },
+        {
+          "source_name": "CMS Revoked Medicare Providers and Suppliers",
+          "role": "revoked_status",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/a6496a7d-4e19-479a-a9ad-d4c0a49e07c3/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1912870478",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1912870478",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1912870478",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Revoked Medicare Providers and Suppliers",
+          "landingPage": ""
+        }
+      ],
+      "reason": "no_cms_rows_found_for_npi_in_whitelist",
+      "sources_with_rows": [],
+      "sources_with_evidence": []
+    },
+    "timestamp": "2026-06-29T19:07:17Z"
+  },
+  {
+    "provider_id": "NPI1_00011",
+    "node": "npi_registry_lookup",
+    "status": "ok",
+    "evidence_count": 6,
+    "reason": "",
+    "detail": {
+      "evidence_count": 6
+    },
+    "timestamp": "2026-06-29T19:07:17Z"
+  },
+  {
+    "provider_id": "NPI1_00011",
+    "node": "cms_care_compare_lookup",
+    "status": "ok",
+    "evidence_count": 4,
+    "reason": "ok",
+    "detail": {
+      "evidence_count": 4,
+      "connector": "CMS Provider Data Whitelist",
+      "provider_id": "NPI1_00011",
+      "npi": "1043218977",
+      "configured_data_url": "",
+      "source_mode": "minimal",
+      "strategy": "v08_whitelist_aggregate_dataset_configs",
+      "dataset_runs": [
+        {
+          "source_name": "CMS Medicare FFS Public Provider Enrollment",
+          "role": "medicare_enrollment_provider_type",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/2457ea29-fc82-48b0-86ec-3b0755de7515/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1043218977",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 1,
+              "matched_rows": 1
+            }
+          ],
+          "rows_found": 1,
+          "evidence_count": 4,
+          "reason": "ok",
+          "dataset_title": "CMS Medicare FFS Public Provider Enrollment",
+          "landingPage": "",
+          "sample_row_keys": [
+            "NPI",
+            "MULTIPLE_NPI_FLAG",
+            "PECOS_ASCT_CNTL_ID",
+            "ENRLMT_ID",
+            "PROVIDER_TYPE_CD",
+            "PROVIDER_TYPE_DESC",
+            "STATE_CD",
+            "FIRST_NAME",
+            "MDL_NAME",
+            "LAST_NAME",
+            "ORG_NAME"
+          ],
+          "sample_row_keys_normalized": [
+            "enrlmt_id",
+            "first_name",
+            "last_name",
+            "mdl_name",
+            "multiple_npi_flag",
+            "npi",
+            "org_name",
+            "pecos_asct_cntl_id",
+            "provider_type_cd",
+            "provider_type_desc",
+            "state_cd"
+          ],
+          "sample_row_preview": {
+            "NPI": "1043218977",
+            "MULTIPLE_NPI_FLAG": "N",
+            "PECOS_ASCT_CNTL_ID": "8820039571",
+            "ENRLMT_ID": "I20050513000165",
+            "PROVIDER_TYPE_CD": "14-01",
+            "PROVIDER_TYPE_DESC": "PRACTITIONER - GENERAL PRACTICE",
+            "STATE_CD": "FL",
+            "FIRST_NAME": "RICHARD",
+            "MDL_NAME": "G",
+            "LAST_NAME": "ABOOD",
+            "ORG_NAME": ""
+          }
+        },
+        {
+          "source_name": "CMS Revoked Medicare Providers and Suppliers",
+          "role": "revoked_status",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/a6496a7d-4e19-479a-a9ad-d4c0a49e07c3/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1043218977",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1043218977",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1043218977",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Revoked Medicare Providers and Suppliers",
+          "landingPage": ""
+        }
+      ],
+      "reason": "ok",
+      "sources_with_rows": [
+        "CMS Medicare FFS Public Provider Enrollment"
+      ],
+      "sources_with_evidence": [
+        "CMS Medicare FFS Public Provider Enrollment"
+      ]
+    },
+    "timestamp": "2026-06-29T19:07:18Z"
+  },
+  {
+    "provider_id": "NPI1_00012",
+    "node": "npi_registry_lookup",
+    "status": "ok",
+    "evidence_count": 6,
+    "reason": "",
+    "detail": {
+      "evidence_count": 6
+    },
+    "timestamp": "2026-06-29T19:07:18Z"
+  },
+  {
+    "provider_id": "NPI1_00012",
+    "node": "cms_care_compare_lookup",
+    "status": "ok",
+    "evidence_count": 0,
+    "reason": "no_cms_rows_found_for_npi_in_whitelist",
+    "detail": {
+      "evidence_count": 0,
+      "connector": "CMS Provider Data Whitelist",
+      "provider_id": "NPI1_00012",
+      "npi": "1669224457",
+      "configured_data_url": "",
+      "source_mode": "minimal",
+      "strategy": "v08_whitelist_aggregate_dataset_configs",
+      "dataset_runs": [
+        {
+          "source_name": "CMS Medicare FFS Public Provider Enrollment",
+          "role": "medicare_enrollment_provider_type",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/2457ea29-fc82-48b0-86ec-3b0755de7515/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1669224457",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1669224457",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1669224457",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Medicare FFS Public Provider Enrollment",
+          "landingPage": ""
+        },
+        {
+          "source_name": "CMS Revoked Medicare Providers and Suppliers",
+          "role": "revoked_status",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/a6496a7d-4e19-479a-a9ad-d4c0a49e07c3/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1669224457",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1669224457",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1669224457",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Revoked Medicare Providers and Suppliers",
+          "landingPage": ""
+        }
+      ],
+      "reason": "no_cms_rows_found_for_npi_in_whitelist",
+      "sources_with_rows": [],
+      "sources_with_evidence": []
+    },
+    "timestamp": "2026-06-29T19:07:19Z"
+  },
+  {
+    "provider_id": "NPI1_00013",
+    "node": "npi_registry_lookup",
+    "status": "ok",
+    "evidence_count": 6,
+    "reason": "",
+    "detail": {
+      "evidence_count": 6
+    },
+    "timestamp": "2026-06-29T19:07:20Z"
+  },
+  {
+    "provider_id": "NPI1_00013",
+    "node": "cms_care_compare_lookup",
+    "status": "ok",
+    "evidence_count": 0,
+    "reason": "no_cms_rows_found_for_npi_in_whitelist",
+    "detail": {
+      "evidence_count": 0,
+      "connector": "CMS Provider Data Whitelist",
+      "provider_id": "NPI1_00013",
+      "npi": "1073482121",
+      "configured_data_url": "",
+      "source_mode": "minimal",
+      "strategy": "v08_whitelist_aggregate_dataset_configs",
+      "dataset_runs": [
+        {
+          "source_name": "CMS Medicare FFS Public Provider Enrollment",
+          "role": "medicare_enrollment_provider_type",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/2457ea29-fc82-48b0-86ec-3b0755de7515/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1073482121",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1073482121",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1073482121",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Medicare FFS Public Provider Enrollment",
+          "landingPage": ""
+        },
+        {
+          "source_name": "CMS Revoked Medicare Providers and Suppliers",
+          "role": "revoked_status",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/a6496a7d-4e19-479a-a9ad-d4c0a49e07c3/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1073482121",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1073482121",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1073482121",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Revoked Medicare Providers and Suppliers",
+          "landingPage": ""
+        }
+      ],
+      "reason": "no_cms_rows_found_for_npi_in_whitelist",
+      "sources_with_rows": [],
+      "sources_with_evidence": []
+    },
+    "timestamp": "2026-06-29T19:07:21Z"
+  },
+  {
+    "provider_id": "NPI1_00014",
+    "node": "npi_registry_lookup",
+    "status": "ok",
+    "evidence_count": 6,
+    "reason": "",
+    "detail": {
+      "evidence_count": 6
+    },
+    "timestamp": "2026-06-29T19:07:21Z"
+  },
+  {
+    "provider_id": "NPI1_00014",
+    "node": "cms_care_compare_lookup",
+    "status": "ok",
+    "evidence_count": 4,
+    "reason": "ok",
+    "detail": {
+      "evidence_count": 4,
+      "connector": "CMS Provider Data Whitelist",
+      "provider_id": "NPI1_00014",
+      "npi": "1215425319",
+      "configured_data_url": "",
+      "source_mode": "minimal",
+      "strategy": "v08_whitelist_aggregate_dataset_configs",
+      "dataset_runs": [
+        {
+          "source_name": "CMS Medicare FFS Public Provider Enrollment",
+          "role": "medicare_enrollment_provider_type",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/2457ea29-fc82-48b0-86ec-3b0755de7515/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1215425319",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 2,
+              "matched_rows": 2
+            }
+          ],
+          "rows_found": 2,
+          "evidence_count": 4,
+          "reason": "ok",
+          "dataset_title": "CMS Medicare FFS Public Provider Enrollment",
+          "landingPage": "",
+          "sample_row_keys": [
+            "NPI",
+            "MULTIPLE_NPI_FLAG",
+            "PECOS_ASCT_CNTL_ID",
+            "ENRLMT_ID",
+            "PROVIDER_TYPE_CD",
+            "PROVIDER_TYPE_DESC",
+            "STATE_CD",
+            "FIRST_NAME",
+            "MDL_NAME",
+            "LAST_NAME",
+            "ORG_NAME"
+          ],
+          "sample_row_keys_normalized": [
+            "enrlmt_id",
+            "first_name",
+            "last_name",
+            "mdl_name",
+            "multiple_npi_flag",
+            "npi",
+            "org_name",
+            "pecos_asct_cntl_id",
+            "provider_type_cd",
+            "provider_type_desc",
+            "state_cd"
+          ],
+          "sample_row_preview": {
+            "NPI": "1215425319",
+            "MULTIPLE_NPI_FLAG": "N",
+            "PECOS_ASCT_CNTL_ID": "3779847934",
+            "ENRLMT_ID": "I20220412001977",
+            "PROVIDER_TYPE_CD": "14-06",
+            "PROVIDER_TYPE_DESC": "PRACTITIONER - CARDIOVASCULAR DISEASE (CARDIOLOGY)",
+            "STATE_CD": "AZ",
+            "FIRST_NAME": "BISHOY",
+            "MDL_NAME": "",
+            "LAST_NAME": "ABRAHAM",
+            "ORG_NAME": ""
+          }
+        },
+        {
+          "source_name": "CMS Revoked Medicare Providers and Suppliers",
+          "role": "revoked_status",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/a6496a7d-4e19-479a-a9ad-d4c0a49e07c3/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1215425319",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1215425319",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1215425319",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Revoked Medicare Providers and Suppliers",
+          "landingPage": ""
+        }
+      ],
+      "reason": "ok",
+      "sources_with_rows": [
+        "CMS Medicare FFS Public Provider Enrollment"
+      ],
+      "sources_with_evidence": [
+        "CMS Medicare FFS Public Provider Enrollment"
+      ]
+    },
+    "timestamp": "2026-06-29T19:07:22Z"
+  },
+  {
+    "provider_id": "NPI1_00015",
+    "node": "npi_registry_lookup",
+    "status": "ok",
+    "evidence_count": 6,
+    "reason": "",
+    "detail": {
+      "evidence_count": 6
+    },
+    "timestamp": "2026-06-29T19:07:23Z"
+  },
+  {
+    "provider_id": "NPI1_00015",
+    "node": "cms_care_compare_lookup",
+    "status": "ok",
+    "evidence_count": 2,
+    "reason": "ok",
+    "detail": {
+      "evidence_count": 2,
+      "connector": "CMS Provider Data Whitelist",
+      "provider_id": "NPI1_00015",
+      "npi": "1386606325",
+      "configured_data_url": "",
+      "source_mode": "minimal",
+      "strategy": "v08_whitelist_aggregate_dataset_configs",
+      "dataset_runs": [
+        {
+          "source_name": "CMS Medicare FFS Public Provider Enrollment",
+          "role": "medicare_enrollment_provider_type",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/2457ea29-fc82-48b0-86ec-3b0755de7515/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1386606325",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1386606325",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1386606325",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Medicare FFS Public Provider Enrollment",
+          "landingPage": ""
+        },
+        {
+          "source_name": "CMS Revoked Medicare Providers and Suppliers",
+          "role": "revoked_status",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/a6496a7d-4e19-479a-a9ad-d4c0a49e07c3/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1386606325",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 1,
+              "matched_rows": 1
+            }
+          ],
+          "rows_found": 1,
+          "evidence_count": 2,
+          "reason": "ok",
+          "dataset_title": "CMS Revoked Medicare Providers and Suppliers",
+          "landingPage": "",
+          "sample_row_keys": [
+            "ENRLMT_ID",
+            "NPI",
+            "FIRST_NAME",
+            "MDL_NAME",
+            "LAST_NAME",
+            "ORG_NAME",
+            "MULTIPLE_NPI_FLAG",
+            "STATE_CD",
+            "PROVIDER_TYPE_DESC",
+            "REVOCATION_RSN",
+            "REVOCATION_EFCTV_DT",
+            "REENROLLMENT_BAR_EXPRTN_DT"
+          ],
+          "sample_row_keys_normalized": [
+            "enrlmt_id",
+            "first_name",
+            "last_name",
+            "mdl_name",
+            "multiple_npi_flag",
+            "npi",
+            "org_name",
+            "provider_type_desc",
+            "reenrollment_bar_exprtn_dt",
+            "revocation_efctv_dt",
+            "revocation_rsn",
+            "state_cd"
+          ],
+          "sample_row_preview": {
+            "ENRLMT_ID": "I20110607000109",
+            "NPI": "1386606325",
+            "FIRST_NAME": "GERALD",
+            "MDL_NAME": "MICHAEL",
+            "LAST_NAME": "ABRAHAM",
+            "ORG_NAME": "",
+            "MULTIPLE_NPI_FLAG": "N",
+            "STATE_CD": "FL",
+            "PROVIDER_TYPE_DESC": "PRACTITIONER - PSYCHIATRY",
+            "REVOCATION_RSN": "424.535(A)(3) Felonies",
+            "REVOCATION_EFCTV_DT": "2021-07-06",
+            "REENROLLMENT_BAR_EXPRTN_DT": "2031-07-06"
+          }
+        }
+      ],
+      "reason": "ok",
+      "sources_with_rows": [
+        "CMS Revoked Medicare Providers and Suppliers"
+      ],
+      "sources_with_evidence": [
+        "CMS Revoked Medicare Providers and Suppliers"
+      ]
+    },
+    "timestamp": "2026-06-29T19:07:24Z"
+  },
+  {
+    "provider_id": "NPI1_00016",
+    "node": "npi_registry_lookup",
+    "status": "ok",
+    "evidence_count": 6,
+    "reason": "",
+    "detail": {
+      "evidence_count": 6
+    },
+    "timestamp": "2026-06-29T19:07:25Z"
+  },
+  {
+    "provider_id": "NPI1_00016",
+    "node": "cms_care_compare_lookup",
+    "status": "ok",
+    "evidence_count": 4,
+    "reason": "ok",
+    "detail": {
+      "evidence_count": 4,
+      "connector": "CMS Provider Data Whitelist",
+      "provider_id": "NPI1_00016",
+      "npi": "1174883722",
+      "configured_data_url": "",
+      "source_mode": "minimal",
+      "strategy": "v08_whitelist_aggregate_dataset_configs",
+      "dataset_runs": [
+        {
+          "source_name": "CMS Medicare FFS Public Provider Enrollment",
+          "role": "medicare_enrollment_provider_type",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/2457ea29-fc82-48b0-86ec-3b0755de7515/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1174883722",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 2,
+              "matched_rows": 2
+            }
+          ],
+          "rows_found": 2,
+          "evidence_count": 4,
+          "reason": "ok",
+          "dataset_title": "CMS Medicare FFS Public Provider Enrollment",
+          "landingPage": "",
+          "sample_row_keys": [
+            "NPI",
+            "MULTIPLE_NPI_FLAG",
+            "PECOS_ASCT_CNTL_ID",
+            "ENRLMT_ID",
+            "PROVIDER_TYPE_CD",
+            "PROVIDER_TYPE_DESC",
+            "STATE_CD",
+            "FIRST_NAME",
+            "MDL_NAME",
+            "LAST_NAME",
+            "ORG_NAME"
+          ],
+          "sample_row_keys_normalized": [
+            "enrlmt_id",
+            "first_name",
+            "last_name",
+            "mdl_name",
+            "multiple_npi_flag",
+            "npi",
+            "org_name",
+            "pecos_asct_cntl_id",
+            "provider_type_cd",
+            "provider_type_desc",
+            "state_cd"
+          ],
+          "sample_row_preview": {
+            "NPI": "1174883722",
+            "MULTIPLE_NPI_FLAG": "N",
+            "PECOS_ASCT_CNTL_ID": "8527376300",
+            "ENRLMT_ID": "I20150928001574",
+            "PROVIDER_TYPE_CD": "14-11",
+            "PROVIDER_TYPE_DESC": "PRACTITIONER - INTERNAL MEDICINE",
+            "STATE_CD": "LA",
+            "FIRST_NAME": "SHAUN",
+            "MDL_NAME": "A",
+            "LAST_NAME": "ABRAHAM",
+            "ORG_NAME": ""
+          }
+        },
+        {
+          "source_name": "CMS Revoked Medicare Providers and Suppliers",
+          "role": "revoked_status",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/a6496a7d-4e19-479a-a9ad-d4c0a49e07c3/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1174883722",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1174883722",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1174883722",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Revoked Medicare Providers and Suppliers",
+          "landingPage": ""
+        }
+      ],
+      "reason": "ok",
+      "sources_with_rows": [
+        "CMS Medicare FFS Public Provider Enrollment"
+      ],
+      "sources_with_evidence": [
+        "CMS Medicare FFS Public Provider Enrollment"
+      ]
+    },
+    "timestamp": "2026-06-29T19:07:26Z"
+  },
+  {
+    "provider_id": "NPI1_00017",
+    "node": "npi_registry_lookup",
+    "status": "ok",
+    "evidence_count": 6,
+    "reason": "",
+    "detail": {
+      "evidence_count": 6
+    },
+    "timestamp": "2026-06-29T19:07:26Z"
+  },
+  {
+    "provider_id": "NPI1_00017",
+    "node": "cms_care_compare_lookup",
+    "status": "ok",
+    "evidence_count": 0,
+    "reason": "no_cms_rows_found_for_npi_in_whitelist",
+    "detail": {
+      "evidence_count": 0,
+      "connector": "CMS Provider Data Whitelist",
+      "provider_id": "NPI1_00017",
+      "npi": "1306672092",
+      "configured_data_url": "",
+      "source_mode": "minimal",
+      "strategy": "v08_whitelist_aggregate_dataset_configs",
+      "dataset_runs": [
+        {
+          "source_name": "CMS Medicare FFS Public Provider Enrollment",
+          "role": "medicare_enrollment_provider_type",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/2457ea29-fc82-48b0-86ec-3b0755de7515/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1306672092",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1306672092",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1306672092",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Medicare FFS Public Provider Enrollment",
+          "landingPage": ""
+        },
+        {
+          "source_name": "CMS Revoked Medicare Providers and Suppliers",
+          "role": "revoked_status",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/a6496a7d-4e19-479a-a9ad-d4c0a49e07c3/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1306672092",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1306672092",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1306672092",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Revoked Medicare Providers and Suppliers",
+          "landingPage": ""
+        }
+      ],
+      "reason": "no_cms_rows_found_for_npi_in_whitelist",
+      "sources_with_rows": [],
+      "sources_with_evidence": []
+    },
+    "timestamp": "2026-06-29T19:07:28Z"
+  },
+  {
+    "provider_id": "NPI1_00018",
+    "node": "npi_registry_lookup",
+    "status": "ok",
+    "evidence_count": 6,
+    "reason": "",
+    "detail": {
+      "evidence_count": 6
+    },
+    "timestamp": "2026-06-29T19:07:28Z"
+  },
+  {
+    "provider_id": "NPI1_00018",
+    "node": "cms_care_compare_lookup",
+    "status": "ok",
+    "evidence_count": 4,
+    "reason": "ok",
+    "detail": {
+      "evidence_count": 4,
+      "connector": "CMS Provider Data Whitelist",
+      "provider_id": "NPI1_00018",
+      "npi": "1053020784",
+      "configured_data_url": "",
+      "source_mode": "minimal",
+      "strategy": "v08_whitelist_aggregate_dataset_configs",
+      "dataset_runs": [
+        {
+          "source_name": "CMS Medicare FFS Public Provider Enrollment",
+          "role": "medicare_enrollment_provider_type",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/2457ea29-fc82-48b0-86ec-3b0755de7515/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1053020784",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 2,
+              "matched_rows": 2
+            }
+          ],
+          "rows_found": 2,
+          "evidence_count": 4,
+          "reason": "ok",
+          "dataset_title": "CMS Medicare FFS Public Provider Enrollment",
+          "landingPage": "",
+          "sample_row_keys": [
+            "NPI",
+            "MULTIPLE_NPI_FLAG",
+            "PECOS_ASCT_CNTL_ID",
+            "ENRLMT_ID",
+            "PROVIDER_TYPE_CD",
+            "PROVIDER_TYPE_DESC",
+            "STATE_CD",
+            "FIRST_NAME",
+            "MDL_NAME",
+            "LAST_NAME",
+            "ORG_NAME"
+          ],
+          "sample_row_keys_normalized": [
+            "enrlmt_id",
+            "first_name",
+            "last_name",
+            "mdl_name",
+            "multiple_npi_flag",
+            "npi",
+            "org_name",
+            "pecos_asct_cntl_id",
+            "provider_type_cd",
+            "provider_type_desc",
+            "state_cd"
+          ],
+          "sample_row_preview": {
+            "NPI": "1053020784",
+            "MULTIPLE_NPI_FLAG": "N",
+            "PECOS_ASCT_CNTL_ID": "9638532773",
+            "ENRLMT_ID": "I20230823000442",
+            "PROVIDER_TYPE_CD": "14-43",
+            "PROVIDER_TYPE_DESC": "PRACTITIONER - CERTIFIED REGISTERED NURSE ANESTHETIST (CRNA)",
+            "STATE_CD": "FL",
+            "FIRST_NAME": "ALBERTO",
+            "MDL_NAME": "",
+            "LAST_NAME": "ABREU",
+            "ORG_NAME": ""
+          }
+        },
+        {
+          "source_name": "CMS Revoked Medicare Providers and Suppliers",
+          "role": "revoked_status",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/a6496a7d-4e19-479a-a9ad-d4c0a49e07c3/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1053020784",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1053020784",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1053020784",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Revoked Medicare Providers and Suppliers",
+          "landingPage": ""
+        }
+      ],
+      "reason": "ok",
+      "sources_with_rows": [
+        "CMS Medicare FFS Public Provider Enrollment"
+      ],
+      "sources_with_evidence": [
+        "CMS Medicare FFS Public Provider Enrollment"
+      ]
+    },
+    "timestamp": "2026-06-29T19:07:29Z"
+  },
+  {
+    "provider_id": "NPI1_00019",
+    "node": "npi_registry_lookup",
+    "status": "ok",
+    "evidence_count": 6,
+    "reason": "",
+    "detail": {
+      "evidence_count": 6
+    },
+    "timestamp": "2026-06-29T19:07:29Z"
+  },
+  {
+    "provider_id": "NPI1_00019",
+    "node": "cms_care_compare_lookup",
+    "status": "ok",
+    "evidence_count": 0,
+    "reason": "no_cms_rows_found_for_npi_in_whitelist",
+    "detail": {
+      "evidence_count": 0,
+      "connector": "CMS Provider Data Whitelist",
+      "provider_id": "NPI1_00019",
+      "npi": "1679163695",
+      "configured_data_url": "",
+      "source_mode": "minimal",
+      "strategy": "v08_whitelist_aggregate_dataset_configs",
+      "dataset_runs": [
+        {
+          "source_name": "CMS Medicare FFS Public Provider Enrollment",
+          "role": "medicare_enrollment_provider_type",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/2457ea29-fc82-48b0-86ec-3b0755de7515/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1679163695",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1679163695",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1679163695",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Medicare FFS Public Provider Enrollment",
+          "landingPage": ""
+        },
+        {
+          "source_name": "CMS Revoked Medicare Providers and Suppliers",
+          "role": "revoked_status",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/a6496a7d-4e19-479a-a9ad-d4c0a49e07c3/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1679163695",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1679163695",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1679163695",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Revoked Medicare Providers and Suppliers",
+          "landingPage": ""
+        }
+      ],
+      "reason": "no_cms_rows_found_for_npi_in_whitelist",
+      "sources_with_rows": [],
+      "sources_with_evidence": []
+    },
+    "timestamp": "2026-06-29T19:07:30Z"
+  },
+  {
+    "provider_id": "NPI1_00020",
+    "node": "npi_registry_lookup",
+    "status": "ok",
+    "evidence_count": 6,
+    "reason": "",
+    "detail": {
+      "evidence_count": 6
+    },
+    "timestamp": "2026-06-29T19:07:31Z"
+  },
+  {
+    "provider_id": "NPI1_00020",
+    "node": "cms_care_compare_lookup",
+    "status": "ok",
+    "evidence_count": 0,
+    "reason": "no_cms_rows_found_for_npi_in_whitelist",
+    "detail": {
+      "evidence_count": 0,
+      "connector": "CMS Provider Data Whitelist",
+      "provider_id": "NPI1_00020",
+      "npi": "1629873302",
+      "configured_data_url": "",
+      "source_mode": "minimal",
+      "strategy": "v08_whitelist_aggregate_dataset_configs",
+      "dataset_runs": [
+        {
+          "source_name": "CMS Medicare FFS Public Provider Enrollment",
+          "role": "medicare_enrollment_provider_type",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/2457ea29-fc82-48b0-86ec-3b0755de7515/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1629873302",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1629873302",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1629873302",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Medicare FFS Public Provider Enrollment",
+          "landingPage": ""
+        },
+        {
+          "source_name": "CMS Revoked Medicare Providers and Suppliers",
+          "role": "revoked_status",
+          "status": "ok",
+          "endpoint": "https://data.cms.gov/data-api/v1/dataset/a6496a7d-4e19-479a-a9ad-d4c0a49e07c3/data",
+          "endpoint_source": "built_in",
+          "query_attempts": [
+            {
+              "method": "filter",
+              "field": "NPI",
+              "params": {
+                "filter[NPI]": "1629873302",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            },
+            {
+              "method": "filter",
+              "field": "npi",
+              "params": {
+                "filter[npi]": "1629873302",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 10,
+              "matched_rows": 0
+            },
+            {
+              "method": "keyword",
+              "params": {
+                "keyword": "1629873302",
+                "size": "10",
+                "offset": "0"
+              },
+              "status": "ok",
+              "status_code": 200,
+              "raw_rows": 0,
+              "matched_rows": 0
+            }
+          ],
+          "rows_found": 0,
+          "evidence_count": 0,
+          "reason": "no_rows_for_npi",
+          "dataset_title": "CMS Revoked Medicare Providers and Suppliers",
+          "landingPage": ""
+        }
+      ],
+      "reason": "no_cms_rows_found_for_npi_in_whitelist",
+      "sources_with_rows": [],
+      "sources_with_evidence": []
+    },
+    "timestamp": "2026-06-29T19:07:33Z"
+  }
+]

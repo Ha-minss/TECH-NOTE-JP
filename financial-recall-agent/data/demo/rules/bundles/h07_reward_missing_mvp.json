@@ -1,0 +1,95 @@
+{
+  "schema_version": "2.0",
+  "bundle_type": "RECALL_RULE_BUNDLE",
+  "bundle_id": "H07_REWARD_MISSING_MVP_2026_06",
+  "legacy_bundle_ids": [
+    "H07_SMART_CASHBACK_MVP_2026_06"
+  ],
+  "bundle_name": "H07 Reward Missing MVP approved execution bundle",
+  "bundle_status": "APPROVED_FOR_MVP_DEMO",
+  "production_approval_status": "NOT_APPROVED_FOR_PRODUCTION",
+  "execution_mode": "MVP_DEMO",
+  "description": "Approved MVP bundle for the generic H07 reward/cashback/point/mileage missing template. Product-specific policy is selected from allowed_product_configs; Smart Cashback is the first approved config instance.",
+  "rule_registry_path": "data/demo/rules/rule_registry.json",
+  "rule_registry_sha256_canonical": "52b64da059fb73d6bb8b3c010fb80e43f13efed074b3298c1869b492f902d196",
+  "dataset_base_path": "data/demo/datasets/jb_h07_synthetic_dataset_v3",
+  "policy_basis_registry_path": "data/demo/policy_rag/policy_basis_registry.jsonl",
+  "audit_log_path": "data/demo/audit/audit_log.jsonl",
+  "runtime_controls": {
+    "path_override_allowed_in_normal_mode": false,
+    "developer_mode_env_var": "RECALL_AGENT_DEV_MODE",
+    "llm_can_generate_sql": false,
+    "llm_can_calculate_refund_amount": false,
+    "automatic_refund_allowed": false,
+    "human_review_required_before_refund": true,
+    "product_specific_rule_creation_allowed": false,
+    "product_specific_policy_location": "allowed_product_configs"
+  },
+  "rules": [
+    {
+      "rule_id": "H07-REWARD-MISSING-TEMPLATE",
+      "legacy_rule_ids": [
+        "H07-SMART-CASHBACK-001"
+      ],
+      "rule_template_id": "H07_REWARD_MISSING",
+      "rule_status": "ACTIVE_FOR_MVP_DEMO",
+      "sql_dir": "sql/reward_missing",
+      "default_product_config_id": "JB_SMART_CASHBACK_CHECK__2022-07__v2",
+      "allowed_product_configs": [
+        {
+          "product_config_id": "JB_SMART_CASHBACK_CHECK__2022-07__v2",
+          "product_id": "JB_SMART_CASHBACK_CHECK",
+          "product_name": "Smart Cashback 체크카드",
+          "product_family": "REWARD_CASHBACK_POINT_MILEAGE",
+          "product_policy_version": "2022-07",
+          "product_config_path": "data/demo/rules/product_policy_configs/JB_SMART_CASHBACK_CHECK__2022-07__v2.json",
+          "product_config_sha256_canonical": "c5724459208e542723ff9a998285815544211be5927931b28f637dc91da590e1",
+          "status": "APPROVED_FOR_MVP_DEMO"
+        }
+      ],
+      "future_product_config_examples": [
+        {
+          "product_config_id": "WORKER_CASHBACK__YYYY-MM__v1",
+          "status": "NOT_REGISTERED_PLACEHOLDER",
+          "note": "Add only after real product policy and ledger contract are provided."
+        },
+        {
+          "product_config_id": "YOUTH_POINT_REWARD__YYYY-MM__v1",
+          "status": "NOT_REGISTERED_PLACEHOLDER",
+          "note": "Add only after real product policy and ledger contract are provided."
+        }
+      ],
+      "data_contract_path": "data/demo/rules/data_contracts/h07_synthetic_v3.json",
+      "data_contract_sha256_canonical": "4e73cf7befe7533f403e0584172dd0ab58621b8dd65660c131a5aca4a646548d",
+      "approved_sql": [
+        {
+          "name": "01_build_base_frame.sql",
+          "path": "sql/reward_missing/01_build_base_frame.sql",
+          "sha256": "da73d20ebefc5d98a58fe12a04b31a1a6e9eafc15732d4106eb88eb8271d4346"
+        },
+        {
+          "name": "02_policy_recalculate.sql",
+          "path": "sql/reward_missing/02_policy_recalculate.sql",
+          "sha256": "c21661caa620ecbde413108ff472d1b55f5e21442e65761e6a471ea711c43626"
+        },
+        {
+          "name": "03_reconcile.sql",
+          "path": "sql/reward_missing/03_reconcile.sql",
+          "sha256": "4e19927c732fe55d0085c76dea1fb03d394ea2c0a5419dd5a7a91dcaa5863d9d"
+        }
+      ]
+    }
+  ],
+  "extension_slots": [
+    {
+      "rule_id": "H02-FEE-WAIVER-OVERCHARGE-001",
+      "harm_type": "H02",
+      "status": "PLACEHOLDER_NOT_EXECUTABLE"
+    },
+    {
+      "rule_id": "H06-AUTO-DEBIT-DUPLICATE-001",
+      "harm_type": "H06",
+      "status": "PLACEHOLDER_NOT_EXECUTABLE"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+﻿outcome,clean_trimmed,washout_months,mean_post_end_coef_e1_to_e3,n_post_terms,interpretation_note
+gap_equal_main,False,0,0.09889708970126683,3,Positive post-end coefficients indicate carryover/persistence; not a pure causal effect.
+gap_equal_main,False,1,0.09889708970126683,3,Positive post-end coefficients indicate carryover/persistence; not a pure causal effect.
+gap_equal_main,False,2,0.09889708970126683,3,Positive post-end coefficients indicate carryover/persistence; not a pure causal effect.
+gap_equal_main,False,3,0.09889708970126683,3,Positive post-end coefficients indicate carryover/persistence; not a pure causal effect.
+gap_synth_main,False,0,0.09068841776263525,3,Positive post-end coefficients indicate carryover/persistence; not a pure causal effect.
+gap_synth_main,False,1,0.09068841776263525,3,Positive post-end coefficients indicate carryover/persistence; not a pure causal effect.
+gap_synth_main,False,2,0.09068841776263525,3,Positive post-end coefficients indicate carryover/persistence; not a pure causal effect.
+gap_synth_main,False,3,0.09068841776263525,3,Positive post-end coefficients indicate carryover/persistence; not a pure causal effect.
+gap_equal_main,True,0,0.09889708970126683,3,Positive post-end coefficients indicate carryover/persistence; not a pure causal effect.
+gap_synth_main,True,0,0.09068841776263525,3,Positive post-end coefficients indicate carryover/persistence; not a pure causal effect.
+gap_equal_main,True,1,0.09889708970126683,3,Positive post-end coefficients indicate carryover/persistence; not a pure causal effect.
+gap_synth_main,True,1,0.09068841776263525,3,Positive post-end coefficients indicate carryover/persistence; not a pure causal effect.
+gap_equal_main,True,2,0.09889708970126683,3,Positive post-end coefficients indicate carryover/persistence; not a pure causal effect.
+gap_synth_main,True,2,0.09068841776263525,3,Positive post-end coefficients indicate carryover/persistence; not a pure causal effect.
+gap_equal_main,True,3,0.09889708970126536,3,Positive post-end coefficients indicate carryover/persistence; not a pure causal effect.
+gap_synth_main,True,3,0.09068841776263366,3,Positive post-end coefficients indicate carryover/persistence; not a pure causal effect.

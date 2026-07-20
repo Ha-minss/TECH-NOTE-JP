@@ -1,0 +1,4 @@
+﻿outcome,pre_policy_mean,policy_period_mean,post_policy_mean,policy_minus_pre,post_minus_policy,post_minus_pre,interpretation_note
+gap_equal_main,0.2944581388560749,0.44242114055399046,0.5080111896683936,0.14796300169791554,0.06559004911440319,0.21355305081231873,Descriptive clean-block contrast only; no strong statistical inference.
+gap_synth_main,0.3346733380636812,0.5361356370789817,0.5870441694156489,0.2014622990153005,0.050908532336667145,0.25237083135196764,Descriptive clean-block contrast only; no strong statistical inference.
+log_spi_afs,4.9672713418113625,5.1483881431082645,5.211503266797943,0.181116801296902,0.06311512368967875,0.24423192498658075,Descriptive clean-block contrast only; no strong statistical inference.

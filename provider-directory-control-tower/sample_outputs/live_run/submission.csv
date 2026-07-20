@@ -1,0 +1,21 @@
+provider_id,npi,change_detected,overall_confidence,recommended_action,reason,num_changes,changed_fields,audit_id
+NPI1_00001,1598284069,False,0.9,no_change,Record confirmed as accurate against collected evidence.,0,,AUD_cc76cf610d9d646c
+NPI1_00002,1831841188,False,0.9,no_change,Record confirmed as accurate against collected evidence.,0,,AUD_db0a8f9ee479b080
+NPI1_00003,1891082467,False,0.9,no_change,Record confirmed as accurate against collected evidence.,0,,AUD_f81e340f4aebe2ba
+NPI1_00004,1104434562,False,0.9,no_change,Record confirmed as accurate against collected evidence.,0,,AUD_e98846e5ec5104ba
+NPI1_00005,1235432303,False,0.9,no_change,Record confirmed as accurate against collected evidence.,0,,AUD_8debbaf6ed632a0f
+NPI1_00006,1295363927,False,0.9,no_change,Record confirmed as accurate against collected evidence.,0,,AUD_f9a3ad452c36553c
+NPI1_00007,1356844617,False,0.9,no_change,Record confirmed as accurate against collected evidence.,0,,AUD_aaaa4fa7b613d576
+NPI1_00008,1952976995,False,0.9,no_change,Record confirmed as accurate against collected evidence.,0,,AUD_9d3defe872ceeee6
+NPI1_00009,1184253296,False,0.9,no_change,Record confirmed as accurate against collected evidence.,0,,AUD_e62900e0117127b0
+NPI1_00010,1912870478,False,0.9,no_change,Record confirmed as accurate against collected evidence.,0,,AUD_fc37e0291d11d52e
+NPI1_00011,1043218977,False,0.9,no_change,Record confirmed as accurate against collected evidence.,0,,AUD_b2ed06f16dd2bb3b
+NPI1_00012,1669224457,False,0.9,no_change,Record confirmed as accurate against collected evidence.,0,,AUD_fb6780ce09f03d32
+NPI1_00013,1073482121,False,0.9,no_change,Record confirmed as accurate against collected evidence.,0,,AUD_eaeba7e4feb78ca8
+NPI1_00014,1215425319,False,0.9,no_change,Record confirmed as accurate against collected evidence.,0,,AUD_1f6d4b62ccbc96b5
+NPI1_00015,1386606325,True,0.704,human_review,Conflicting sources found. Manual verification recommended.,1,active_status,AUD_858aad76f8fec85e
+NPI1_00016,1174883722,False,0.9,no_change,Record confirmed as accurate against collected evidence.,0,,AUD_843ce835df9d5a1f
+NPI1_00017,1306672092,False,0.9,no_change,Record confirmed as accurate against collected evidence.,0,,AUD_ab8d741d2eea6429
+NPI1_00018,1053020784,False,0.9,no_change,Record confirmed as accurate against collected evidence.,0,,AUD_8d6fd625722c624f
+NPI1_00019,1679163695,False,0.9,no_change,Record confirmed as accurate against collected evidence.,0,,AUD_89c909cac780f145
+NPI1_00020,1629873302,False,0.9,no_change,Record confirmed as accurate against collected evidence.,0,,AUD_e8f3dec9917a0282

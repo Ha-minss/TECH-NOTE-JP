@@ -1,0 +1,39 @@
+support_route_id,store_id,issue_type,destination_type,destination_label,record_status
+ROUTE-SYN-001,STR-SYN-001,duplicate_tid,van_agency,VAN/TID 설정 지원,active
+ROUTE-SYN-002,STR-SYN-002,duplicate_tid,van_agency,VAN/TID 설정 지원,active
+ROUTE-SYN-003,STR-SYN-003,duplicate_tid,van_agency,VAN/TID 설정 지원,active
+ROUTE-SYN-004,STR-SYN-004,duplicate_tid,van_agency,VAN/TID 설정 지원,active
+ROUTE-SYN-005,STR-SYN-005,duplicate_tid,van_agency,VAN/TID 설정 지원,active
+ROUTE-SYN-006,STR-SYN-006,duplicate_tid,van_agency,VAN/TID 설정 지원,active
+ROUTE-SYN-007,STR-SYN-007,duplicate_tid,van_agency,VAN/TID 설정 지원,active
+ROUTE-SYN-008,STR-SYN-008,duplicate_tid,van_agency,VAN/TID 설정 지원,active
+ROUTE-SYN-009,STR-SYN-009,duplicate_tid,van_agency,VAN/TID 설정 지원,active
+ROUTE-SYN-010,STR-SYN-010,duplicate_tid,van_agency,VAN/TID 설정 지원,active
+ROUTE-SYN-011,STR-SYN-011,terminal_identifier_mismatch,installation_partner,설치/식별값 확인 지원,active
+ROUTE-SYN-012,STR-SYN-012,terminal_identifier_mismatch,installation_partner,설치/식별값 확인 지원,active
+ROUTE-SYN-013,STR-SYN-013,terminal_identifier_mismatch,installation_partner,설치/식별값 확인 지원,active
+ROUTE-SYN-014,STR-SYN-014,terminal_identifier_mismatch,installation_partner,설치/식별값 확인 지원,active
+ROUTE-SYN-015,STR-SYN-015,terminal_identifier_mismatch,installation_partner,설치/식별값 확인 지원,active
+ROUTE-SYN-016,STR-SYN-016,terminal_identifier_mismatch,installation_partner,설치/식별값 확인 지원,active
+ROUTE-SYN-017,STR-SYN-017,terminal_identifier_mismatch,installation_partner,설치/식별값 확인 지원,active
+ROUTE-SYN-018,STR-SYN-018,van_merchant_registration_missing,van_agency,VAN 가맹점 등록 지원,active
+ROUTE-SYN-019,STR-SYN-019,van_merchant_registration_missing,van_agency,VAN 가맹점 등록 지원,active
+ROUTE-SYN-020,STR-SYN-020,van_merchant_registration_missing,van_agency,VAN 가맹점 등록 지원,active
+ROUTE-SYN-021,STR-SYN-021,van_merchant_registration_missing,van_agency,VAN 가맹점 등록 지원,active
+ROUTE-SYN-022,STR-SYN-022,van_merchant_registration_missing,van_agency,VAN 가맹점 등록 지원,active
+ROUTE-SYN-023,STR-SYN-023,van_merchant_registration_missing,van_agency,VAN 가맹점 등록 지원,active
+ROUTE-SYN-024,STR-SYN-024,van_merchant_registration_missing,van_agency,VAN 가맹점 등록 지원,active
+ROUTE-SYN-025,STR-SYN-025,pos_front_connection_issue,pos_front_support,POS-Front 연결 지원,active
+ROUTE-SYN-026,STR-SYN-026,pos_front_connection_issue,pos_front_support,POS-Front 연결 지원,active
+ROUTE-SYN-027,STR-SYN-027,pos_front_connection_issue,pos_front_support,POS-Front 연결 지원,active
+ROUTE-SYN-028,STR-SYN-028,pos_front_connection_issue,pos_front_support,POS-Front 연결 지원,active
+ROUTE-SYN-029,STR-SYN-029,pos_front_connection_issue,pos_front_support,POS-Front 연결 지원,active
+ROUTE-SYN-030,STR-SYN-030,pos_front_connection_issue,pos_front_support,POS-Front 연결 지원,active
+ROUTE-SYN-031,STR-SYN-031,pos_front_connection_issue,pos_front_support,POS-Front 연결 지원,active
+ROUTE-SYN-039,STR-SYN-039,duplicate_tid,van_agency,VAN/TID 설정 지원,active
+ROUTE-SYN-040,STR-SYN-040,duplicate_tid,van_agency,VAN/TID 설정 지원,active
+ROUTE-SYN-041,STR-SYN-041,duplicate_tid,van_agency,VAN/TID 설정 지원,active
+ROUTE-SYN-042,STR-SYN-042,duplicate_tid,van_agency,VAN/TID 설정 지원,active
+ROUTE-SYN-043,STR-SYN-043,duplicate_tid,van_agency,VAN/TID 설정 지원,active
+ROUTE-SYN-044,STR-SYN-044,duplicate_tid,van_agency,VAN/TID 설정 지원,active
+ROUTE-SYN-045,STR-SYN-045,duplicate_tid,van_agency,VAN/TID 설정 지원,active

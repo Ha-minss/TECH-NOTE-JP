@@ -1,0 +1,7 @@
+{
+  "master_cases": 20,
+  "normalization_cases": 20,
+  "consistency_cases": 20,
+  "narrative_cases": 20,
+  "source": "existing evaluation gold cases"
+}

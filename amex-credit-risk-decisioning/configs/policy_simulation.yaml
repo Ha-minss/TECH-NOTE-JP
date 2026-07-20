@@ -1,0 +1,14 @@
+source_notebook_section: Untitled41.ipynb cell 45
+modeled_population_count: 458913
+nondefault_weight_scenario:
+  label: AMEX competition sampling-adjusted scenario
+  label_ko: 비부도 고객 20배 가중 시나리오
+  nondefault_weight: 20
+base_cost_assumption:
+  ead: 1.0
+  lgd: 0.5
+  intervention_effect: 0.2
+  review_cost: 0.01
+  friction_cost: 0.005
+interpretation_boundary: modeling sample cutoff with maximum simulated net benefit, not an automatic operational policy
+

@@ -1,0 +1,8 @@
+link_id,store_id,pos_instance_id,front_terminal_id,pairing_status,network_segment,configured_front_ip,key_download_status,working_key_status,updated_at
+LINK-SYN-025,STR-SYN-025,POS-SYN-025,TERM-SYN-025,disconnected,NET-A,192.0.2.11,current,valid,2026-06-20T18:00:00+09:00
+LINK-SYN-026,STR-SYN-026,POS-SYN-026,TERM-SYN-026,paired,NET-A,192.0.2.12,current,valid,2026-06-21T18:00:00+09:00
+LINK-SYN-027,STR-SYN-027,POS-SYN-027,TERM-SYN-027,disconnected,NET-A,192.0.2.13,current,valid,2026-06-22T18:00:00+09:00
+LINK-SYN-028,STR-SYN-028,POS-SYN-028,TERM-SYN-028,paired,NET-A,192.0.2.14,current,valid,2026-06-23T18:00:00+09:00
+LINK-SYN-029,STR-SYN-029,POS-SYN-029,TERM-SYN-029,disconnected,NET-A,192.0.2.15,current,valid,2026-06-24T18:00:00+09:00
+LINK-SYN-030,STR-SYN-030,POS-SYN-030,TERM-SYN-030,paired,NET-A,192.0.2.16,current,valid,2026-06-25T18:00:00+09:00
+LINK-SYN-031,STR-SYN-031,POS-SYN-031,TERM-SYN-031,disconnected,NET-A,192.0.2.17,current,valid,2026-06-26T18:00:00+09:00

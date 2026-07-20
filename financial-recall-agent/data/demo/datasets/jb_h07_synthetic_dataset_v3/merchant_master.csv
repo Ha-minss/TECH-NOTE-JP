@@ -1,0 +1,93 @@
+﻿merchant_id,merchant_name,merchant_category,is_cashback_excluded,merchant_region
+M0001,한옥마을기념품,GENERAL,False,전주시 덕진구 금암동
+M0002,효자동생활용품,GENERAL,False,전주시 완산구 삼천동
+M0003,서신동문구,GENERAL,False,전주시 덕진구 금암동
+M0004,객사전자,GENERAL,False,전주시 완산구 삼천동
+M0005,덕진가구,GENERAL,False,전주시 덕진구 인후동
+M0006,전주서점,GENERAL,False,전주시 덕진구 인후동
+M0007,완산안경원,GENERAL,False,전주시 덕진구 금암동
+M0008,혁신도시꽃집,GENERAL,False,완주군 이서면
+M0009,송천스포츠,GENERAL,False,전주시 완산구 효자동
+M0010,삼천동세탁소,GENERAL,False,전주시 완산구 중앙동
+M0011,중앙동의류,GENERAL,False,전주시 덕진구 금암동
+M0012,전주사진관,GENERAL,False,전주시 덕진구 금암동
+M0013,덕진철물,GENERAL,False,전주시 완산구 삼천동
+M0014,효천인테리어,GENERAL,False,전주시 완산구 삼천동
+M0015,서곡완구,GENERAL,False,전주시 덕진구 송천동
+M0016,금암화장품,GENERAL,False,완주군 이서면
+M0017,전주반려용품,GENERAL,False,전주시 완산구 삼천동
+M0018,팔복공구,GENERAL,False,전주시 덕진구 금암동
+M0019,평화동잡화,GENERAL,False,전주시 덕진구 송천동
+M0020,전주렌탈샵,GENERAL,False,전주시 덕진구 송천동
+M0021,전주비빔밥집,RESTAURANT,False,완주군 이서면
+M0022,객리단길파스타,RESTAURANT,False,전주시 완산구 중앙동
+M0023,송천동국밥,RESTAURANT,False,전주시 덕진구 인후동
+M0024,효자동초밥,RESTAURANT,False,완주군 이서면
+M0025,덕진칼국수,RESTAURANT,False,전주시 완산구 중앙동
+M0026,서신동분식,RESTAURANT,False,전주시 덕진구 송천동
+M0027,삼천동족발,RESTAURANT,False,전주시 완산구 효자동
+M0028,금암동백반,RESTAURANT,False,전주시 덕진구 인후동
+M0029,한옥마을한정식,RESTAURANT,False,전주시 덕진구 금암동
+M0030,혁신도시샤브,RESTAURANT,False,전주시 덕진구 송천동
+M0031,중앙동치킨,RESTAURANT,False,전주시 덕진구 금암동
+M0032,완산구중식,RESTAURANT,False,전주시 완산구 중앙동
+M0033,인후동김밥,RESTAURANT,False,전주시 완산구 효자동
+M0034,전북대앞분식,RESTAURANT,False,전주시 덕진구 인후동
+M0035,평화동갈비,RESTAURANT,False,전주시 덕진구 송천동
+M0036,객리단길카페,CAFE,False,전주시 덕진구 금암동
+M0037,효자동커피,CAFE,False,전주시 완산구 삼천동
+M0038,송천동디저트,CAFE,False,전주시 완산구 효자동
+M0039,한옥마을찻집,CAFE,False,전주시 덕진구 송천동
+M0040,서신동베이커리카페,CAFE,False,전주시 완산구 중앙동
+M0041,전북대스터디카페,CAFE,False,전주시 완산구 삼천동
+M0042,덕진호수카페,CAFE,False,완주군 이서면
+M0043,혁신도시로스터리,CAFE,False,전주시 완산구 효자동
+M0044,삼천동커피,CAFE,False,전주시 완산구 삼천동
+M0045,중앙동빙수,CAFE,False,완주군 이서면
+M0046,완산디저트,CAFE,False,전주시 완산구 삼천동
+M0047,금암테이크아웃,CAFE,False,전주시 완산구 효자동
+M0048,송천동마트,GROCERY,False,전주시 완산구 서신동
+M0049,효자동마트,GROCERY,False,완주군 이서면
+M0050,서신동슈퍼,GROCERY,False,전주시 덕진구 송천동
+M0051,삼천동정육마트,GROCERY,False,전주시 덕진구 금암동
+M0052,덕진식자재,GROCERY,False,전주시 완산구 서신동
+M0053,금암동과일가게,GROCERY,False,전주시 완산구 효자동
+M0054,혁신도시마켓,GROCERY,False,전주시 완산구 서신동
+M0055,평화동반찬가게,GROCERY,False,전주시 덕진구 송천동
+M0056,전주로컬푸드,GROCERY,False,완주군 이서면
+M0057,완산농산물,GROCERY,False,전주시 덕진구 인후동
+M0058,효자편의점,CONVENIENCE,False,전주시 완산구 중앙동
+M0059,송천편의점,CONVENIENCE,False,전주시 완산구 효자동
+M0060,서신편의점,CONVENIENCE,False,전주시 덕진구 송천동
+M0061,전북대편의점,CONVENIENCE,False,전주시 덕진구 금암동
+M0062,삼천편의점,CONVENIENCE,False,전주시 완산구 서신동
+M0063,덕진편의점,CONVENIENCE,False,완주군 이서면
+M0064,객사편의점,CONVENIENCE,False,전주시 완산구 서신동
+M0065,혁신편의점,CONVENIENCE,False,전주시 완산구 삼천동
+M0066,송천동주유소,FUEL,False,전주시 덕진구 인후동
+M0067,효자동주유소,FUEL,False,전주시 완산구 서신동
+M0068,덕진주유소,FUEL,False,전주시 완산구 삼천동
+M0069,완산충전소,FUEL,False,전주시 덕진구 금암동
+M0070,삼천동주유소,FUEL,False,전주시 완산구 효자동
+M0071,혁신도시주유소,FUEL,False,전주시 완산구 서신동
+M0072,익산IC주유소,FUEL,False,전주시 완산구 효자동
+M0073,덕진약국,MEDICAL,False,전주시 완산구 효자동
+M0074,효자동약국,MEDICAL,False,전주시 완산구 삼천동
+M0075,서신동치과,MEDICAL,False,전주시 완산구 서신동
+M0076,송천동내과,MEDICAL,False,전주시 완산구 서신동
+M0077,완산정형외과,MEDICAL,False,전주시 덕진구 송천동
+M0078,전주안과,MEDICAL,False,완주군 이서면
+M0079,삼천동한의원,MEDICAL,False,전주시 완산구 효자동
+M0080,금암동소아과,MEDICAL,False,완주군 이서면
+M0081,국세납부,TAX,True,전주시 완산구 효자동
+M0082,지방세납부,TAX,True,전주시 덕진구 송천동
+M0083,관세납부,TAX,True,완주군 이서면
+M0084,종합소득세납부,TAX,True,완주군 이서면
+M0085,전기요금납부,PUBLIC_CHARGE,True,전주시 덕진구 송천동
+M0086,도시가스요금납부,PUBLIC_CHARGE,True,완주군 이서면
+M0087,상하수도요금납부,PUBLIC_CHARGE,True,전주시 덕진구 금암동
+M0088,국민연금납부,PUBLIC_CHARGE,True,전주시 덕진구 송천동
+M0089,전북대학교등록금,TUITION,True,전주시 완산구 삼천동
+M0090,전주대학교등록금,TUITION,True,전주시 덕진구 인후동
+M0091,우석대학교등록금,TUITION,True,완주군 이서면
+M0092,전주비전대학교등록금,TUITION,True,전주시 덕진구 송천동

@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>전자금융거래 사고 피해 신고서</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 15mm 12mm;
+            background-color: #ffffff;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+            color: #000000;
+            background-color: #ffffff;
+            line-height: 1.4;
+        }
+        .page-container {
+            border: 1px solid #000000;
+            width: 100%;
+            padding: 12mm 10mm;
+            position: relative;
+            background-color: #ffffff;
+            /* 웹 화면에서 A4 비율(210x297)과 유사하게 보이도록 최대 너비와 높이 설정 */
+            max-width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            page-break-after: always;
+            display: flex;
+            flex-direction: column;
+        }
+        .doc-meta {
+            display: table;
+            width: 100%;
+            font-size: 8.2pt;
+            margin-bottom: 20px;
+        }
+        .doc-meta-left {
+            display: table-cell;
+            text-align: left;
+            vertical-align: bottom;
+        }
+        .doc-meta-right {
+            display: table-cell;
+            text-align: right;
+            vertical-align: bottom;
+            font-weight: bold;
+        }
+        .title-section {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 25px;
+        }
+        .title-section h1 {
+            font-size: 20pt;
+            font-weight: bold;
+            letter-spacing: 1px;
+            margin: 0 0 10px 0;
+            padding: 0;
+        }
+        .title-section h2 {
+            font-size: 14pt;
+            font-weight: normal;
+            margin: 5px 0 10px 0;
+            padding: 0;
+        }
+        .recipient-line {
+            text-align: right;
+            font-size: 9.5pt;
+            font-weight: bold;
+            margin-top: 15px;
+            padding-right: 5px;
+        }
+        .guidance-box {
+            border: 1px solid #000000;
+            padding: 10px 12px;
+            font-size: 8.4pt;
+            line-height: 1.5;
+            margin-bottom: 22px;
+            background-color: #ffffff;
+            text-align: justify;
+        }
+        .section-label {
+            font-size: 8.8pt;
+            font-weight: bold;
+            background-color: #e0e0e0;
+            display: inline-block;
+            padding: 3px 8px;
+            margin-bottom: 6px;
+            border: 1px solid #000000;
+        }
+        .form-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #000000;
+            margin-bottom: 22px;
+            table-layout: fixed; /* 테이블 셀 너비 고정 */
+        }
+        .form-table th {
+            border: 1px solid #000000;
+            background-color: #f5f5f5;
+            font-size: 8.3pt;
+            font-weight: bold;
+            text-align: center;
+            padding: 7px 4px;
+        }
+        .form-table td {
+            border: 1px solid #000000;
+            font-size: 8.3pt;
+            padding: 7px 8px;
+            background-color: #ffffff;
+            word-wrap: break-word; /* 긴 텍스트 줄바꿈 */
+        }
+        .checklist-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #000000;
+            margin-bottom: 25px;
+            table-layout: fixed;
+        }
+        .checklist-table th {
+            border: 1px solid #000000;
+            background-color: #f5f5f5;
+            font-size: 8.3pt;
+            font-weight: bold;
+            padding: 6px;
+        }
+        .checklist-table td {
+            border: 1px solid #000000;
+            font-size: 8.3pt;
+            padding: 5px 8px;
+            vertical-align: middle;
+        }
+        .checkbox-cell {
+            text-align: center;
+            width: 8%;
+            font-size: 9.5pt;
+        }
+        .text-left {
+            text-align: left;
+        }
+        .footer-declaration {
+            text-align: center;
+            margin-top: 35px;
+            font-size: 8.8pt;
+            line-height: 1.6;
+        }
+        .date-section {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 10pt;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .signature-section {
+            display: table;
+            width: 100%;
+            margin-top: 30px;
+            font-size: 9.5pt;
+            font-weight: bold;
+        }
+        .signature-row {
+            display: table-row;
+        }
+        .signature-cell-left {
+            display: table-cell;
+            text-align: left;
+            padding-left: 20px;
+        }
+        .signature-cell-right {
+            display: table-cell;
+            text-align: right;
+            padding-right: 20px;
+        }
+        .exclusion-final-box {
+            border: 1px solid #000;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 8.5pt;
+            background-color: #f5f5f5;
+        }
+        .exclusion-final-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        .guidance-text-small {
+            font-size: 8pt;
+            color: #444;
+            margin-left: 20px;
+        }
+        .footer-page-info {
+            display: flex;
+            justify-content: space-between;
+            font-size: 8pt;
+            position: absolute;
+            bottom: 12mm;
+            left: 10mm;
+            right: 10mm;
+        }
+        .tx-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #000000;
+            margin-bottom: 22px;
+            table-layout: fixed;
+            font-size: 8pt;
+        }
+        .tx-table th {
+            border: 1px solid #000000;
+            background-color: #f5f5f5;
+            font-weight: bold;
+            text-align: center;
+            padding: 4px;
+        }
+        .tx-table td {
+            border: 1px solid #000000;
+            padding: 4px;
+            text-align: center;
+            word-wrap: break-word;
+        }
+        .sub-guidance {
+            font-size: 8pt;
+            margin-bottom: 5px;
+            margin-top: -3px;
+        }
+        .survey-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #000000;
+            margin-bottom: 22px;
+            table-layout: fixed;
+        }
+        .survey-table th {
+            border: 1px solid #000000;
+            background-color: #f5f5f5;
+            font-size: 8.3pt;
+            font-weight: bold;
+            text-align: center;
+            padding: 6px 4px;
+            width: 22%;
+        }
+        .survey-table td {
+            border: 1px solid #000000;
+            font-size: 8.3pt;
+            padding: 6px 8px;
+            background-color: #ffffff;
+            word-wrap: break-word;
+        }
+        .survey-question {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .survey-options {
+            margin-top: 5px;
+        }
+        .survey-desc {
+            font-size: 7.8pt;
+            color: #444;
+            margin-bottom: 5px;
+        }
+        .survey-text-input {
+            border-bottom: 1px solid #000;
+            display: inline-block;
+            min-width: 150px;
+            margin-left: 5px;
+        }
+        
+        /* Page 4 Styles */
+        .narrative-guidance-list {
+            font-size: 8.2pt;
+            color: #333;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            line-height: 1.5;
+        }
+        .narrative-box {
+            border: 1px solid #000;
+            width: 100%;
+            padding: 10px;
+            font-size: 8.5pt;
+            background-color: #fff;
+            min-height: 250px;
+            margin-bottom: 20px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            flex-grow: 1; /* 컨테이너 내에서 남는 공간을 차지하도록 설정 (필요시) */
+        }
+        .post-action-box {
+            border: 1px solid #000;
+            width: 100%;
+            padding: 10px;
+            font-size: 8.5pt;
+            background-color: #fff;
+            min-height: 150px; /* 경위 박스보다 약간 작게 */
+            margin-bottom: 25px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .final-declaration {
+            border: 1px solid #000;
+            background-color: #f5f5f5;
+            padding: 15px;
+            font-size: 9pt;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+        .staff-section {
+            border: 1px solid #000;
+            padding: 8px 15px;
+            font-size: 8.5pt;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            background-color: #fcfcfc;
+        }
+
+        /* Page 5 & 6 Styles */
+        .consent-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #000000;
+            margin-bottom: 20px;
+            font-size: 8.5pt;
+        }
+        .consent-table th {
+            border: 1px solid #000000;
+            background-color: #f5f5f5;
+            padding: 8px;
+            text-align: left;
+            width: 25%;
+            font-weight: bold;
+        }
+        .consent-table td {
+            border: 1px solid #000000;
+            padding: 8px;
+            background-color: #ffffff;
+            line-height: 1.5;
+        }
+        .consent-table ul {
+            margin-top: 4px;
+            margin-bottom: 4px;
+            padding-left: 20px;
+        }
+        .consent-item-title {
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        .consent-sub-item {
+            margin-left: 10px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        .consent-content {
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+        .consent-question {
+            margin-top: 10px;
+            font-weight: bold;
+            background-color: #fcfcfc;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+        .consent-options {
+            text-align: right;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        /* Page 7 Styles */
+        .page-7-title {
+            font-size: 16pt;
+            font-weight: bold;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+        .attachment-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #000000;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            table-layout: fixed;
+            font-size: 8.3pt;
+        }
+        .attachment-table th {
+            border: 1px solid #000000;
+            background-color: #f5f5f5;
+            font-weight: bold;
+            text-align: center;
+            padding: 8px 4px;
+        }
+        .attachment-table td {
+            border: 1px solid #000000;
+            padding: 8px;
+            background-color: #ffffff;
+            word-wrap: break-word;
+            vertical-align: middle;
+            line-height: 1.4;
+        }
+        .attachment-table .col-no {
+            width: 10%;
+            text-align: center;
+        }
+        .attachment-table .col-name {
+            width: 72%;
+        }
+        .attachment-table .col-remark {
+            width: 18%;
+            text-align: center;
+        }
+        .attachment-desc {
+            font-size: 7.8pt;
+            color: #444;
+            margin-top: 4px;
+        }
+
+        /* Page 8 Styles */
+        .delegation-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #000000;
+            margin-bottom: 25px;
+            table-layout: fixed;
+        }
+        .delegation-table th {
+            border: 1px solid #000000;
+            background-color: #f5f5f5;
+            font-size: 8.5pt;
+            font-weight: bold;
+            text-align: center;
+            padding: 8px 4px;
+        }
+        .delegation-table td {
+            border: 1px solid #000000;
+            font-size: 8.5pt;
+            padding: 8px 10px;
+            background-color: #ffffff;
+            word-wrap: break-word;
+        }
+        .delegation-purpose-box {
+            border: 1px solid #000000;
+            padding: 15px;
+            min-height: 100px;
+            font-size: 9pt;
+            background-color: #ffffff;
+            margin-bottom: 25px;
+        }
+        .attachment-notice {
+            font-size: 8.5pt;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- PAGE 1 -->
+    <div class="page-container">
+        <!-- 상단 문서 정보 -->
+        <div class="doc-meta">
+            <div class="doc-meta-left">(보존년한 : 완제일로부터 5년)</div>
+            <div class="doc-meta-right">R24-99-0002(8-1)</div>
+        </div>
+
+        <!-- 중앙 제목 -->
+        <div class="title-section">
+            <h1>전자금융거래 사고 피해 신고서</h1>
+            <div class="recipient-line">OO은행 귀중</div>
+        </div>
+
+        <!-- 안내문 -->
+        <div class="guidance-box">
+            본 신고서는 전자금융거래법 및 관련 법령에 따라 전자금융거래 사고로 인하여 발생한 피해 사실을 공식적으로 신고하고 구제를 요청하기 위한 서식입니다. 신고인은 아래의 항목을 빠짐없이 정확하게 기재하여 주시기 바라며, 허위 신고의 경우 관련 법률에 따라 불이익을 받을 수 있습니다.
+        </div>
+
+        <!-- 섹션 라벨: 피해신청인 -->
+        <div class="section-label">피해신청인</div>
+
+        <!-- 피해신청인 표 -->
+        <table class="form-table">
+            <tr>
+                <th style="width: 14%;">개인 성명</th>
+                <td style="width: 19%;">{{ applicant.name }}</td>
+                <th style="width: 14%;">생년월일</th>
+                <td style="width: 20%;">{{ applicant.birthDate }}</td>
+                <th style="width: 14%;">고객번호</th>
+                <td style="width: 19%;">{{ applicant.customerNumber }}</td>
+            </tr>
+            <tr>
+                <th>법인 법인명</th>
+                <td>{{ applicant.companyName }}</td>
+                <th>사업자등록번호</th>
+                <td colspan="3">{{ applicant.businessNumber }}</td>
+            </tr>
+            <tr>
+                <th>전화번호</th>
+                <td>{{ applicant.phoneNumber }}</td>
+                <th>휴대전화번호</th>
+                <td>{{ applicant.mobileNumber }}</td>
+                <th>e-mail</th>
+                <td>{{ applicant.email }}</td>
+            </tr>
+            <tr>
+                <th>주소</th>
+                <td colspan="5">{{ applicant.address }}</td>
+            </tr>
+            <tr>
+                <th>기타</th>
+                <td colspan="5">{{ applicant.memo }}</td>
+            </tr>
+            <tr>
+                <th>SMS 수신 동의</th>
+                <td colspan="5">
+                    동의함 {{ checkbox.smsConsentYes }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 동의하지 않음 {{ checkbox.smsConsentNo }}
+                </td>
+            </tr>
+        </table>
+
+        <!-- 섹션 라벨: 피해 신고 제외대상 확인 -->
+        <div class="section-label">피해 신고 제외대상 확인</div>
+
+        <!-- 제외대상 체크리스트 -->
+        <table class="checklist-table">
+            <thead>
+                <tr>
+                    <th style="width: 92%; text-align: left; padding-left: 10px;">피해 신고 제외대상 주요 항목</th>
+                    <th style="width: 8%;">확인</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-left">1. 이용자 본인이 직접 지급지시한 금융거래</td>
+                    <td class="checkbox-cell">{{ checkbox.exclude1 }}</td>
+                </tr>
+                <tr>
+                    <td class="text-left">2. 동거가족 또는 지인에 의한 거래</td>
+                    <td class="checkbox-cell">{{ checkbox.exclude2 }}</td>
+                </tr>
+                <tr>
+                    <td class="text-left">3. 접근매체 양도/양수/질권 설정 관련 거래</td>
+                    <td class="checkbox-cell">{{ checkbox.exclude3 }}</td>
+                </tr>
+                <tr>
+                    <td class="text-left">4. 법인 이용자의 기관/피용자로서 법인을 위한 거래</td>
+                    <td class="checkbox-cell">{{ checkbox.exclude4 }}</td>
+                </tr>
+                <tr>
+                    <td class="text-left">5. 재화 공급을 가장한 상거래</td>
+                    <td class="checkbox-cell">{{ checkbox.exclude5 }}</td>
+                </tr>
+                <tr>
+                    <td class="text-left">6. 용역 제공을 가장한 거래</td>
+                    <td class="checkbox-cell">{{ checkbox.exclude6 }}</td>
+                </tr>
+                <tr>
+                    <td class="text-left">7. 불법적이거나 비정상적인 재화/용역 관련 거래</td>
+                    <td class="checkbox-cell">{{ checkbox.exclude7 }}</td>
+                </tr>
+                <tr>
+                    <td class="text-left">8. 간편송금업체를 통한 금융거래</td>
+                    <td class="checkbox-cell">{{ checkbox.exclude8 }}</td>
+                </tr>
+                <tr>
+                    <td class="text-left">9. 영업점 창구를 통한 대면 금융거래</td>
+                    <td class="checkbox-cell">{{ checkbox.exclude9 }}</td>
+                </tr>
+                <tr>
+                    <td class="text-left">10. 피해 예방 안내에도 정상 거래 주장으로 발생한 피해</td>
+                    <td class="checkbox-cell">{{ checkbox.exclude10 }}</td>
+                </tr>
+                <tr>
+                    <td class="text-left">11. 이전 피해구제/전자금융거래 사고 배상 신청 여부</td>
+                    <td class="checkbox-cell">{{ checkbox.exclude11 }}</td>
+                </tr>
+                <tr>
+                    <td class="text-left">12. 카드/현금서비스/카드론 등 여신전문금융업 관련 거래</td>
+                    <td class="checkbox-cell">{{ checkbox.exclude12 }}</td>
+                </tr>
+                <tr>
+                    <td class="text-left">13. 전자금융사고로 보기 어려운 경우</td>
+                    <td class="checkbox-cell">{{ checkbox.exclude13 }}</td>
+                </tr>
+                <tr>
+                    <td class="text-left">14. 소송 등 법적 분쟁 진행/판결 확정</td>
+                    <td class="checkbox-cell">{{ checkbox.exclude14 }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="footer-page-info" style="display:none;">
+             <div>Recover24-Official-(8-1)</div>
+             <div>1 / 8</div>
+        </div>
+    </div>
+
+
+    <!-- PAGE 2 -->
+    <div class="page-container">
+        
+        <!-- 섹션 라벨: 피해 신고 제외대상 확인 (계속) -->
+        <div class="section-label">피해 신고 제외대상 확인 (계속)</div>
+        <table class="checklist-table">
+            <tbody>
+                <tr>
+                    <td class="text-left">15. 이용자와 은행 사이에 화해/합의가 이미 성립된 경우</td>
+                    <td class="checkbox-cell">{{ checkbox.exclude15 }}</td>
+                </tr>
+                <tr>
+                    <td class="text-left">16. 수사기관 등의 수사를 통해 전자금융사고가 아닌 경우로 판단된 경우</td>
+                    <td class="checkbox-cell">{{ checkbox.exclude16 }}</td>
+                </tr>
+                <tr>
+                    <td class="text-left">17. 기타</td>
+                    <td class="checkbox-cell">{{ checkbox.exclude17 }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 최종 확인 박스 -->
+        <div class="exclusion-final-box">
+            <div class="exclusion-final-row">
+                <span>본인은 위 사고유형 중 한 가지 이상이라도 [ 해당없음 {{ checkbox.finalExcludeNo }} / 해당됨 {{ checkbox.finalExcludeYes }} ] 을 확인하였음</span>
+                <span>신청인 서명: (인)</span>
+            </div>
+            <div class="guidance-text-small">
+                ※ [해당없음] 피해 신고 대상으로 신청서 계속 작성<br>
+                ※ [해당됨] 피해 신고 제외 대상으로 신청서 작성 중단 및 종료
+            </div>
+        </div>
+
+        <!-- 섹션 라벨: 전자금융거래 사고 정보 -->
+        <div class="section-label">전자금융거래 사고 정보</div>
+        <table class="form-table">
+            <tr>
+                <th style="width: 30%;">최초 사고발생 일시</th>
+                <td data-field="incident.first_occurred_at">{{ accident.firstIncidentAt }}</td>
+            </tr>
+            <tr>
+                <th>최초 사고인지 일시</th>
+                <td data-field="incident.recognized_at">{{ accident.firstDiscoveredAt }}</td>
+            </tr>
+            <tr>
+                <th>최초 계좌 지급정지/거래제한 일시</th>
+                <td>{{ accident.firstFreezeAt }}</td>
+            </tr>
+            <tr>
+                <th>사고발생 총 피해금액</th>
+                <td data-field="incident.total_damage_amount">{{ accident.totalDamageAmountLabel }}</td>
+            </tr>
+            <tr>
+                <th>피해유형</th>
+                <td data-field="incident.fraud_type">{{ accident.incidentTypeLabel }}</td>
+            </tr>
+            <tr>
+                <th>사건개요</th>
+                <td data-field="incident.overview">{{ accident.incidentOverview }}</td>
+            </tr>
+        </table>
+
+        <!-- 섹션 라벨: 사고발생 계좌내역 -->
+        <div class="section-label">사고발생 계좌내역 (본인명의)</div>
+        <table class="tx-table">
+            <thead>
+                <tr>
+                    <th style="width: 12%;">출금은행</th>
+                    <th style="width: 20%;">출금계좌번호</th>
+                    <th style="width: 15%;">출금/피해금액</th>
+                    <th style="width: 12%;">입금은행</th>
+                    <th style="width: 20%;">입금/상대계좌</th>
+                    <th style="width: 10%;">예금주</th>
+                    <th style="width: 5%;">본인/<br>타인</th>
+                    <th style="width: 6%;">거래<br>유형</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tx in transactions_padded %}
+                <tr>
+                    <td data-field="transaction.{{ loop.index0 }}.from_bank">{{ tx.sourceBank }}</td>
+                    <td data-field="transaction.{{ loop.index0 }}.from_account">{{ tx.sourceAccountNumber }}</td>
+                    <td data-field="transaction.{{ loop.index0 }}.amount">{{ tx.amountLabel }}</td>
+                    <td data-field="transaction.{{ loop.index0 }}.to_bank">{{ tx.destinationBank }}</td>
+                    <td data-field="transaction.{{ loop.index0 }}.to_account">{{ tx.destinationAccountNumber }}</td>
+                    <td data-field="transaction.{{ loop.index0 }}.recipient_name">{{ tx.destinationAccountHolder }}</td>
+                    <td>{{ tx.holderType }}</td>
+                    <td data-field="transaction.{{ loop.index0 }}.transaction_type">{{ tx.transactionType }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- 섹션 라벨: 선택기재 -->
+        <div class="section-label">선택기재</div>
+        <table class="form-table" style="margin-bottom: 15px;">
+            <tr>
+                <th style="width: 25%;">신분증 분실 신고</th>
+                <td style="width: 25%;">예 {{ optionalReports.idLossReportedYes }} / 아니오 {{ optionalReports.idLossReportedNo }}</td>
+                <th style="width: 15%;">신고일</th>
+                <td style="width: 35%;">{{ optionalReports.idLossReportedDate }}</td>
+            </tr>
+            <tr>
+                <th>휴대전화 분실 신고</th>
+                <td>예 {{ optionalReports.phoneLossReportedYes }} / 아니오 {{ optionalReports.phoneLossReportedNo }}</td>
+                <th>신고일</th>
+                <td>{{ optionalReports.phoneLossReportedDate }}</td>
+            </tr>
+            <tr>
+                <th>명의도용 휴대전화 개설 신고</th>
+                <td>예 {{ optionalReports.identityTheftPhoneReportedYes }} / 아니오 {{ optionalReports.identityTheftPhoneReportedNo }}</td>
+                <th>신고일</th>
+                <td>{{ optionalReports.identityTheftPhoneReportedDate }}</td>
+            </tr>
+            <tr>
+                <th>기타</th>
+                <td colspan="3">{{ optionalReports.other }}</td>
+            </tr>
+        </table>
+
+        <!-- 섹션 라벨: 피해구제 및 수사기관 신청 -->
+        <div class="section-label">피해구제 및 수사기관 신청</div>
+        
+        <table class="form-table" style="margin-bottom: 5px;">
+            <tr>
+                <th rowspan="4" style="width: 20%;">A. 피해구제<br>환급 신청</th>
+                <td colspan="3" style="background-color: #fcfcfc;">
+                    <div class="sub-guidance">※ 전기통신금융사기 피해 방지 및 피해금 환급에 관한 특별법에 따른 피해구제 신청 후 해당 신청 건이 종결된 이후 전자금융거래 사고 신청이 가능합니다.</div>
+                </td>
+            </tr>
+            <tr>
+                <th style="width: 15%;">신청상태</th>
+                <td colspan="2">
+                    신청예정 {{ relief.statusPlanned }} &nbsp;&nbsp; 신청 후 진행중 {{ relief.statusInProgress }} &nbsp;&nbsp; 피해구제 종결 {{ relief.statusCompleted }} &nbsp;&nbsp; 기타 {{ relief.statusOther }}
+                    <div class="small-note">피해구제 신청 상태: {{ relief.statusLabel }}</div>
+                </td>
+            </tr>
+            <tr>
+                <th>신청은행 / 신청일</th>
+                <td colspan="2">
+                    {% for row in relief.rows %}
+                    <div>은행{{ row.index }}: {{ row.bank }} &nbsp;&nbsp; 일자{{ row.index }}: {{ row.date }}</div>
+                    {% endfor %}
+                </td>
+            </tr>
+        </table>
+
+        <table class="form-table">
+            <tr>
+                <th rowspan="3" style="width: 20%;">B. 수사기관<br>수사 진행</th>
+                <td colspan="3" style="background-color: #fcfcfc;">
+                    <div class="sub-guidance">※ 수사기관 앞 사고신고 후 사건사고사실확인원을 발급받은 이후 전자금융거래 사고 신청이 가능합니다.</div>
+                </td>
+            </tr>
+            <tr>
+                <th style="width: 15%;">진행상태</th>
+                <td colspan="2">
+                    미신고 {{ investigation.statusNotReported }} &nbsp;&nbsp; 신고 {{ investigation.statusReported }} &nbsp;&nbsp; 신고 후 수사 개시하여 진행중 {{ investigation.statusInProgress }}<br>수사 종결 {{ investigation.statusClosed }} &nbsp;&nbsp; 기타 {{ investigation.statusOther }}
+                    <div class="small-note">경찰 신고 상태: {{ investigation.statusLabel }}</div>
+                </td>
+            </tr>
+            <tr>
+                <th>수사기관 / 신고일</th>
+                <td style="width: 32.5%;">수사기관: {{ investigation.agency }}</td>
+                <td style="width: 32.5%;">신고일: {{ investigation.reportedAt }}</td>
+            </tr>
+        </table>
+
+        <div class="footer-page-info" style="display:none;">
+             <div>Recover24-Official-(8-2)</div>
+             <div>2 / 8</div>
+        </div>
+
+    </div>
+
+    <!-- PAGE 3 -->
+    <div class="page-container">
+        
+        <!-- 섹션 라벨: 전자금융거래 사고 관련 설문 -->
+        <div class="section-label">전자금융거래 사고 관련 설문</div>
+        
+        <!-- 설문 표 -->
+        <table class="survey-table">
+            <tr>
+                <th>이체주체</th>
+                <td>
+                    <div class="survey-question">본 사고와 관련하여 전자금융거래를 실행한 사람은 누구인가요?</div>
+                    <div class="survey-options">
+                        손님 본인 {{ survey.transferActorSelf }} &nbsp;&nbsp; 
+                        가족 {{ survey.transferActorFamily }} &nbsp;&nbsp; 
+                        지인 {{ survey.transferActorAcquaintance }} &nbsp;&nbsp; 
+                        불상의 제3자 {{ survey.transferActorUnknownThirdParty }}
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>사고유형 1</th>
+                <td>
+                    <div class="survey-question">본 사고와 관련하여 스미싱(가짜 청첩장, 부고장, 택배, 대출안내 등) 문자 또는 카톡 메시지를 통하여 악성 앱 주소 등이 포함된 링크(URL)를 클릭한 사실이 있습니까?</div>
+                    <div class="survey-options">
+                        예 {{ survey.smishingLinkClickedYes }} &nbsp;&nbsp; 
+                        아니오 {{ survey.smishingLinkClickedNo }} &nbsp;&nbsp; 
+                        기타 {{ survey.smishingLinkClickedOther }} <span class="survey-text-input">{{ survey.smishingLinkClickedOtherText }}</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>사고유형 2</th>
+                <td>
+                    <div class="survey-question">본 사고와 관련하여 출처를 알 수 정체불명의 악성 앱(원격조종 앱 포함)이 설치되어 실행되었습니까?</div>
+                    <div class="survey-desc">※ 구글스토어/앱스토어가 아닌 문자 또는 카톡 메시 내 악성 앱 설치주소 등을 클릭하여 악성 앱 또는 원격조종 앱 다운로드/설치를 허용한 경우 등</div>
+                    <div class="survey-options">
+                        예 {{ survey.maliciousAppInstalledYes }} &nbsp;&nbsp; 
+                        아니오 {{ survey.maliciousAppInstalledNo }} &nbsp;&nbsp; 
+                        기타 {{ survey.maliciousAppInstalledOther }} <span class="survey-text-input">{{ survey.maliciousAppInstalledOtherText }}</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>이용자 제공정보</th>
+                <td>
+                    <div class="survey-question">본 사고와 관련하여 제3자(가족, 지인 사칭 포함)에게 제공한 정보를 모두 선택하여 주세요.</div>
+                    <div class="survey-options" style="line-height: 1.6;">
+                        신분증 {{ survey.providedIdCard }} &nbsp;&nbsp; 
+                        개인정보 {{ survey.providedPersonalInfo }} &nbsp;&nbsp; 
+                        전자적 장치 {{ survey.providedDevice }} &nbsp;&nbsp; 
+                        계좌번호 및 계좌용 비밀번호 {{ providedAccountPassword }}<br>
+                        보안매체/OTP/보안카드/인증서 {{ survey.providedSecurityMedia }} &nbsp;&nbsp; 
+                        기타 전자금융 관련정보 {{ survey.providedOtherFinancialInfo }} <span class="survey-text-input">{{ survey.providedOtherFinancialInfoText }}</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>전자금융거래<br>사용 경험 및 빈도</th>
+                <td>
+                    <div class="survey-desc">※ 각 항목별로 O/X를 표기하고, O로 표기한 경우 평상시 사용 빈도도 작성하여 주십시오.</div>
+                    <div class="survey-options">
+                        인터넷뱅킹 [ {{ survey.internetBankingUsed }} ] 빈도: <span class="survey-text-input" style="min-width:100px;">{{ survey.internetBankingFrequency }}</span><br>
+                        폰뱅킹 [ {{ survey.phoneBankingUsed }} ] 빈도: <span class="survey-text-input" style="min-width:100px;">{{ survey.phoneBankingFrequency }}</span><br>
+                        오픈뱅킹 [ {{ survey.openBankingUsed }} ] 빈도: <span class="survey-text-input" style="min-width:100px;">{{ survey.openBankingFrequency }}</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>신분증<br>보관 방식</th>
+                <td>
+                    <div class="survey-question">가족이나 지인 등에게 신분증을 대여하여 준 경험이 있습니까?</div>
+                    <div class="survey-options" style="margin-bottom: 8px;">
+                        예 {{ survey.idLentYes }} &nbsp;&nbsp; 아니오 {{ survey.idLentNo }}
+                    </div>
+                    
+                    <div class="survey-question">신분증 사본(사진, 그림파일 등)을 평소 휴대전화, PC, 클라우드에 저장하여 보관하고 있습니까?</div>
+                    <div class="survey-options" style="margin-bottom: 8px;">
+                        예 {{ survey.idCopyStoredDigitallyYes }} &nbsp;&nbsp; 아니오 {{ survey.idCopyStoredDigitallyNo }}
+                    </div>
+
+                    <div class="survey-question">신분증 실물을 평상시에 어떠한 방식으로 보관하고 계십니까?</div>
+                    <div class="survey-options">
+                        <span class="survey-text-input" style="min-width: 90%;">{{ survey.idPhysicalStorageMethod }}</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>휴대전화</th>
+                <td>
+                    <div class="survey-question">가족이나 지인 등에게 전자적 장치(휴대전화 등)를 제공하거나 대여하여 준 경험이 있습니까?</div>
+                    <div class="survey-options" style="margin-bottom: 8px;">
+                        예 {{ survey.phoneLentYes }} &nbsp;&nbsp; 아니오 {{ survey.phoneLentNo }}
+                    </div>
+
+                    <div class="survey-question">평상시 휴대전화 잠금 방식으로는 어떠한 방식을 사용합니까?</div>
+                    <div class="survey-options">
+                        <span class="survey-text-input" style="min-width: 90%;">{{ survey.phoneLockMethod }}</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>기타</th>
+                <td>
+                    <div class="survey-question">신분증이나 휴대전화 외의 접근매체(은행/증권회사의 보안카드)를 평소 어떠한 방식으로 보관하고 계십니까?</div>
+                    <div class="survey-options">
+                        <span class="survey-text-input" style="min-width: 90%;">{{ survey.securityMediaStorageMethod }}</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>사고 이전<br>신분증 분실신고 여부</th>
+                <td>
+                    <div class="survey-question">본 사고 이전에 신분증을 분실한 경우, 해당기관 앞 신분증 분실신고를 즉시 실행하였습니까?</div>
+                    <div class="survey-options">
+                        예 {{ survey.idLossReportedYes }} &nbsp;&nbsp; 
+                        아니오 {{ survey.idLossReportedNo }} &nbsp;&nbsp; 
+                        해당없음 {{ survey.idLossReportedNotApplicable }}
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>사고 이전<br>신분증 사본 저장 여부</th>
+                <td>
+                    <div class="survey-question">본 사고 이전에 신분증 사본(사진, 파일 등)을 휴대전화, PC, 클라우드 등에 저장하여 보관하고 있었습니까?</div>
+                    <div class="survey-options">
+                        예 {{ survey.idCopyStoredBeforeIncidentYes }} &nbsp;&nbsp; 
+                        아니오 {{ survey.idCopyStoredBeforeIncidentNo }} &nbsp;&nbsp; 
+                        기타 {{ survey.idCopyStoredBeforeIncidentOther }} <span class="survey-text-input">{{ survey.idCopyStoredBeforeIncidentOtherText }}</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>계좌번호와 계좌<br>비밀번호 저장 여부</th>
+                <td>
+                    <div class="survey-question">본 사고 이전에 계좌번호와 계좌용 비밀번호를 휴대전화, PC, 클라우드 등에 저장(메모)하고 있었습니까?</div>
+                    <div class="survey-options">
+                        예 {{ survey.accountPasswordStoredYes }} &nbsp;&nbsp; 
+                        아니오 {{ survey.accountPasswordStoredNo }} &nbsp;&nbsp; 
+                        기타 {{ survey.accountPasswordStoredOther }} <span class="survey-text-input">{{ survey.accountPasswordStoredOtherText }}</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>휴대전화 잠금 방식<br>설정 여부</th>
+                <td>
+                    <div class="survey-question">본 사고 이전에 휴대전화 잠금 방식이 설정되어 있었습니까?</div>
+                    <div class="survey-desc">※ 설정방식: 패턴, 핀, 비밀번호, 지문/얼굴인식 등</div>
+                    <div class="survey-options">
+                        예 {{ survey.phoneLockEnabledYes }} &nbsp;&nbsp; 
+                        아니오 {{ survey.phoneLockEnabledNo }} &nbsp;&nbsp; 
+                        기타 {{ survey.phoneLockEnabledOther }} <span class="survey-text-input">{{ survey.phoneLockEnabledOtherText }}</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <th>개인정보 유출 의심<br>정황 및 기타 참고사항</th>
+                <td>
+                    <div class="survey-question">본 사고 관련 개인정보 유출로 의심되는 정황, 특이사항 등 기타 참고사항이 있는 경우 기재하여 주세요.</div>
+                    <div class="survey-options">
+                        <span class="survey-text-input" style="min-width: 90%; min-height: 40px;">{{ survey.personalInfoLeakSuspicionDetails }}</span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+        <div class="footer-page-info" style="display:none;">
+             <div>Recover24-Official-(8-3)</div>
+             <div>3 / 8</div>
+        </div>
+
+    </div>
+
+    <!-- PAGE 4 -->
+    <div class="page-container">
+        
+        <!-- 섹션 라벨: 전자금융거래 사고 발생 경위 및 사유 -->
+        <div class="section-label">전자금융거래 사고 발생 경위 및 사유</div>
+        
+        <div class="narrative-box" data-field="narrative.incident_circumstances">{{ narrative.incidentNarrativeDraft }}</div>
+
+        <div class="section-label" style="margin-top: 10px;">사고 인지 후 조치 내역</div>
+
+        <div class="post-action-box" data-field="narrative.post_action">{{ narrative.postActionNarrativeDraft }}</div>
+
+        <div class="final-declaration">
+            본인은 금번 전자금융거래 사고 신청과 관련하여 위 기재사항 및 사고정황이<br>거짓이나 사실과 다른 경우로 확인될 경우, 신청절차 종료 및 민형사상 처벌 등의<br>불이익을 받을 수 있음을 확인합니다.
+        </div>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; font-size: 10pt; font-weight: bold; margin-bottom: 5px;">
+            <div>작성일자: {{ today.year }} 년 {{ today.month }} 월 {{ today.day }} 일</div>
+            <div>신청인 : {{ applicant.name }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(서명 또는 인)</div>
+        </div>
+
+        <div class="staff-section">
+            <div>본인확인(직원기재) &nbsp;&nbsp;&nbsp;&nbsp; 지점(부) ____________________ &nbsp;&nbsp;&nbsp; 행번 ____________________ &nbsp;&nbsp;&nbsp; 직원명 ____________________</div>
+            <div>(서명 또는 인)</div>
+        </div>
+
+        <!-- 빈 공간을 채워 하단에 푸터가 고정되도록 함 -->
+        <div style="flex-grow: 1;"></div>
+
+        <div class="footer-page-info" style="display:none;">
+             <div>Recover24-Official-(8-4)</div>
+             <div>4 / 8</div>
+        </div>
+
+    </div>
+
+    <!-- PAGE 5 -->
+    <div class="page-container">
+        
+        <div class="title-section">
+            <h1>[필수] 개인(신용)정보 수집·이용 동의서</h1>
+            <h2>[전자금융거래 사고 피해 신고]</h2>
+            <div class="recipient-line" style="margin-top: 5px;">OO은행 귀중</div>
+        </div>
+
+        <div class="guidance-box" style="margin-bottom: 20px;">
+            귀 금융회사와의 거래와 관련하여 금융회사가 본인의 개인(신용)정보를 수집·이용하고자 하는 경우에는 「신용정보의 이용 및 보호에 관한 법률」, 「개인정보 보호법」 등 관계 법령에 따라 본인의 동의가 필요합니다.
+        </div>
+
+        <div class="section-label">1. 수집·이용에 관한 사항</div>
+
+        <table class="consent-table">
+            <tr>
+                <th>수집·이용 목적</th>
+                <td>금융소비자보호를 위한 신속하고 공정한 전자금융거래 사고 피해조사 및 처리결과 통지</td>
+            </tr>
+            <tr>
+                <th>보유 및 이용기간</th>
+                <td>
+                    <strong>피해조사 및 처리결과 통지 완료일로부터 5년까지 보유·이용</strong><br>
+                    <span style="font-size: 8pt; color: #444;">※ 피해조사 및 처리결과 통지 완료일 이후에는 법령상 의무이행 및 금융소비자보호 업무 수행을 위한 목적으로만 보유·이용됩니다.</span>
+                </td>
+            </tr>
+            <tr>
+                <th>거부 권리 및 불이익</th>
+                <td>
+                    귀하는 동의를 거부하실 수 있습니다. 다만, 위 개인(신용)정보 수집·이용에 관한 동의는 본인 식별 및 전자금융거래 사고 피해신고 접수·조사를 위한 필수적 사항이므로, 위 사항에 동의하셔야만 전자금융거래 사고 피해신고 접수 및 처리가 가능합니다.
+                </td>
+            </tr>
+        </table>
+
+        <div class="section-label">수집·이용 항목</div>
+
+        <div style="border: 1px solid #000; padding: 10px; margin-bottom: 20px; font-size: 8.5pt;">
+            <div class="consent-item-title">■ 고유식별정보</div>
+            <div class="consent-content">주민등록번호, 외국인등록번호, 여권번호, 운전면허번호</div>
+            
+            <div class="consent-question">
+                위 고유식별정보 수집·이용에 동의하십니까?
+            </div>
+            <div class="consent-options">
+                동의하지 않음 {{ consent.uniqueIdCollectionDisagree }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 동의함 {{ consent.uniqueIdCollectionAgree }}
+            </div>
+        </div>
+
+        <div style="border: 1px solid #000; padding: 10px; font-size: 8.5pt;">
+            <div class="consent-item-title">■ 개인(신용)정보</div>
+            
+            <div class="consent-sub-item">■ 일반개인정보</div>
+            <div class="consent-content">고객번호, 사업자등록번호, 성명, 생년월일, 주소, 이메일주소, 연락처(전화번호, 휴대전화번호), 계좌번호, 전자금융거래 사고 피해 신고서에 기재된 신고내용 및 정보, 기타 피해조사와 관련하여 상담 시 제공된 정보</div>
+            
+            <div class="consent-sub-item">■ 신용거래정보</div>
+            <div class="consent-content">계좌거래내역, 전자금융 가입 및 거래내역 등 피해조사를 위한 사실조사에 필요한 금융거래내역, 피해환급 절차 처리내역, 사고 관련 계좌 및 거래내역, 피해환급금 결정 내역 등</div>
+
+            <div class="consent-question">
+                위 개인(신용)정보 수집·이용에 동의하십니까?
+            </div>
+            <div class="consent-options">
+                동의하지 않음 {{ consent.personalCreditCollectionDisagree }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 동의함 {{ consent.personalCreditCollectionAgree }}
+            </div>
+        </div>
+
+        <div style="flex-grow: 1;"></div>
+
+        <div class="footer-page-info" style="display:none;">
+             <div>Recover24-Official-(8-5)</div>
+             <div>5 / 8</div>
+        </div>
+
+    </div>
+
+    <!-- PAGE 6 -->
+    <div class="page-container">
+        
+        <div class="section-label">2. 제공에 관한 사항</div>
+
+        <table class="consent-table">
+            <tr>
+                <th>제공받는 자</th>
+                <td>
+                    <ul style="margin-top: 5px; margin-bottom: 5px;">
+                        <li>금융소비자보호 관련 대외기관 (금융위원회, 금융감독원 등)</li>
+                        <li>사고 관련 금융회사</li>
+                        <li>사고 관련 금융회사가 사고조사를 의뢰하는 손해보험회사 및 손해사정법인</li>
+                        <li>Payment Gateway사 또는 결제 관련 기관 (해당되는 경우)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>제공받는 자의<br>이용목적</th>
+                <td>
+                    <ul style="margin-top: 5px; margin-bottom: 5px;">
+                        <li>금융소비자보호를 위한 신속하고 공정한 전자금융거래 사고 피해조사</li>
+                        <li>사고 현황 파악, 보상 처리 및 처리결과 통지</li>
+                        <li>금융소비자보호 관련 대외기관의 자료제출 요구 등 법령상 의무이행</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <th>보유 및 이용기간</th>
+                <td>
+                    <strong>제공된 날로부터 동의 철회 시 또는 제공목적 달성 시까지 보유·이용</strong><br>
+                    <span style="font-size: 8pt; color: #444;">※ 동의 철회 또는 제공목적 달성 후에는 금융사고 조사, 분쟁 해결, 민원처리, 금융소비자보호를 위한 조사·연구 등 필요한 범위 내에서만 보유·이용됩니다.</span>
+                </td>
+            </tr>
+            <tr>
+                <th>거부 권리 및 불이익</th>
+                <td>
+                    귀하는 동의를 거부하실 수 있습니다. 다만, 위 개인(신용)정보 제공에 관한 동의는 금융소비자보호 업무 수행 및 전자금융거래 사고 피해신고 처리를 위한 필수적 사항이므로, 위 사항에 동의하셔야만 전자금융거래 사고 피해신고 접수 및 처리가 가능합니다.
+                </td>
+            </tr>
+        </table>
+
+        <div class="section-label">제공 항목</div>
+
+        <div style="border: 1px solid #000; padding: 10px; margin-bottom: 20px; font-size: 8.5pt;">
+            <div class="consent-item-title">■ 고유식별정보</div>
+            <div class="consent-content">주민등록번호, 외국인등록번호, 여권번호, 운전면허번호</div>
+            
+            <div class="consent-question">
+                위 고유식별정보 제공에 동의하십니까?
+            </div>
+            <div class="consent-options">
+                동의하지 않음 {{ consent.uniqueIdProvisionDisagree }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 동의함 {{ consent.uniqueIdProvisionAgree }}
+            </div>
+        </div>
+
+        <div style="border: 1px solid #000; padding: 10px; font-size: 8.5pt; margin-bottom: 20px;">
+            <div class="consent-item-title">■ 개인(신용)정보</div>
+            
+            <div class="consent-sub-item">■ 일반개인정보</div>
+            <div class="consent-content">고객번호, 사업자등록번호, 성명, 생년월일, 주소, 이메일주소, 연락처(전화번호, 휴대전화번호), 계좌번호, 전자금융거래 사고 피해 신고서에 기재된 신고내용 및 정보, 기타 피해조사와 관련하여 상담 시 제공된 정보</div>
+            
+            <div class="consent-sub-item">■ 신용거래정보</div>
+            <div class="consent-content">계좌거래내역, 전자금융 가입 및 거래내역 등 보상절차를 위한 사실조사에 필요한 금융거래내역, 피해환급 절차 처리내역, 사고 관련 계좌 및 거래내역, 피해환급금 결정 내역 등</div>
+
+            <div class="consent-question">
+                위 개인(신용)정보 제공에 동의하십니까?
+            </div>
+            <div class="consent-options">
+                동의하지 않음 {{ consent.personalCreditProvisionDisagree }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 동의함 {{ consent.personalCreditProvisionAgree }}
+            </div>
+        </div>
+
+        <div style="font-size: 8pt; color: #444; margin-bottom: 20px; line-height: 1.5;">
+            ※ 본 동의 이전에 발생한 개인(신용)정보도 제공 대상에 포함될 수 있습니다.<br>
+            ※ 금융회사의 고의 또는 과실 등 귀책사유로 인한 개인정보 유출로 고객에게 손해가 발생한 경우 관계 법령 등에 따라 보상받을 수 있습니다.
+        </div>
+
+        <!-- 빈 공간을 채워 하단을 밀어냄 -->
+        <div style="flex-grow: 1;"></div>
+
+        <div class="date-section" style="margin-bottom: 25px;">
+            {{ today.year }} 년 {{ today.month }} 월 {{ today.day }} 일
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; align-items: center; font-size: 10pt; font-weight: bold; margin-bottom: 20px; margin-right: 20px;">
+            <div style="margin-right: 50px;">본인 성명 : {{ applicant.name }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(서명)</div>
+            {% if showDelegation %}<div>대리인 성명 : {{ delegation.agentName }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(서명)</div>{% endif %}
+        </div>
+
+        <div class="footer-page-info" style="display:none;">
+             <div>Recover24-Official-(8-6)</div>
+             <div>6 / 8</div>
+        </div>
+
+    </div>
+
+    <!-- PAGE 7 -->
+    <div class="page-container" style="display: flex; flex-direction: column;">
+        
+        <div class="doc-meta">
+            <div class="doc-meta-left">(보존년한 : 완제일로부터 5년)</div>
+            <div class="doc-meta-right">R24-99-0002(8-7)</div>
+        </div>
+
+        <div class="page-7-title">첨부서류</div>
+
+        <table class="attachment-table">
+            <thead>
+                <tr>
+                    <th class="col-no">구분</th>
+                    <th class="col-name">서류명</th>
+                    <th class="col-remark">비고</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="col-no">1</td>
+                    <td class="col-name">신분증 사본</td>
+                    <td class="col-remark" data-field="attachments.evidence_items">{{ attachmentRemarks.idCardCopy }}</td>
+                </tr>
+                <tr>
+                    <td class="col-no">2</td>
+                    <td class="col-name">사건사고사실확인원 및 진술조서 등 수사관련 자료와 이에 따른 수사기관의 결정문 내지는 처분서</td>
+                    <td class="col-remark" data-field="attachments.evidence_items">{{ attachmentRemarks.policeCertificate }}</td>
+                </tr>
+                <tr>
+                    <td class="col-no">3</td>
+                    <td class="col-name">신분증 분실 및 도난 신고 내역, 재발급 내역 관련 증빙 자료 등</td>
+                    <td class="col-remark">{{ attachmentRemarks.idLossEvidence }}</td>
+                </tr>
+                <tr>
+                    <td class="col-no">4</td>
+                    <td class="col-name">휴대전화 개통·가입 관련 서류, 명의자 및 개통시점, 명의도용 예방서비스 가입 내역, 주요 의심 프로그램 가입 내역, 분실신고 내역, 명의도용 신고사실 등에 관한 확인서</td>
+                    <td class="col-remark">{{ attachmentRemarks.phoneEvidence }}</td>
+                </tr>
+                <tr>
+                    <td class="col-no">5</td>
+                    <td class="col-name">수사기관 또는 금융당국에 대한 고소나 민원 접수 내역
+                        <div class="attachment-desc">※ 고소장 및 고소장에 첨부한 증거자료, 아직 고소하지 않았다면 추후 고소 제기 일정 기재 필요</div>
+                    </td>
+                    <td class="col-remark" data-field="attachments.evidence_items">{{ attachmentRemarks.complaintEvidence }}</td>
+                </tr>
+                <tr>
+                    <td class="col-no">6</td>
+                    <td class="col-name">금융회사가 위임한 대리인이 수사기관에서 각종 진술조서 등을 열람 및 등사할 수 있도록 하는 위임장 또는 동의서</td>
+                    <td class="col-remark">{{ attachmentRemarks.investigationDelegation }}</td>
+                </tr>
+                <tr>
+                    <td class="col-no">7</td>
+                    <td class="col-name">개인정보보호법상 개인정보 유출 등의 통지를 받은 내역</td>
+                    <td class="col-remark">{{ attachmentRemarks.dataLeakNotice }}</td>
+                </tr>
+                <tr>
+                    <td class="col-no">8</td>
+                    <td class="col-name">사고 발생 확인 후 신청까지 상당한 지연이 있었던 경우, 이에 관한 경위 및 개인정보 유출에 대하여 취한 조치가 포함된 경위서
+                        <div class="attachment-desc">※ 24시간 이상 지연</div>
+                    </td>
+                    <td class="col-remark">{{ attachmentRemarks.delayReason }}</td>
+                </tr>
+                <tr>
+                    <td class="col-no">9</td>
+                    <td class="col-name">가족·동거인 확인 서류
+                        <div class="attachment-desc">※ 가족관계증명서, 주민등록등본 등</div>
+                    </td>
+                    <td class="col-remark">{{ attachmentRemarks.familyProof }}</td>
+                </tr>
+                <tr>
+                    <td class="col-no">10</td>
+                    <td class="col-name">본인서명사실확인서</td>
+                    <td class="col-remark">{{ attachmentRemarks.signatureCertificate }}</td>
+                </tr>
+                <tr>
+                    <td class="col-no">11</td>
+                    <td class="col-name">이용자 본인의 기존 금융거래 관련 지식 및 경험, 보안 준수사항에 관한 조사 양식
+                        <div class="attachment-desc">※ 인터넷뱅킹, 폰뱅킹, 오픈뱅킹 등 비대면 거래 내역 및 접근매체·보안카드 등의 보관 방식 포함</div>
+                    </td>
+                    <td class="col-remark">{{ attachmentRemarks.securitySurvey }}</td>
+                </tr>
+                <tr>
+                    <td class="col-no">12</td>
+                    <td class="col-name">기타 피해 확인을 위해 필요한 서류 또는 증빙자료
+                        <div class="attachment-desc">※ 통화내역, 이메일, 문자메시지, 카카오톡, 텔레그램 등 메신저 대화내역, 휴대전화 애플리케이션 설치 내역, 원격 제어 프로그램 관련 자료 등</div>
+                    </td>
+                    <td class="col-remark" data-field="attachments.evidence_items">{{ attachmentRemarks.otherEvidence }}</td>
+                </tr>
+                <tr>
+                    <td class="col-no">13</td>
+                    <td class="col-name">출입국사실증명원 또는 여권 사본</td>
+                    <td class="col-remark">{{ attachmentRemarks.passportOrTravelProof }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 빈 공간을 채워 하단을 밀어냄 -->
+        <div style="flex-grow: 1;"></div>
+
+        <div class="footer-page-info">
+             <div>Recover24-Official-(8-7)</div>
+             <div>7 / 8</div>
+        </div>
+
+    </div>
+
+    {% if showDelegation %}
+    <!-- PAGE 8 -->
+    <div class="page-container" style="display: flex; flex-direction: column;">
+        
+        <div class="doc-meta">
+            <div class="doc-meta-left">(보존년한 : 완제일로부터 5년)</div>
+            <div class="doc-meta-right">R24-99-0002(8-8)</div>
+        </div>
+
+        <div class="title-section">
+            <h1>전자금융거래 사고 피해 신고 위임장</h1>
+            <div class="recipient-line" style="margin-top: 15px;">OO은행 귀중</div>
+        </div>
+
+        <table class="delegation-table">
+            <tr>
+                <th rowspan="4" style="width: 15%;">위임자<br>(본인)</th>
+                <th style="width: 15%;">개인 성명</th>
+                <td style="width: 27%;">{{ applicant.name }}</td>
+                <th style="width: 15%;">생년월일</th>
+                <td style="width: 28%;">{{ applicant.birthDate }}</td>
+            </tr>
+            <tr>
+                <th>고객번호</th>
+                <td>{{ applicant.customerNumber }}</td>
+                <th>법인명</th>
+                <td>{{ applicant.companyName }}</td>
+            </tr>
+            <tr>
+                <th>사업자등록번호</th>
+                <td>{{ applicant.businessNumber }}</td>
+                <th>전화번호</th>
+                <td>{{ applicant.phoneNumber }}</td>
+            </tr>
+            <tr>
+                <th>휴대전화번호</th>
+                <td>{{ applicant.mobileNumber }}</td>
+                <th>e-mail</th>
+                <td>{{ applicant.email }}</td>
+            </tr>
+            <tr>
+                <th style="border-top: none;"></th>
+                <th>주소</th>
+                <td colspan="3">{{ applicant.address }}</td>
+            </tr>
+            <tr>
+                <th style="border-top: none;"></th>
+                <th>기타</th>
+                <td colspan="3">{{ applicant.memo }}</td>
+            </tr>
+        </table>
+
+        <table class="delegation-table">
+            <tr>
+                <th rowspan="4" style="width: 15%;">수임자<br>(대리인)</th>
+                <th style="width: 15%;">성명</th>
+                <td style="width: 27%;">{{ delegation.agentName }}</td>
+                <th style="width: 15%;">생년월일</th>
+                <td style="width: 28%;">{{ delegation.agentBirthDate }}</td>
+            </tr>
+            <tr>
+                <th>전화번호</th>
+                <td>{{ delegation.agentPhoneNumber }}</td>
+                <th>휴대전화번호</th>
+                <td>{{ delegation.agentMobileNumber }}</td>
+            </tr>
+            <tr>
+                <th>e-mail</th>
+                <td colspan="3">{{ delegation.agentEmail }}</td>
+            </tr>
+            <tr>
+                <th>주소</th>
+                <td colspan="3">{{ delegation.agentAddress }}</td>
+            </tr>
+            <tr>
+                <th style="border-top: none;"></th>
+                <th>기타</th>
+                <td colspan="3">{{ delegation.agentMemo }}</td>
+            </tr>
+        </table>
+
+        <div class="section-label">신청취지(요구사항)</div>
+        <div class="delegation-purpose-box">
+            {{ delegation.requestPurpose if delegation.requestPurpose else '전자금융거래 사고 피해 신고 등 전자금융거래 사고와 관련된 행위 일체' }}
+        </div>
+
+        <div class="date-section" style="margin-bottom: 20px; margin-top: 10px;">
+            본인은 위의 사람을 대리인으로 정하고 권한을 위임합니다.<br><br><br>
+            {{ today.year }} 년 {{ today.month }} 월 {{ today.day }} 일
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; align-items: center; font-size: 10pt; font-weight: bold; margin-bottom: 5px; margin-right: 20px;">
+            <div>위임자(본인) : {{ applicant.name }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(인)</div>
+        </div>
+
+        <div class="attachment-notice">
+            ※ 첨부 : 인감증명서 또는 본인서명사실확인서 1부
+        </div>
+
+        <div class="staff-section">
+            <div>본인확인(직원기재) &nbsp;&nbsp;&nbsp;&nbsp; 지점명: ____________________ &nbsp;&nbsp;&nbsp; 행번: ____________________ &nbsp;&nbsp;&nbsp; 성명: ____________________</div>
+            <div>(서명 또는 인)</div>
+        </div>
+
+        <!-- 빈 공간을 채워 하단을 밀어냄 -->
+        <div style="flex-grow: 1;"></div>
+
+        <div class="footer-page-info">
+             <div>Recover24-Official-(8-8)</div>
+             <div>8 / 8</div>
+        </div>
+
+    </div>
+    {% endif %}
+
+</body>
+</html>

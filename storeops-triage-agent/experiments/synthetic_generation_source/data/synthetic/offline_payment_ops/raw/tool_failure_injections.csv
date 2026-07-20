@@ -1,0 +1,8 @@
+failure_id,scenario_id,tool_name,failure_mode,error_message
+FAIL-SYN-039-TID,SYN-039,get_tid_config,timeout,TID registry timed out during required evidence lookup.
+FAIL-SYN-040-TID,SYN-040,get_tid_config,timeout,TID registry timed out during required evidence lookup.
+FAIL-SYN-041-TID,SYN-041,get_tid_config,timeout,TID registry timed out during required evidence lookup.
+FAIL-SYN-042-TID,SYN-042,get_tid_config,timeout,TID registry timed out during required evidence lookup.
+FAIL-SYN-043-ROUTE,SYN-043,get_support_route,unavailable,Support directory unavailable during optional routing lookup.
+FAIL-SYN-044-ROUTE,SYN-044,get_support_route,unavailable,Support directory unavailable during optional routing lookup.
+FAIL-SYN-045-ROUTE,SYN-045,get_support_route,unavailable,Support directory unavailable during optional routing lookup.

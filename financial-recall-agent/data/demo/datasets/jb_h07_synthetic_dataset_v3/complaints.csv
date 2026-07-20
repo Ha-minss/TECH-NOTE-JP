@@ -1,0 +1,51 @@
+﻿complaint_id,customer_id,received_at,channel,product_id_claimed,narrative_ko,claim_label_for_demo,source_system
+EVAL_BASE_0001,CUST_0001,2026-06-30T09:03:00,인터넷뱅킹,JB_SMART_CASHBACK_CHECK,"지난달 Smart Cashback 체크카드로 장도 보고 식당에서도 결제했는데, 6월 29일 지나도 캐시백이 안 들어왔습니다. 전북은행 통장 입금내역 확인 부탁드립니다.",true_positive,router_aligned_50_fixture
+EVAL_BASE_0002,CUST_0002,2026-06-30T09:06:00,인터넷뱅킹,JB_SMART_CASHBACK_CHECK,스마트 캐시백 체크카드 혜택 보고 계속 사용했는데 5월 사용분 캐시백이 아직도 0원입니다. 27일이 주말이면 다음 영업일에 들어오는 거 아닌가요?,true_positive,router_aligned_50_fixture
+EVAL_BASE_0003,CUST_0003,2026-06-30T09:09:00,영업점,JB_SMART_CASHBACK_CHECK,전주에서 거의 이 카드만 썼는데 5월분 캐시백 입금이 누락된 것 같습니다. 통장 거래내역에 6월 말 입금 기록이 없습니다.,true_positive,router_aligned_50_fixture
+EVAL_BASE_0004,CUST_0004,2026-06-30T09:12:00,모바일앱,JB_SMART_CASHBACK_CHECK,Smart Cashback 카드 지난달 정상 결제분 캐시백이 안 들어왔어요. 취소한 건도 아닌데 왜 미지급인지 확인해 주세요.,true_positive,router_aligned_50_fixture
+EVAL_BASE_0005,CUST_0005,2026-06-30T09:15:00,영업점,JB_SMART_CASHBACK_CHECK,전북대학교 등록금 500만 원을 카드로 냈는데 캐시백이 거의 안 들어왔습니다. 금액이 큰데 왜 혜택이 없나요?,hard_negative_policy_exclusion,router_aligned_50_fixture
+EVAL_BASE_0006,CUST_0019,2026-06-30T09:18:00,인터넷뱅킹,JB_SMART_CASHBACK_CHECK,종합소득세를 카드로 냈는데 캐시백 대상에서 빠진 것 같습니다. 세금도 카드 결제인데 확인 부탁드립니다.,hard_negative_policy_exclusion,router_aligned_50_fixture
+EVAL_BASE_0007,CUST_0023,2026-06-30T09:21:00,영업점,JB_SMART_CASHBACK_CHECK,도시가스 요금을 카드로 냈는데 캐시백이 안 보입니다. 공과금도 결제금액인데 누락 아닌가요?,hard_negative_policy_exclusion,router_aligned_50_fixture
+EVAL_BASE_0008,CUST_0012,2026-06-30T09:24:00,인터넷뱅킹,JB_SMART_CASHBACK_CHECK,지난달에 결제했다가 바로 취소한 100만 원 건에 대한 캐시백이 안 들어왔습니다. 결제는 했으니 캐시백 줘야 하는 거 아닌가요?,hard_negative_policy_exclusion,router_aligned_50_fixture
+EVAL_BASE_0009,CUST_0341,2026-06-30T09:27:00,모바일앱,JB_SALARY_QUICK_CASHBACK,직장인 퀵캐시백 카드 사용분 캐시백이 안 들어왔어요. 스마트 캐시백이랑 같은 혜택 아닌가요?,wrong_product_or_unsupported_product,router_aligned_50_fixture
+EVAL_BASE_0010,CUST_0081,2026-06-15T10:00:00,인터넷뱅킹,JB_SMART_CASHBACK_CHECK,오늘 송천동마트에서 10만 원 썼는데 캐시백이 바로 안 들어왔습니다. 실시간 입금되는 줄 알았는데 왜 안 되나요?,hard_negative_payment_timing,router_aligned_50_fixture
+EVAL_TP_001,CUST_0022,2026-06-30T09:33:00,mobile_app_inquiry,JB_SMART_CASHBACK_CHECK,스마트 캐시백 체크카드 5월 사용분 캐시백이 6월 말에도 입금되지 않았습니다. 전월 실적도 충족했습니다.,true_positive,router_aligned_50_fixture
+EVAL_TP_002,CUST_0023,2026-06-30T09:36:00,chatbot_summary,JB_SMART_CASHBACK_CHECK,고객은 Smart Cashback 카드의 5월 리워드가 지급 예정일 이후에도 0원이라고 주장함.,true_positive,router_aligned_50_fixture
+EVAL_TP_003,CUST_0024,2026-06-30T09:39:00,call_center_summary,JB_SMART_CASHBACK_CHECK,상담 메모: 고객이 전월 카드 실적 충족 후 캐시백 입금 누락을 문의. 통장 입금내역에 지급 기록이 없다고 함.,true_positive,router_aligned_50_fixture
+EVAL_TP_004,CUST_0025,2026-06-30T09:42:00,web_complaint_board,JB_SMART_CASHBACK_CHECK,지난달 마트랑 식당에서 쓴 금액에 대한 캐시백이 빠진 것 같습니다. 스마트 캐시백 카드 혜택 확인 부탁드립니다.,true_positive,router_aligned_50_fixture
+EVAL_TP_005,CUST_0026,2026-06-30T09:45:00,email,JB_SMART_CASHBACK_CHECK,"Smart Cashback 체크카드를 사용 중인데, 2026년 5월 결제분 캐시백이 아직 지급되지 않았습니다.",true_positive,router_aligned_50_fixture
+EVAL_TP_006,CUST_0027,2026-06-30T09:48:00,mobile_app_inquiry,JB_SMART_CASHBACK_CHECK,캐시백 지급일이 지났는데 스마트 캐시백 혜택 입금이 없습니다. 카드 사용 조건은 채웠습니다.,true_positive,router_aligned_50_fixture
+EVAL_TP_007,CUST_0028,2026-06-30T09:51:00,branch_memo,JB_SMART_CASHBACK_CHECK,영업점 접수: 고객은 스마트 캐시백 카드 정상 결제분에 대한 리워드 미입금을 주장.,true_positive,router_aligned_50_fixture
+EVAL_TP_008,CUST_0029,2026-06-30T09:54:00,chatbot,JB_SMART_CASHBACK_CHECK,"제가 스마트 캐시백 카드 쓰는데요, 이번 달 들어와야 할 캐시백이 안 들어왔어요.",true_positive,router_aligned_50_fixture
+EVAL_TP_009,CUST_0030,2026-06-30T09:57:00,mobile_app_inquiry,JB_SMART_CASHBACK_CHECK,5월 카드 사용분 리워드가 지급 실패된 것 같습니다. 스마트 캐시백 체크카드입니다.,true_positive,router_aligned_50_fixture
+EVAL_TP_010,CUST_0031,2026-06-30T09:00:00,call_center_summary,JB_SMART_CASHBACK_CHECK,고객은 캐시백 지급 예정일 이후에도 결제계좌 입금이 없다고 하며 Smart Cashback 카드 사용 내역 확인을 요청함.,true_positive,router_aligned_50_fixture
+EVAL_NPV_001,CUST_0061,2026-06-30T09:03:00,mobile_app_inquiry,,카드 혜택이 이번 달 안 들어온 것 같습니다. 어떤 혜택인지 앱에서는 잘 안 보여서 확인 부탁드립니다.,needs_product_verification,router_aligned_50_fixture
+EVAL_NPV_002,CUST_0062,2026-06-30T09:06:00,chatbot,,혜택 입금이 안 된 것 같아요. 제가 쓰는 카드 확인해서 캐시백 대상인지 봐주세요.,needs_product_verification,router_aligned_50_fixture
+EVAL_NPV_003,CUST_0063,2026-06-30T09:09:00,call_center_summary,,고객은 카드 혜택 지급 누락 가능성을 문의했으나 상품명과 지급월을 명확히 말하지 않음.,needs_product_verification,router_aligned_50_fixture
+EVAL_NPV_004,CUST_0064,2026-06-30T09:12:00,email,UNKNOWN_CARD_BENEFIT,카드 리워드가 안 들어온 것 같은데 제가 어떤 카드 혜택인지 정확히 모르겠습니다.,needs_product_verification,router_aligned_50_fixture
+EVAL_NPV_005,CUST_0065,2026-06-30T09:15:00,mobile_app_inquiry,,지난달 혜택이 빠진 것 같습니다. 캐시백인지 포인트인지 확인이 필요합니다.,needs_product_verification,router_aligned_50_fixture
+EVAL_NPV_006,CUST_0231,2026-06-30T09:18:00,mobile_app_inquiry,,카드 혜택이 안 들어왔습니다. 제가 쓰는 카드 상품 기준으로 확인해주세요.,needs_product_verification,router_aligned_50_fixture
+EVAL_NPV_007,CUST_0232,2026-06-30T09:21:00,chatbot_summary,,고객이 혜택 미지급을 주장했으나 카드 상품명이 불명확함. 보유 상품 확인 필요.,needs_product_verification,router_aligned_50_fixture
+EVAL_NPV_008,CUST_0351,2026-06-30T09:24:00,call_center_summary,,고객은 리워드가 빠진 것 같다고 말했지만 상품명은 확인되지 않음.,needs_product_verification,router_aligned_50_fixture
+EVAL_NPV_009,CUST_0233,2026-06-30T09:27:00,email,UNKNOWN_CARD_BENEFIT,이번 달 카드 혜택이 없어서 문의합니다. 어떤 기준인지 모르겠어요.,needs_product_verification,router_aligned_50_fixture
+EVAL_NPV_010,CUST_0352,2026-06-30T09:30:00,branch_memo,,카드 리워드 문의. 고객이 사용 상품을 정확히 기억하지 못함.,needs_product_verification,router_aligned_50_fixture
+EVAL_WP_001,CUST_0361,2026-06-30T09:33:00,mobile_app_inquiry,JB_SALARY_QUICK_CASHBACK,직장인 퀵캐시백 카드 캐시백이 안 들어왔습니다. 스마트 캐시백이랑 같은 기준 아닌가요?,wrong_product_or_unsupported_product,router_aligned_50_fixture
+EVAL_WP_002,CUST_0362,2026-06-30T09:36:00,chatbot,JB_SALARY_QUICK_CASHBACK,퀵캐시백 카드 리워드가 누락된 것 같아요. 캐시백 미지급이면 확인해주세요.,wrong_product_or_unsupported_product,router_aligned_50_fixture
+EVAL_WP_003,CUST_0241,2026-06-30T09:39:00,email,JB_FRIENDS_CARD,JB 프렌즈 카드 혜택 캐시백이 안 들어온 것 같습니다. 스마트 캐시백 대상인지도 확인 부탁드립니다.,wrong_product_or_unsupported_product,router_aligned_50_fixture
+EVAL_WP_004,CUST_0242,2026-06-30T09:42:00,call_center_summary,JB_FRIENDS_CARD,고객은 프렌즈 카드의 포인트성 혜택 미지급을 주장하며 캐시백이라고 표현함.,wrong_product_or_unsupported_product,router_aligned_50_fixture
+EVAL_WP_005,CUST_0363,2026-06-30T09:45:00,web_complaint_board,JB_SALARY_QUICK_CASHBACK,월급통장 연계 퀵캐시백 혜택이 입금되지 않았습니다. 같은 H07 캐시백 문제 아닌가요?,wrong_product_or_unsupported_product,router_aligned_50_fixture
+EVAL_HN_001,CUST_0081,2026-06-30T09:48:00,mobile_app_inquiry,JB_SMART_CASHBACK_CHECK,포인트가 소멸됐는데 사전 안내를 못 받았습니다. 캐시백 문제가 아니라 안내 문제 같습니다.,hard_negative_disclosure,router_aligned_50_fixture
+EVAL_HN_002,CUST_0082,2026-06-30T09:51:00,email,JB_SMART_CASHBACK_CHECK,카드 결제를 취소했는데 환불금이 아직 안 들어왔습니다. 캐시백 말고 결제취소 환불 확인해주세요.,hard_negative_refund,router_aligned_50_fixture
+EVAL_HN_003,CUST_0083,2026-06-30T09:54:00,mobile_app_inquiry,JB_SMART_CASHBACK_CHECK,공과금 결제도 카드로 했는데 캐시백이 안 보입니다. 공과금도 혜택 대상인가요?,hard_negative_excluded_category,router_aligned_50_fixture
+EVAL_HN_004,CUST_0084,2026-06-30T09:57:00,chatbot,JB_SMART_CASHBACK_CHECK,세금 납부한 금액이 큰데 캐시백이 적어요. 세금도 캐시백 되는지 궁금합니다.,hard_negative_excluded_category,router_aligned_50_fixture
+EVAL_HN_005,CUST_0085,2026-06-15T10:00:00,call_center_summary,JB_SMART_CASHBACK_CHECK,고객은 오늘 결제한 금액에 대해 즉시 캐시백 입금을 기대했으나 지급 예정일 전임.,hard_negative_payment_timing,router_aligned_50_fixture
+EVAL_HN_006,CUST_0086,2026-06-30T09:03:00,branch_memo,JB_SMART_CASHBACK_CHECK,고객은 등록금 카드 납부 건에 캐시백이 없다고 문의. 업종 제외 여부 설명 필요.,hard_negative_excluded_category,router_aligned_50_fixture
+EVAL_HN_007,CUST_0087,2026-06-30T09:06:00,email,JB_SMART_CASHBACK_CHECK,카드 연회비가 잘못 청구된 것 같습니다. 혜택 문제가 아니라 수수료/청구 확인 요청입니다.,hard_negative_fee,router_aligned_50_fixture
+EVAL_HN_008,CUST_0088,2026-06-30T09:09:00,mobile_app_inquiry,JB_SMART_CASHBACK_CHECK,자동이체가 두 번 빠져나갔습니다. 캐시백과 관계없이 중복 출금 확인해주세요.,hard_negative_duplicate_debit,router_aligned_50_fixture
+EVAL_HN_009,CUST_0089,2026-06-30T09:12:00,web_complaint_board,JB_SMART_CASHBACK_CHECK,카드를 분실해서 재발급 신청했는데 이전 혜택이 유지되는지 궁금합니다.,hard_negative_service_inquiry,router_aligned_50_fixture
+EVAL_HN_010,CUST_0090,2026-06-30T09:15:00,call_center_summary,JB_SMART_CASHBACK_CHECK,고객은 결제 내역이 앱에 늦게 반영된다고 불만을 제기. 캐시백 지급 누락 주장은 없음.,hard_negative_statement_delay,router_aligned_50_fixture
+EVAL_EDGE_001,CUST_0101,2026-06-30T09:18:00,chatbot,,돈이 안 들어왔어요.,edge_ambiguous,router_aligned_50_fixture
+EVAL_EDGE_002,CUST_0102,2026-06-30T09:21:00,mobile_app_inquiry,,혜택 확인 부탁드립니다.,edge_ambiguous,router_aligned_50_fixture
+EVAL_EDGE_003,CUST_0261,2026-06-30T09:24:00,email,,카드 관련해서 입금이 이상합니다. 자세한 내용은 전화 주세요.,edge_ambiguous,router_aligned_50_fixture
+EVAL_EDGE_004,CUST_0381,2026-06-30T09:27:00,call_center_summary,,고객이 카드 혜택에 불만을 표시했으나 캐시백/포인트/환불 중 무엇인지 불명확함.,edge_ambiguous,router_aligned_50_fixture
+EVAL_EDGE_005,CUST_0103,2026-06-30T09:30:00,web_complaint_board,,지난달 카드 건이 이상한데 앱에서는 확인이 어렵습니다.,edge_ambiguous,router_aligned_50_fixture

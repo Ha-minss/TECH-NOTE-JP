@@ -1,0 +1,421 @@
+{
+  "schema_version": "2.0",
+  "config_type": "PRODUCT_POLICY_CONFIG",
+  "config_id": "JB_SMART_CASHBACK_CHECK__2022-07__v2",
+  "product_id": "JB_SMART_CASHBACK_CHECK",
+  "product_name": "Smart Cashback 체크카드",
+  "bank_name": "전북은행",
+  "policy_version": "2022-07",
+  "effective_from": "2022-07-14",
+  "effective_to": null,
+  "config_status": "ACTIVE_FOR_MVP_DEMO",
+  "approval_status": "APPROVED_FOR_MVP_DEMO",
+  "production_approval_status": "NOT_APPROVED_FOR_PRODUCTION",
+  "source_document": {
+    "document_name": "전북은행_Smart_Cashback_체크카드_상품설명서_202207.pdf",
+    "document_type": "PRODUCT_DESCRIPTION",
+    "source_document_hash_sha256": "063c9a63be3f8fccb40d3471aa7dc0562197fc091a0c2855abb23619c165f58f",
+    "compliance_review_number": "제2022-다-291호",
+    "compliance_review_date": "2022-07-14",
+    "compliance_review_text": "준법감시인 심의필 제2022-다-291호(심의일자: 2022. 7. 14. 현재)"
+  },
+  "basic_product_info": {
+    "eligible_customer_type": "PERSONAL_MEMBER",
+    "eligible_customer_type_source_text": "발급대상: 개인회원",
+    "brand": "UNKNOWN_FROM_EXTRACTED_TEXT",
+    "annual_fee_krw": 0,
+    "annual_fee_source_text": "연회비: 없음"
+  },
+  "h07_cashback_policy": {
+    "rule_id": "H07-REWARD-MISSING-TEMPLATE",
+    "harm_type": "H07",
+    "rule_template": "reward_policy_recalculate_and_reconcile",
+    "service_name": "건당 사용금액별 캐시백 서비스",
+    "calculation_purpose": "거래 당시 승인된 상품설정으로 예상 캐시백을 독립 재계산한 뒤, 은행 시스템 expected_rewards 및 reward_ledger와 대사한다.",
+    "amount_basis": {
+      "source_table": "card_purchases",
+      "source_field": "amount",
+      "currency": "KRW",
+      "calculation_unit": "PER_TRANSACTION"
+    },
+    "eligibility": {
+      "minimum_eligible_amount_krw": 5000,
+      "below_minimum_amount_reason": "BELOW_MINIMUM_TRANSACTION_AMOUNT",
+      "eligible_transaction_statuses": [
+        "COMPLETED"
+      ],
+      "excluded_transaction_statuses": [
+        "CANCELLED"
+      ],
+      "excluded_merchant_categories": [
+        "TAX",
+        "PUBLIC_CHARGE",
+        "TUITION"
+      ],
+      "excluded_reason_mapping": {
+        "CANCELLED": "사용 취소건은 캐시백 서비스 적용 제외",
+        "TAX": "제세공과금 사용액은 캐시백 서비스 적용 제외",
+        "PUBLIC_CHARGE": "제세공과금 사용액은 캐시백 서비스 적용 제외",
+        "TUITION": "등록금 사용액은 캐시백 서비스 적용 제외",
+        "BELOW_MINIMUM_TRANSACTION_AMOUNT": "건당 사용금액 5천원 미만으로 캐시백률 구간 미충족"
+      },
+      "merchant_exclusion_precedence": {
+        "primary_source": "product_config.excluded_merchant_categories",
+        "secondary_source": "merchant_master.is_cashback_excluded",
+        "on_conflict": "FLAG_FOR_HUMAN_REVIEW",
+        "note": "MVP에서는 merchant_category 기준으로 계산하고, merchant_master의 제외 플래그와 충돌하면 정상 확정하지 않고 검토 대상으로 표시한다."
+      }
+    },
+    "rate_table": [
+      {
+        "min_amount_inclusive": 5000,
+        "max_amount_exclusive": 50000,
+        "cashback_rate": 0.002,
+        "cashback_rate_percent": 0.2,
+        "source_label": "5천원 이상~5만원 미만: 0.2% 캐시백"
+      },
+      {
+        "min_amount_inclusive": 50000,
+        "max_amount_exclusive": 100000,
+        "cashback_rate": 0.005,
+        "cashback_rate_percent": 0.5,
+        "source_label": "5만원 이상~10만원 미만: 0.5% 캐시백"
+      },
+      {
+        "min_amount_inclusive": 100000,
+        "max_amount_exclusive": 500000,
+        "cashback_rate": 0.007,
+        "cashback_rate_percent": 0.7,
+        "source_label": "10만원 이상~50만원 미만: 0.7% 캐시백"
+      },
+      {
+        "min_amount_inclusive": 500000,
+        "max_amount_exclusive": 1000000,
+        "cashback_rate": 0.01,
+        "cashback_rate_percent": 1.0,
+        "source_label": "50만원 이상~100만원 미만: 1.0% 캐시백"
+      },
+      {
+        "min_amount_inclusive": 1000000,
+        "max_amount_exclusive": null,
+        "cashback_rate": 0.012,
+        "cashback_rate_percent": 1.2,
+        "source_label": "100만원 이상: 1.2% 캐시백"
+      }
+    ],
+    "rounding_policy": {
+      "rounding_method": "FLOOR_TO_KRW",
+      "rounding_unit": 1,
+      "is_mvp_assumption": true,
+      "requires_internal_policy_confirmation": true,
+      "note": "상품설명서 발췌문에서 소수점 이하 원 단위 처리 방식은 확인되지 않아 MVP에서는 원 단위 절사로 가정한다."
+    },
+    "monthly_cap": {
+      "cap_amount_krw": 100000,
+      "cap_amount_source_verified": true,
+      "cap_basis": "CASHBACK_AMOUNT",
+      "cap_scope": "CUSTOMER_PRODUCT_MONTH",
+      "cap_scope_requires_internal_policy_confirmation": true,
+      "allocation_method": "TRANSACTION_ORDER",
+      "allocation_order": [
+        "purchase_date",
+        "purchase_id"
+      ],
+      "partial_reward_allowed_when_cap_remaining": true,
+      "cap_exhausted_behavior": "CALCULATED_REWARD_CAPPED_TO_REMAINING_MONTHLY_LIMIT",
+      "allocation_method_is_mvp_assumption": true,
+      "allocation_method_requires_internal_policy_confirmation": true,
+      "source_text": "캐시백은 월 10만원(캐시백 금액 기준) 이내에서 제공"
+    },
+    "payment_schedule": {
+      "usage_period_start_day": 1,
+      "usage_period_end": "LAST_DAY_OF_MONTH",
+      "payment_month_offset": 1,
+      "payment_day": 27,
+      "payment_account": "LINKED_SETTLEMENT_ACCOUNT",
+      "holiday_rule": "NEXT_BUSINESS_DAY",
+      "business_calendar": {
+        "calendar_id": "KR_BANKING_CALENDAR",
+        "mvp_implementation": "WEEKEND_ONLY",
+        "requires_holiday_table_for_production": true
+      },
+      "source_text": "매월 1일~말일까지 사용건에 대한 캐시백이 익월 27일에 결제계좌로 입금됩니다. 입금일이 휴일 및 공휴일인 경우 다음 영업일에 입금됩니다."
+    },
+    "independent_policy_calculation": {
+      "enabled": true,
+      "calculator_name": "reward_policy_calculator",
+      "purpose": "expected_rewards를 그대로 신뢰하지 않고 상품설정으로 예상 캐시백을 독립 재계산한다.",
+      "input_tables": [
+        "card_purchases",
+        "merchant_master",
+        "card_contracts"
+      ],
+      "output_fields": [
+        "policy_expected_reward_amount",
+        "policy_eligibility_status",
+        "policy_eligibility_reason",
+        "policy_applied_rate",
+        "policy_monthly_cap_remaining_before_transaction",
+        "policy_monthly_cap_remaining_after_transaction"
+      ]
+    },
+    "reconciliation": {
+      "enabled": true,
+      "calculator_name": "reward_reconciliation_calculator",
+      "purpose": "독립 재계산한 예상 캐시백, 은행 expected_rewards, 실제 reward_ledger를 비교하여 오류 유형을 분리한다.",
+      "comparison_targets": {
+        "policy_calculated_expected": "policy_expected_reward_amount",
+        "bank_system_expected": "expected_rewards.expected_reward_amount",
+        "actual_paid": "reward_ledger.paid_reward_amount"
+      },
+      "detectable_error_types": [
+        {
+          "error_type": "POLICY_CALCULATION_ERROR",
+          "condition": "policy_expected_reward_amount != expected_rewards.expected_reward_amount",
+          "description": "은행 시스템의 expected_rewards 자체가 상품설정 기준과 다르게 계산된 경우"
+        },
+        {
+          "error_type": "PAYMENT_EXECUTION_ERROR",
+          "condition": "expected_rewards.expected_reward_amount > reward_ledger.paid_reward_amount",
+          "description": "은행 시스템의 예상 캐시백은 존재하지만 실제 지급 원장에서 누락 또는 과소 지급된 경우"
+        },
+        {
+          "error_type": "EXPECTED_REWARD_ROW_MISSING",
+          "condition": "policy_expected_reward_amount > 0 AND expected_rewards.reward_id IS NULL",
+          "description": "상품설정 기준으로 캐시백 대상인데 expected_rewards 행 자체가 없는 경우"
+        },
+        {
+          "error_type": "REWARD_LEDGER_ROW_MISSING",
+          "condition": "expected_rewards.expected_reward_amount > 0 AND reward_ledger.ledger_id IS NULL",
+          "description": "예상 캐시백은 존재하지만 지급 원장 행이 없는 경우"
+        }
+      ]
+    },
+    "required_policy_basis_ids": [
+      "H07-BASIS-RATE",
+      "H07-BASIS-MONTHLY-CAP",
+      "H07-BASIS-EXCLUSION",
+      "H07-BASIS-PAYMENT-DATE"
+    ],
+    "field_basis_mapping": {
+      "h07_cashback_policy.rate_table": "H07-BASIS-RATE",
+      "h07_cashback_policy.monthly_cap.cap_amount_krw": "H07-BASIS-MONTHLY-CAP",
+      "h07_cashback_policy.eligibility.excluded_transaction_statuses": "H07-BASIS-EXCLUSION",
+      "h07_cashback_policy.eligibility.excluded_merchant_categories": "H07-BASIS-EXCLUSION",
+      "h07_cashback_policy.payment_schedule": "H07-BASIS-PAYMENT-DATE"
+    },
+    "rule_template_id": "H07_REWARD_MISSING",
+    "legacy_rule_id": "H07-SMART-CASHBACK-001",
+    "reward_type": "CASHBACK",
+    "product_config_id": "JB_SMART_CASHBACK_CHECK__2022-07__v2",
+    "product_policy_version": "2022-07",
+    "calculation_pattern": "expected_reward_vs_actual_reward_reconciliation",
+    "scope_note": "Smart Cashback is a product config instance of the generic H07 Reward Missing template."
+  },
+  "runtime_controls": {
+    "llm_may_use_this_config_for_calculation": false,
+    "rag_may_use_this_config_for_calculation": false,
+    "deterministic_rule_engine_must_use_this_config": true,
+    "human_review_required_before_refund": true,
+    "automatic_customer_refund_allowed": false
+  },
+  "change_control": {
+    "immutable_after_approval": true,
+    "changes_require_new_config_id": true,
+    "approved_for_mvp_by": "PROJECT_OWNER",
+    "approved_for_mvp_at": "2026-06-13T00:00:00+09:00",
+    "production_approval_required": true,
+    "production_approved_by": null,
+    "production_approved_at": null
+  },
+  "product_family": "REWARD_CASHBACK_POINT_MILEAGE",
+  "supported_rule_template_id": "H07_REWARD_MISSING",
+  "supported_rule_id": "H07-REWARD-MISSING-TEMPLATE",
+  "legacy_rule_id": "H07-SMART-CASHBACK-001",
+  "h07_reward_policy": {
+    "rule_id": "H07-REWARD-MISSING-TEMPLATE",
+    "harm_type": "H07",
+    "rule_template": "reward_policy_recalculate_and_reconcile",
+    "service_name": "건당 사용금액별 캐시백 서비스",
+    "calculation_purpose": "거래 당시 승인된 상품설정으로 예상 캐시백을 독립 재계산한 뒤, 은행 시스템 expected_rewards 및 reward_ledger와 대사한다.",
+    "amount_basis": {
+      "source_table": "card_purchases",
+      "source_field": "amount",
+      "currency": "KRW",
+      "calculation_unit": "PER_TRANSACTION"
+    },
+    "eligibility": {
+      "minimum_eligible_amount_krw": 5000,
+      "below_minimum_amount_reason": "BELOW_MINIMUM_TRANSACTION_AMOUNT",
+      "eligible_transaction_statuses": [
+        "COMPLETED"
+      ],
+      "excluded_transaction_statuses": [
+        "CANCELLED"
+      ],
+      "excluded_merchant_categories": [
+        "TAX",
+        "PUBLIC_CHARGE",
+        "TUITION"
+      ],
+      "excluded_reason_mapping": {
+        "CANCELLED": "사용 취소건은 캐시백 서비스 적용 제외",
+        "TAX": "제세공과금 사용액은 캐시백 서비스 적용 제외",
+        "PUBLIC_CHARGE": "제세공과금 사용액은 캐시백 서비스 적용 제외",
+        "TUITION": "등록금 사용액은 캐시백 서비스 적용 제외",
+        "BELOW_MINIMUM_TRANSACTION_AMOUNT": "건당 사용금액 5천원 미만으로 캐시백률 구간 미충족"
+      },
+      "merchant_exclusion_precedence": {
+        "primary_source": "product_config.excluded_merchant_categories",
+        "secondary_source": "merchant_master.is_cashback_excluded",
+        "on_conflict": "FLAG_FOR_HUMAN_REVIEW",
+        "note": "MVP에서는 merchant_category 기준으로 계산하고, merchant_master의 제외 플래그와 충돌하면 정상 확정하지 않고 검토 대상으로 표시한다."
+      }
+    },
+    "rate_table": [
+      {
+        "min_amount_inclusive": 5000,
+        "max_amount_exclusive": 50000,
+        "cashback_rate": 0.002,
+        "cashback_rate_percent": 0.2,
+        "source_label": "5천원 이상~5만원 미만: 0.2% 캐시백"
+      },
+      {
+        "min_amount_inclusive": 50000,
+        "max_amount_exclusive": 100000,
+        "cashback_rate": 0.005,
+        "cashback_rate_percent": 0.5,
+        "source_label": "5만원 이상~10만원 미만: 0.5% 캐시백"
+      },
+      {
+        "min_amount_inclusive": 100000,
+        "max_amount_exclusive": 500000,
+        "cashback_rate": 0.007,
+        "cashback_rate_percent": 0.7,
+        "source_label": "10만원 이상~50만원 미만: 0.7% 캐시백"
+      },
+      {
+        "min_amount_inclusive": 500000,
+        "max_amount_exclusive": 1000000,
+        "cashback_rate": 0.01,
+        "cashback_rate_percent": 1.0,
+        "source_label": "50만원 이상~100만원 미만: 1.0% 캐시백"
+      },
+      {
+        "min_amount_inclusive": 1000000,
+        "max_amount_exclusive": null,
+        "cashback_rate": 0.012,
+        "cashback_rate_percent": 1.2,
+        "source_label": "100만원 이상: 1.2% 캐시백"
+      }
+    ],
+    "rounding_policy": {
+      "rounding_method": "FLOOR_TO_KRW",
+      "rounding_unit": 1,
+      "is_mvp_assumption": true,
+      "requires_internal_policy_confirmation": true,
+      "note": "상품설명서 발췌문에서 소수점 이하 원 단위 처리 방식은 확인되지 않아 MVP에서는 원 단위 절사로 가정한다."
+    },
+    "monthly_cap": {
+      "cap_amount_krw": 100000,
+      "cap_amount_source_verified": true,
+      "cap_basis": "CASHBACK_AMOUNT",
+      "cap_scope": "CUSTOMER_PRODUCT_MONTH",
+      "cap_scope_requires_internal_policy_confirmation": true,
+      "allocation_method": "TRANSACTION_ORDER",
+      "allocation_order": [
+        "purchase_date",
+        "purchase_id"
+      ],
+      "partial_reward_allowed_when_cap_remaining": true,
+      "cap_exhausted_behavior": "CALCULATED_REWARD_CAPPED_TO_REMAINING_MONTHLY_LIMIT",
+      "allocation_method_is_mvp_assumption": true,
+      "allocation_method_requires_internal_policy_confirmation": true,
+      "source_text": "캐시백은 월 10만원(캐시백 금액 기준) 이내에서 제공"
+    },
+    "payment_schedule": {
+      "usage_period_start_day": 1,
+      "usage_period_end": "LAST_DAY_OF_MONTH",
+      "payment_month_offset": 1,
+      "payment_day": 27,
+      "payment_account": "LINKED_SETTLEMENT_ACCOUNT",
+      "holiday_rule": "NEXT_BUSINESS_DAY",
+      "business_calendar": {
+        "calendar_id": "KR_BANKING_CALENDAR",
+        "mvp_implementation": "WEEKEND_ONLY",
+        "requires_holiday_table_for_production": true
+      },
+      "source_text": "매월 1일~말일까지 사용건에 대한 캐시백이 익월 27일에 결제계좌로 입금됩니다. 입금일이 휴일 및 공휴일인 경우 다음 영업일에 입금됩니다."
+    },
+    "independent_policy_calculation": {
+      "enabled": true,
+      "calculator_name": "reward_policy_calculator",
+      "purpose": "expected_rewards를 그대로 신뢰하지 않고 상품설정으로 예상 캐시백을 독립 재계산한다.",
+      "input_tables": [
+        "card_purchases",
+        "merchant_master",
+        "card_contracts"
+      ],
+      "output_fields": [
+        "policy_expected_reward_amount",
+        "policy_eligibility_status",
+        "policy_eligibility_reason",
+        "policy_applied_rate",
+        "policy_monthly_cap_remaining_before_transaction",
+        "policy_monthly_cap_remaining_after_transaction"
+      ]
+    },
+    "reconciliation": {
+      "enabled": true,
+      "calculator_name": "reward_reconciliation_calculator",
+      "purpose": "독립 재계산한 예상 캐시백, 은행 expected_rewards, 실제 reward_ledger를 비교하여 오류 유형을 분리한다.",
+      "comparison_targets": {
+        "policy_calculated_expected": "policy_expected_reward_amount",
+        "bank_system_expected": "expected_rewards.expected_reward_amount",
+        "actual_paid": "reward_ledger.paid_reward_amount"
+      },
+      "detectable_error_types": [
+        {
+          "error_type": "POLICY_CALCULATION_ERROR",
+          "condition": "policy_expected_reward_amount != expected_rewards.expected_reward_amount",
+          "description": "은행 시스템의 expected_rewards 자체가 상품설정 기준과 다르게 계산된 경우"
+        },
+        {
+          "error_type": "PAYMENT_EXECUTION_ERROR",
+          "condition": "expected_rewards.expected_reward_amount > reward_ledger.paid_reward_amount",
+          "description": "은행 시스템의 예상 캐시백은 존재하지만 실제 지급 원장에서 누락 또는 과소 지급된 경우"
+        },
+        {
+          "error_type": "EXPECTED_REWARD_ROW_MISSING",
+          "condition": "policy_expected_reward_amount > 0 AND expected_rewards.reward_id IS NULL",
+          "description": "상품설정 기준으로 캐시백 대상인데 expected_rewards 행 자체가 없는 경우"
+        },
+        {
+          "error_type": "REWARD_LEDGER_ROW_MISSING",
+          "condition": "expected_rewards.expected_reward_amount > 0 AND reward_ledger.ledger_id IS NULL",
+          "description": "예상 캐시백은 존재하지만 지급 원장 행이 없는 경우"
+        }
+      ]
+    },
+    "required_policy_basis_ids": [
+      "H07-BASIS-RATE",
+      "H07-BASIS-MONTHLY-CAP",
+      "H07-BASIS-EXCLUSION",
+      "H07-BASIS-PAYMENT-DATE"
+    ],
+    "field_basis_mapping": {
+      "h07_cashback_policy.rate_table": "H07-BASIS-RATE",
+      "h07_cashback_policy.monthly_cap.cap_amount_krw": "H07-BASIS-MONTHLY-CAP",
+      "h07_cashback_policy.eligibility.excluded_transaction_statuses": "H07-BASIS-EXCLUSION",
+      "h07_cashback_policy.eligibility.excluded_merchant_categories": "H07-BASIS-EXCLUSION",
+      "h07_cashback_policy.payment_schedule": "H07-BASIS-PAYMENT-DATE"
+    },
+    "rule_template_id": "H07_REWARD_MISSING",
+    "legacy_rule_id": "H07-SMART-CASHBACK-001",
+    "reward_type": "CASHBACK",
+    "product_config_id": "JB_SMART_CASHBACK_CHECK__2022-07__v2",
+    "product_policy_version": "2022-07",
+    "calculation_pattern": "expected_reward_vs_actual_reward_reconciliation",
+    "scope_note": "Smart Cashback is a product config instance of the generic H07 Reward Missing template."
+  }
+}

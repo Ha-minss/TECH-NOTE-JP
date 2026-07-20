@@ -1,0 +1,2462 @@
+{
+  "source_zip": "C:\\Users\\dongha\\Downloads\\mobile-game-ltv-forecasting-challenge.zip",
+  "train": {
+    "member": "train.csv",
+    "row_count": 21006238,
+    "column_count": 15,
+    "columns": [
+      "user_id",
+      "platform",
+      "country_tier",
+      "channel_tier",
+      "install_day",
+      "install_week",
+      "day_since_install",
+      "event_hour",
+      "event_type",
+      "event_name",
+      "product_id",
+      "network",
+      "ad_placement",
+      "revenue_usd",
+      "ltv_d8_d180"
+    ],
+    "user_count": 75464,
+    "rows_per_user": {
+      "count": 75464,
+      "mean": 278.36104632672533,
+      "std": 1498.4484638897907,
+      "min": 1.0,
+      "p01": 1.0,
+      "p05": 2.0,
+      "p25": 7.0,
+      "p50": 32.0,
+      "p75": 278.0,
+      "p95": 1166.0,
+      "p99": 2188.0,
+      "max": 178821.0,
+      "zero_rate": 0.0
+    },
+    "null_counts": {
+      "user_id": 0,
+      "platform": 0,
+      "country_tier": 0,
+      "channel_tier": 0,
+      "install_day": 0,
+      "install_week": 0,
+      "day_since_install": 0,
+      "event_hour": 0,
+      "event_type": 0,
+      "event_name": 0,
+      "product_id": 20950193,
+      "network": 2415572,
+      "ad_placement": 2415572,
+      "revenue_usd": 2359512,
+      "ltv_d8_d180": 0
+    },
+    "null_rates": {
+      "user_id": 0.0,
+      "platform": 0.0,
+      "country_tier": 0.0,
+      "channel_tier": 0.0,
+      "install_day": 0.0,
+      "install_week": 0.0,
+      "day_since_install": 0.0,
+      "event_hour": 0.0,
+      "event_type": 0.0,
+      "event_name": 0.0,
+      "product_id": 0.9973319830042866,
+      "network": 0.11499307967471377,
+      "ad_placement": 0.11499307967471377,
+      "revenue_usd": 0.11232434860539997,
+      "ltv_d8_d180": 0.0
+    },
+    "empty_string_counts": {
+      "platform": 0,
+      "country_tier": 0,
+      "channel_tier": 0,
+      "event_type": 0,
+      "event_name": 0,
+      "product_id": 20950193,
+      "network": 2415572,
+      "ad_placement": 2415572
+    },
+    "categorical_top_values": {
+      "platform": [
+        {
+          "value": "android",
+          "count": 19033977,
+          "share": 0.9061106991170909
+        },
+        {
+          "value": "ios",
+          "count": 1972261,
+          "share": 0.09388930088290916
+        }
+      ],
+      "country_tier": [
+        {
+          "value": "RU",
+          "count": 4493286,
+          "share": 0.2139024607833159
+        },
+        {
+          "value": "OTHER",
+          "count": 3012670,
+          "share": 0.14341787425240066
+        },
+        {
+          "value": "VN",
+          "count": 2844219,
+          "share": 0.13539878011474496
+        },
+        {
+          "value": "UA",
+          "count": 2493209,
+          "share": 0.11868898181578254
+        },
+        {
+          "value": "TR",
+          "count": 1250325,
+          "share": 0.059521604963249486
+        },
+        {
+          "value": "UZ",
+          "count": 1035281,
+          "share": 0.04928445540796025
+        },
+        {
+          "value": "IR",
+          "count": 925981,
+          "share": 0.044081239106212165
+        },
+        {
+          "value": "DE",
+          "count": 896480,
+          "share": 0.04267684675380713
+        },
+        {
+          "value": "US",
+          "count": 831985,
+          "share": 0.039606568296522204
+        },
+        {
+          "value": "NL",
+          "count": 560080,
+          "share": 0.026662556141656586
+        },
+        {
+          "value": "PL",
+          "count": 474776,
+          "share": 0.02260166718095834
+        },
+        {
+          "value": "IN",
+          "count": 454997,
+          "share": 0.021660089731440728
+        },
+        {
+          "value": "UK",
+          "count": 349979,
+          "share": 0.01666071764016003
+        },
+        {
+          "value": "FR",
+          "count": 335644,
+          "share": 0.015978301302689228
+        },
+        {
+          "value": "IT",
+          "count": 235906,
+          "share": 0.01123028311875739
+        },
+        {
+          "value": "ES",
+          "count": 173312,
+          "share": 0.008250501589099391
+        },
+        {
+          "value": "CZ",
+          "count": 126287,
+          "share": 0.00601188085177365
+        },
+        {
+          "value": "JP",
+          "count": 120799,
+          "share": 0.0057506251238322635
+        },
+        {
+          "value": "BY",
+          "count": 95925,
+          "share": 0.004566500674704343
+        },
+        {
+          "value": "ID",
+          "count": 94514,
+          "share": 0.004499330151357897
+        }
+      ],
+      "channel_tier": [
+        {
+          "value": "92247aa9",
+          "count": 16259559,
+          "share": 0.7740347890945537
+        },
+        {
+          "value": "bb16a88d",
+          "count": 3075795,
+          "share": 0.1464229339875136
+        },
+        {
+          "value": "8ad56f16",
+          "count": 789109,
+          "share": 0.03756546031707343
+        },
+        {
+          "value": "0487c9df",
+          "count": 297848,
+          "share": 0.014179026249250342
+        },
+        {
+          "value": "3bc36bb9",
+          "count": 233240,
+          "share": 0.011103368437508896
+        },
+        {
+          "value": "1e3b259e",
+          "count": 103163,
+          "share": 0.004911064989361731
+        },
+        {
+          "value": "0a1068d4",
+          "count": 84578,
+          "share": 0.004026327798437778
+        },
+        {
+          "value": "62eb5cc1",
+          "count": 47795,
+          "share": 0.0022752765154807823
+        },
+        {
+          "value": "0a0ae9c4",
+          "count": 46237,
+          "share": 0.0022011080708501923
+        },
+        {
+          "value": "other",
+          "count": 27861,
+          "share": 0.0013263203054254646
+        },
+        {
+          "value": "c7b4e5c9",
+          "count": 14559,
+          "share": 0.0006930798365704511
+        },
+        {
+          "value": "be8c018e",
+          "count": 11632,
+          "share": 0.0005537402746745991
+        },
+        {
+          "value": "96e2a77d",
+          "count": 11288,
+          "share": 0.0005373641867715675
+        },
+        {
+          "value": "a9603bc5",
+          "count": 1715,
+          "share": 8.164241498168307e-05
+        },
+        {
+          "value": "249fc9c1",
+          "count": 945,
+          "share": 4.4986636826641685e-05
+        },
+        {
+          "value": "a4ec9600",
+          "count": 914,
+          "share": 4.351088471910106e-05
+        }
+      ],
+      "event_type": [
+        {
+          "value": "ad_impression",
+          "count": 18590666,
+          "share": 0.8850069203252863
+        },
+        {
+          "value": "session",
+          "count": 2359512,
+          "share": 0.11232434860539997
+        },
+        {
+          "value": "iap",
+          "count": 56060,
+          "share": 0.0026687310693137914
+        }
+      ],
+      "event_name": [
+        {
+          "value": "ad_reward",
+          "count": 18590666,
+          "share": 0.8850069203252863
+        },
+        {
+          "value": "session_start",
+          "count": 2359512,
+          "share": 0.11232434860539997
+        },
+        {
+          "value": "af_purchase",
+          "count": 56060,
+          "share": 0.0026687310693137914
+        }
+      ],
+      "product_id": [
+        {
+          "value": "<NA>",
+          "count": 20950193,
+          "share": 0.9973319830042866
+        },
+        {
+          "value": "bcc00833",
+          "count": 5712,
+          "share": 0.0002719192270410342
+        },
+        {
+          "value": "e782250a",
+          "count": 3235,
+          "share": 0.00015400187315786862
+        },
+        {
+          "value": "4b938d57",
+          "count": 3070,
+          "share": 0.0001461470635532169
+        },
+        {
+          "value": "c38a022a",
+          "count": 2837,
+          "share": 0.00013505512029331478
+        },
+        {
+          "value": "d032a5fe",
+          "count": 2367,
+          "share": 0.00011268081414673108
+        },
+        {
+          "value": "7fb6e686",
+          "count": 2309,
+          "share": 0.00010991972955842927
+        },
+        {
+          "value": "3221acdd",
+          "count": 2155,
+          "share": 0.00010258857392742098
+        },
+        {
+          "value": "ba0e1e7b",
+          "count": 2014,
+          "share": 9.587628208344588e-05
+        },
+        {
+          "value": "68a9307c",
+          "count": 1832,
+          "share": 8.721218906498156e-05
+        },
+        {
+          "value": "9ae70675",
+          "count": 1788,
+          "share": 8.511757317040776e-05
+        },
+        {
+          "value": "0cf337e5",
+          "count": 1739,
+          "share": 8.278493274235968e-05
+        },
+        {
+          "value": "c0ce49e2",
+          "count": 1657,
+          "share": 7.888133039338124e-05
+        },
+        {
+          "value": "b1dd1c41",
+          "count": 1438,
+          "share": 6.845585582720714e-05
+        },
+        {
+          "value": "a36c6fbf",
+          "count": 1167,
+          "share": 5.555492611290037e-05
+        },
+        {
+          "value": "e43d08a6",
+          "count": 1104,
+          "share": 5.2555816991124256e-05
+        },
+        {
+          "value": "3534c002",
+          "count": 956,
+          "share": 4.5510290800285134e-05
+        },
+        {
+          "value": "979b377d",
+          "count": 870,
+          "share": 4.1416268824527266e-05
+        },
+        {
+          "value": "983b2eeb",
+          "count": 826,
+          "share": 3.932165292995348e-05
+        },
+        {
+          "value": "28eb399a",
+          "count": 825,
+          "share": 3.927404802325861e-05
+        }
+      ],
+      "network": [
+        {
+          "value": "b98072a5",
+          "count": 3389494,
+          "share": 0.16135654561278417
+        },
+        {
+          "value": "8ef7ca0d",
+          "count": 2826755,
+          "share": 0.13456740802422595
+        },
+        {
+          "value": "c2b68400",
+          "count": 2428761,
+          "share": 0.11562094078911227
+        },
+        {
+          "value": "<NA>",
+          "count": 2415572,
+          "share": 0.11499307967471377
+        },
+        {
+          "value": "54b36581",
+          "count": 2155739,
+          "share": 0.10262375395346848
+        },
+        {
+          "value": "4710c070",
+          "count": 1787085,
+          "share": 0.08507401468078196
+        },
+        {
+          "value": "ba78355e",
+          "count": 1457586,
+          "share": 0.06938824552973265
+        },
+        {
+          "value": "29a106dd",
+          "count": 1209421,
+          "share": 0.05757437385980298
+        },
+        {
+          "value": "0f95c3e4",
+          "count": 1206359,
+          "share": 0.05742860763550332
+        },
+        {
+          "value": "48dbfa82",
+          "count": 707286,
+          "share": 0.03367028403657999
+        },
+        {
+          "value": "62865ca7",
+          "count": 653517,
+          "share": 0.031110615808504122
+        },
+        {
+          "value": "6fa365a1",
+          "count": 453879,
+          "share": 0.021606867445755875
+        },
+        {
+          "value": "72ffa408",
+          "count": 314784,
+          "share": 0.014985262949034472
+        }
+      ],
+      "ad_placement": [
+        {
+          "value": "6fc118c8",
+          "count": 3480272,
+          "share": 0.16567802383273006
+        },
+        {
+          "value": "9e17b867",
+          "count": 3332889,
+          "share": 0.15866186986932168
+        },
+        {
+          "value": "02674f0c",
+          "count": 2417876,
+          "share": 0.11510276137973872
+        },
+        {
+          "value": "<NA>",
+          "count": 2415572,
+          "share": 0.11499307967471377
+        },
+        {
+          "value": "e7146d79",
+          "count": 2040132,
+          "share": 0.09712029350519594
+        },
+        {
+          "value": "018933a5",
+          "count": 1659910,
+          "share": 0.07901986067186328
+        },
+        {
+          "value": "6a75a998",
+          "count": 1361893,
+          "share": 0.06483278919338151
+        },
+        {
+          "value": "2401f920",
+          "count": 1184040,
+          "share": 0.05636611372298076
+        },
+        {
+          "value": "db2fa9e8",
+          "count": 1084342,
+          "share": 0.05161999973531672
+        },
+        {
+          "value": "27792d2d",
+          "count": 652746,
+          "share": 0.031073912425442385
+        },
+        {
+          "value": "05f3136b",
+          "count": 353699,
+          "share": 0.016837807893064907
+        },
+        {
+          "value": "eb5f6d53",
+          "count": 314784,
+          "share": 0.014985262949034472
+        },
+        {
+          "value": "e1e6dcbc",
+          "count": 127175,
+          "share": 0.006054154008918684
+        },
+        {
+          "value": "5c3d47b6",
+          "count": 122017,
+          "share": 0.005808607900186602
+        },
+        {
+          "value": "262e10fd",
+          "count": 115607,
+          "share": 0.005503460448272556
+        },
+        {
+          "value": "11abab9b",
+          "count": 100180,
+          "share": 0.004769059552690968
+        },
+        {
+          "value": "64c99e5c",
+          "count": 95693,
+          "share": 0.004555456336351136
+        },
+        {
+          "value": "2b2982d0",
+          "count": 56605,
+          "share": 0.0026946757434624896
+        },
+        {
+          "value": "00216aa2",
+          "count": 54540,
+          "share": 0.002596371611137606
+        },
+        {
+          "value": "1e4b064c",
+          "count": 25381,
+          "share": 0.0012082601368222144
+        }
+      ]
+    },
+    "numeric_min": {
+      "install_day": 0.0,
+      "install_week": 0.0,
+      "day_since_install": 0.0,
+      "event_hour": 0.0,
+      "revenue_usd": 0.0
+    },
+    "numeric_max": {
+      "install_day": 30.0,
+      "install_week": 4.0,
+      "day_since_install": 7.0,
+      "event_hour": 23.0,
+      "revenue_usd": 146.2743858909993
+    },
+    "validation_checks": {
+      "negative_revenue_rows": 0,
+      "session_revenue_non_null_rows": 0,
+      "non_session_revenue_null_rows": 0,
+      "invalid_day_rows": 0,
+      "invalid_hour_rows": 0,
+      "invalid_event_type_rows": 0,
+      "inconsistent_static_users": {
+        "platform": 16216,
+        "country_tier": 45669,
+        "channel_tier": 35758,
+        "install_day": 46462,
+        "install_week": 29425
+      },
+      "inconsistent_target_users": 34191
+    },
+    "rows_by_install_week": {
+      "0": 5545808,
+      "1": 4182926,
+      "2": 4640621,
+      "3": 4809553,
+      "4": 1827330
+    },
+    "users_by_install_week": {
+      "0": 32499,
+      "1": 25678,
+      "2": 23145,
+      "3": 21217,
+      "4": 7021
+    },
+    "event_type_by_day": [
+      {
+        "day_since_install": 0,
+        "event_type": "ad_impression",
+        "rows": 2568796
+      },
+      {
+        "day_since_install": 0,
+        "event_type": "iap",
+        "rows": 11097
+      },
+      {
+        "day_since_install": 0,
+        "event_type": "session",
+        "rows": 682204
+      },
+      {
+        "day_since_install": 1,
+        "event_type": "ad_impression",
+        "rows": 2472570
+      },
+      {
+        "day_since_install": 1,
+        "event_type": "iap",
+        "rows": 7782
+      },
+      {
+        "day_since_install": 1,
+        "event_type": "session",
+        "rows": 335572
+      },
+      {
+        "day_since_install": 2,
+        "event_type": "ad_impression",
+        "rows": 2325299
+      },
+      {
+        "day_since_install": 2,
+        "event_type": "iap",
+        "rows": 8389
+      },
+      {
+        "day_since_install": 2,
+        "event_type": "session",
+        "rows": 274124
+      },
+      {
+        "day_since_install": 3,
+        "event_type": "ad_impression",
+        "rows": 2315002
+      },
+      {
+        "day_since_install": 3,
+        "event_type": "iap",
+        "rows": 6738
+      },
+      {
+        "day_since_install": 3,
+        "event_type": "session",
+        "rows": 246501
+      },
+      {
+        "day_since_install": 4,
+        "event_type": "ad_impression",
+        "rows": 2258960
+      },
+      {
+        "day_since_install": 4,
+        "event_type": "iap",
+        "rows": 6518
+      },
+      {
+        "day_since_install": 4,
+        "event_type": "session",
+        "rows": 231775
+      },
+      {
+        "day_since_install": 5,
+        "event_type": "ad_impression",
+        "rows": 2258523
+      },
+      {
+        "day_since_install": 5,
+        "event_type": "iap",
+        "rows": 6315
+      },
+      {
+        "day_since_install": 5,
+        "event_type": "session",
+        "rows": 204400
+      },
+      {
+        "day_since_install": 6,
+        "event_type": "ad_impression",
+        "rows": 2218730
+      },
+      {
+        "day_since_install": 6,
+        "event_type": "iap",
+        "rows": 4850
+      },
+      {
+        "day_since_install": 6,
+        "event_type": "session",
+        "rows": 200738
+      },
+      {
+        "day_since_install": 7,
+        "event_type": "ad_impression",
+        "rows": 2172786
+      },
+      {
+        "day_since_install": 7,
+        "event_type": "iap",
+        "rows": 4371
+      },
+      {
+        "day_since_install": 7,
+        "event_type": "session",
+        "rows": 184198
+      }
+    ],
+    "user_feature_summaries": {
+      "event_count": {
+        "count": 75464,
+        "mean": 278.36104632672533,
+        "std": 1498.4484638897907,
+        "min": 1.0,
+        "p01": 1.0,
+        "p05": 2.0,
+        "p25": 7.0,
+        "p50": 32.0,
+        "p75": 278.0,
+        "p95": 1166.0,
+        "p99": 2188.0,
+        "max": 178821.0,
+        "zero_rate": 0.0
+      },
+      "session_count": {
+        "count": 75464,
+        "mean": 31.26672320576699,
+        "std": 235.04003555468702,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 2.0,
+        "p50": 6.0,
+        "p75": 16.0,
+        "p95": 103.0,
+        "p99": 397.7399999999907,
+        "max": 30102.0,
+        "zero_rate": 0.18106646877981555
+      },
+      "iap_count": {
+        "count": 75464,
+        "mean": 0.7428707728188275,
+        "std": 18.65802072392814,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p95": 1.0,
+        "p99": 11.0,
+        "max": 3240.0,
+        "zero_rate": 0.9239637443019187
+      },
+      "ad_impression_count": {
+        "count": 75464,
+        "mean": 246.3514523481395,
+        "std": 1424.7221098119414,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 8.0,
+        "p75": 236.0,
+        "p95": 1125.0,
+        "p99": 1975.8499999999767,
+        "max": 178802.0,
+        "zero_rate": 0.32292218806318246
+      },
+      "active_days": {
+        "count": 75464,
+        "mean": 4.696623555602671,
+        "std": 3.003362898075,
+        "min": 1.0,
+        "p01": 1.0,
+        "p05": 1.0,
+        "p25": 1.0,
+        "p50": 5.0,
+        "p75": 8.0,
+        "p95": 8.0,
+        "p99": 8.0,
+        "max": 8.0,
+        "zero_rate": 0.0
+      },
+      "last_event_day": {
+        "count": 75464,
+        "mean": 4.369195907982614,
+        "std": 3.048844672290891,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 6.0,
+        "p75": 7.0,
+        "p95": 7.0,
+        "p99": 7.0,
+        "max": 7.0,
+        "zero_rate": 0.25382964062334357
+      },
+      "unique_event_names": {
+        "count": 75464,
+        "mean": 1.5720475988550833,
+        "std": 0.5735499852312924,
+        "min": 1.0,
+        "p01": 1.0,
+        "p05": 1.0,
+        "p25": 1.0,
+        "p50": 2.0,
+        "p75": 2.0,
+        "p95": 2.0,
+        "p99": 3.0,
+        "max": 3.0,
+        "zero_rate": 0.0
+      },
+      "unique_ad_networks": {
+        "count": 75464,
+        "mean": 3.9755512562281354,
+        "std": 3.9299551592865747,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 3.0,
+        "p75": 8.0,
+        "p95": 11.0,
+        "p99": 12.0,
+        "max": 12.0,
+        "zero_rate": 0.32292218806318246
+      },
+      "unique_products": {
+        "count": 75464,
+        "mean": 0.21708364253153822,
+        "std": 1.1583350700367916,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p95": 1.0,
+        "p99": 5.0,
+        "max": 48.0,
+        "zero_rate": 0.9239769956535566
+      },
+      "revenue_d0_d7": {
+        "count": 75464,
+        "mean": 10.449135188999465,
+        "std": 312.0478617850388,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 0.166695,
+        "p75": 0.94547575,
+        "p95": 12.848122895845725,
+        "p99": 122.1498881999985,
+        "max": 43193.4789270225,
+        "zero_rate": 0.30421127955051414
+      },
+      "iap_revenue_d0_d7": {
+        "count": 75464,
+        "mean": 9.451675624319618,
+        "std": 311.6492497385587,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p95": 7.3734355707007815,
+        "p99": 113.64499695979495,
+        "max": 43193.1388330225,
+        "zero_rate": 0.9239637443019187
+      },
+      "ad_revenue_d0_d7": {
+        "count": 75464,
+        "mean": 0.9974595646798474,
+        "std": 6.498285417702925,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 0.1283515,
+        "p75": 0.734703,
+        "p95": 3.398418,
+        "p99": 12.827133249999951,
+        "max": 789.76496,
+        "zero_rate": 0.32292218806318246
+      },
+      "revenue_d0": {
+        "count": 75464,
+        "mean": 1.783720187047294,
+        "std": 52.82042835933857,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 0.016073,
+        "p75": 0.13830975,
+        "p95": 2.0500089639086014,
+        "p99": 27.774627953445645,
+        "max": 12929.987249441347,
+        "zero_rate": 0.4224000848086505
+      },
+      "revenue_d1": {
+        "count": 75464,
+        "mean": 1.4948086488693184,
+        "std": 80.10295780356239,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0843015,
+        "p95": 0.8180278499999976,
+        "p99": 15.200241297041526,
+        "max": 20443.305264885883,
+        "zero_rate": 0.5199830382699036
+      },
+      "revenue_d2_d3": {
+        "count": 75464,
+        "mean": 2.957495447388851,
+        "std": 116.77911936452814,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 0.0015395,
+        "p75": 0.153695,
+        "p95": 1.2448816499999955,
+        "p99": 26.955391870841677,
+        "max": 21187.57713242656,
+        "zero_rate": 0.49691243506837696
+      },
+      "revenue_d4_d7": {
+        "count": 75464,
+        "mean": 4.213110905694002,
+        "std": 147.8459651754211,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 0.012636999999999999,
+        "p75": 0.29371274999999997,
+        "p95": 2.288692799999999,
+        "p99": 44.334427226270755,
+        "max": 23470.936883710354,
+        "zero_rate": 0.47133732640729353
+      },
+      "days_to_first_iap": {
+        "count": 5738,
+        "mean": 1.3992680376437783,
+        "std": 1.9149730163726233,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 1.0,
+        "p75": 2.0,
+        "p95": 6.0,
+        "p99": 7.0,
+        "max": 7.0,
+        "zero_rate": 0.4996514464970373
+      },
+      "days_to_first_ad": {
+        "count": 51095,
+        "mean": 0.42814365397788434,
+        "std": 1.2071596008747898,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p95": 3.0,
+        "p99": 6.0,
+        "max": 7.0,
+        "zero_rate": 0.831901360211371
+      }
+    },
+    "target_summary": {
+      "count": 75464,
+      "mean": 16.34912947137044,
+      "std": 280.81814669403576,
+      "min": 0.0,
+      "p01": 0.0,
+      "p05": 0.0,
+      "p25": 0.0,
+      "p50": 0.0,
+      "p75": 1.5422669999999998,
+      "p95": 20.43895772416641,
+      "p99": 200.2789975033265,
+      "max": 24234.899653,
+      "zero_rate": 0.5906392452030107,
+      "positive_user_rate": 0.4093607547969893,
+      "positive_revenue_share_top_10pct_by_target": 0.9513923077197235
+    },
+    "segment_summary_top20": {
+      "platform": [
+        {
+          "platform": "android",
+          "users": 69515,
+          "mean_ltv": 11.9763791826551,
+          "median_ltv": 0.0,
+          "positive_rate": 0.414083291375962,
+          "mean_d0_d7_revenue": 8.740222306347233,
+          "mean_event_count": 293.08340645903763
+        },
+        {
+          "platform": "ios",
+          "users": 5949,
+          "mean_ltv": 67.44540385698932,
+          "median_ltv": 0.0,
+          "positive_rate": 0.3541771726340561,
+          "mean_d0_d7_revenue": 30.418050811384738,
+          "mean_event_count": 106.32795427802992
+        }
+      ],
+      "country_tier": [
+        {
+          "country_tier": "OTHER",
+          "users": 18299,
+          "mean_ltv": 15.65695065130555,
+          "median_ltv": 0.0,
+          "positive_rate": 0.3452101207716269,
+          "mean_d0_d7_revenue": 6.856318702051484,
+          "mean_event_count": 210.14290398382425
+        },
+        {
+          "country_tier": "RU",
+          "users": 14974,
+          "mean_ltv": 11.724340213665245,
+          "median_ltv": 0.0,
+          "positive_rate": 0.4981300921597436,
+          "mean_d0_d7_revenue": 3.458262237100294,
+          "mean_event_count": 216.765727260585
+        },
+        {
+          "country_tier": "IN",
+          "users": 6814,
+          "mean_ltv": 6.78068026388601,
+          "median_ltv": 0.0,
+          "positive_rate": 0.2938068682125037,
+          "mean_d0_d7_revenue": 4.218473391868582,
+          "mean_event_count": 225.79087173466394
+        },
+        {
+          "country_tier": "DE",
+          "users": 5792,
+          "mean_ltv": 27.200720966799246,
+          "median_ltv": 0.0,
+          "positive_rate": 0.4338743093922652,
+          "mean_d0_d7_revenue": 44.46998954749483,
+          "mean_event_count": 632.2954074585635
+        },
+        {
+          "country_tier": "IR",
+          "users": 3600,
+          "mean_ltv": 6.495805960317866,
+          "median_ltv": 0.0,
+          "positive_rate": 0.4747222222222222,
+          "mean_d0_d7_revenue": 3.826069150858061,
+          "mean_event_count": 341.78527777777776
+        },
+        {
+          "country_tier": "FR",
+          "users": 2915,
+          "mean_ltv": 18.925961492974164,
+          "median_ltv": 0.0,
+          "positive_rate": 0.37289879931389364,
+          "mean_d0_d7_revenue": 26.42516724918992,
+          "mean_event_count": 274.47341337907375
+        },
+        {
+          "country_tier": "BR",
+          "users": 2458,
+          "mean_ltv": 8.770728613947298,
+          "median_ltv": 0.0,
+          "positive_rate": 0.2965825874694874,
+          "mean_d0_d7_revenue": 15.2208526953064,
+          "mean_event_count": 422.18022782750205
+        },
+        {
+          "country_tier": "US",
+          "users": 2436,
+          "mean_ltv": 53.06276997176825,
+          "median_ltv": 0.0,
+          "positive_rate": 0.3321018062397373,
+          "mean_d0_d7_revenue": 8.256948534893267,
+          "mean_event_count": 80.91830870279146
+        },
+        {
+          "country_tier": "UA",
+          "users": 1947,
+          "mean_ltv": 8.334628501432093,
+          "median_ltv": 0.179111,
+          "positive_rate": 0.551617873651772,
+          "mean_d0_d7_revenue": 2.045259695780284,
+          "mean_event_count": 332.9753466872111
+        },
+        {
+          "country_tier": "TR",
+          "users": 1873,
+          "mean_ltv": 6.643604729893829,
+          "median_ltv": 0.228965,
+          "positive_rate": 0.5627335824879872,
+          "mean_d0_d7_revenue": 2.510996182160781,
+          "mean_event_count": 255.59263214095034
+        },
+        {
+          "country_tier": "ID",
+          "users": 1857,
+          "mean_ltv": 3.107203629319809,
+          "median_ltv": 0.0,
+          "positive_rate": 0.28002154011847064,
+          "mean_d0_d7_revenue": 4.2832866130653136,
+          "mean_event_count": 222.437802907916
+        },
+        {
+          "country_tier": "ES",
+          "users": 1615,
+          "mean_ltv": 15.532950605057026,
+          "median_ltv": 0.0,
+          "positive_rate": 0.3851393188854489,
+          "mean_d0_d7_revenue": 13.343207724489965,
+          "mean_event_count": 338.6377708978328
+        },
+        {
+          "country_tier": "IT",
+          "users": 1463,
+          "mean_ltv": 71.99885025678296,
+          "median_ltv": 0.0,
+          "positive_rate": 0.4354066985645933,
+          "mean_d0_d7_revenue": 11.950852715433383,
+          "mean_event_count": 243.87833219412167
+        },
+        {
+          "country_tier": "NL",
+          "users": 1455,
+          "mean_ltv": 29.500971880086585,
+          "median_ltv": 0.0,
+          "positive_rate": 0.488659793814433,
+          "mean_d0_d7_revenue": 23.666094544074916,
+          "mean_event_count": 389.5085910652921
+        },
+        {
+          "country_tier": "JP",
+          "users": 1330,
+          "mean_ltv": 22.820988651815355,
+          "median_ltv": 0.0,
+          "positive_rate": 0.3676691729323308,
+          "mean_d0_d7_revenue": 11.083098669581164,
+          "mean_event_count": 216.07443609022556
+        },
+        {
+          "country_tier": "PL",
+          "users": 1315,
+          "mean_ltv": 28.041042562439586,
+          "median_ltv": 0.0,
+          "positive_rate": 0.40836501901140687,
+          "mean_d0_d7_revenue": 4.795180111512413,
+          "mean_event_count": 249.11939163498099
+        },
+        {
+          "country_tier": "VN",
+          "users": 985,
+          "mean_ltv": 3.1283629640378026,
+          "median_ltv": 1.676373,
+          "positive_rate": 0.7756345177664975,
+          "mean_d0_d7_revenue": 0.5906097490854513,
+          "mean_event_count": 457.76142131979697
+        },
+        {
+          "country_tier": "KR",
+          "users": 974,
+          "mean_ltv": 16.335298970352873,
+          "median_ltv": 0.0,
+          "positive_rate": 0.3213552361396304,
+          "mean_d0_d7_revenue": 6.167600739739708,
+          "mean_event_count": 188.53388090349077
+        },
+        {
+          "country_tier": "UZ",
+          "users": 739,
+          "mean_ltv": 3.02224648308525,
+          "median_ltv": 0.0494169999999999,
+          "positive_rate": 0.5385656292286874,
+          "mean_d0_d7_revenue": 0.4515189039242219,
+          "mean_event_count": 255.35588633288228
+        },
+        {
+          "country_tier": "UK",
+          "users": 727,
+          "mean_ltv": 30.441477101347804,
+          "median_ltv": 0.0,
+          "positive_rate": 0.3204951856946355,
+          "mean_d0_d7_revenue": 4.102847552061826,
+          "mean_event_count": 81.36863823933976
+        }
+      ],
+      "channel_tier": [
+        {
+          "channel_tier": "92247aa9",
+          "users": 35220,
+          "mean_ltv": 17.352263406575887,
+          "median_ltv": 0.041228999999999946,
+          "positive_rate": 0.5251845542305508,
+          "mean_d0_d7_revenue": 12.70202633034545,
+          "mean_event_count": 338.02660420215784
+        },
+        {
+          "channel_tier": "8ad56f16",
+          "users": 19514,
+          "mean_ltv": 6.346607110134765,
+          "median_ltv": 0.0,
+          "positive_rate": 0.26985753817771857,
+          "mean_d0_d7_revenue": 5.429832714584321,
+          "mean_event_count": 240.93640463257148
+        },
+        {
+          "channel_tier": "bb16a88d",
+          "users": 8579,
+          "mean_ltv": 34.3030898635728,
+          "median_ltv": 0.0,
+          "positive_rate": 0.3418813381512997,
+          "mean_d0_d7_revenue": 9.891618511502404,
+          "mean_event_count": 126.05641683179857
+        },
+        {
+          "channel_tier": "0487c9df",
+          "users": 5336,
+          "mean_ltv": 7.6472665203670385,
+          "median_ltv": 0.0,
+          "positive_rate": 0.33808095952023987,
+          "mean_d0_d7_revenue": 5.8418563922598725,
+          "mean_event_count": 267.08564467766115
+        },
+        {
+          "channel_tier": "3bc36bb9",
+          "users": 2342,
+          "mean_ltv": 9.600906097675043,
+          "median_ltv": 0.0,
+          "positive_rate": 0.31596925704526047,
+          "mean_d0_d7_revenue": 5.643799384746485,
+          "mean_event_count": 269.13834329632795
+        },
+        {
+          "channel_tier": "0a1068d4",
+          "users": 1619,
+          "mean_ltv": 45.340030127328156,
+          "median_ltv": 0.0,
+          "positive_rate": 0.36689314391599753,
+          "mean_d0_d7_revenue": 10.962672401805346,
+          "mean_event_count": 356.1772699197035
+        },
+        {
+          "channel_tier": "1e3b259e",
+          "users": 1313,
+          "mean_ltv": 11.594388233909674,
+          "median_ltv": 0.0,
+          "positive_rate": 0.3488194973343488,
+          "mean_d0_d7_revenue": 8.927662915371968,
+          "mean_event_count": 248.45925361766945
+        },
+        {
+          "channel_tier": "0a0ae9c4",
+          "users": 909,
+          "mean_ltv": 39.313370609929386,
+          "median_ltv": 0.0,
+          "positive_rate": 0.4367436743674367,
+          "mean_d0_d7_revenue": 78.81101848060584,
+          "mean_event_count": 243.1914191419142
+        },
+        {
+          "channel_tier": "62eb5cc1",
+          "users": 332,
+          "mean_ltv": 3.395539497336365,
+          "median_ltv": 0.0,
+          "positive_rate": 0.3463855421686747,
+          "mean_d0_d7_revenue": 9.759186084756923,
+          "mean_event_count": 346.95180722891564
+        },
+        {
+          "channel_tier": "other",
+          "users": 81,
+          "mean_ltv": 52.35243102953898,
+          "median_ltv": 0.0,
+          "positive_rate": 0.37037037037037035,
+          "mean_d0_d7_revenue": 4.8900745116057385,
+          "mean_event_count": 39.03703703703704
+        },
+        {
+          "channel_tier": "249fc9c1",
+          "users": 70,
+          "mean_ltv": 5.078146453408967,
+          "median_ltv": 0.0,
+          "positive_rate": 0.24285714285714285,
+          "mean_d0_d7_revenue": 4.507675865360527,
+          "mean_event_count": 191.9857142857143
+        },
+        {
+          "channel_tier": "a4ec9600",
+          "users": 42,
+          "mean_ltv": 85.15701990476191,
+          "median_ltv": 0.0,
+          "positive_rate": 0.35714285714285715,
+          "mean_d0_d7_revenue": 4.131069109358873,
+          "mean_event_count": 25.238095238095237
+        },
+        {
+          "channel_tier": "be8c018e",
+          "users": 34,
+          "mean_ltv": 8.683540286291967,
+          "median_ltv": 0.0,
+          "positive_rate": 0.29411764705882354,
+          "mean_d0_d7_revenue": 6.175267062352911,
+          "mean_event_count": 66.88235294117646
+        },
+        {
+          "channel_tier": "c7b4e5c9",
+          "users": 34,
+          "mean_ltv": 0.22374000000000002,
+          "median_ltv": 0.0,
+          "positive_rate": 0.14705882352941177,
+          "mean_d0_d7_revenue": 1.0522397527324192,
+          "mean_event_count": 25.647058823529413
+        },
+        {
+          "channel_tier": "96e2a77d",
+          "users": 32,
+          "mean_ltv": 225.9415324383543,
+          "median_ltv": 0.0,
+          "positive_rate": 0.25,
+          "mean_d0_d7_revenue": 14.839490449964098,
+          "mean_event_count": 51.9375
+        },
+        {
+          "channel_tier": "a9603bc5",
+          "users": 7,
+          "mean_ltv": 0.17883342857142856,
+          "median_ltv": 0.0,
+          "positive_rate": 0.42857142857142855,
+          "mean_d0_d7_revenue": 0.6721567142857143,
+          "mean_event_count": 111.85714285714286
+        }
+      ],
+      "install_week": [
+        {
+          "install_week": "0",
+          "users": 32499,
+          "mean_ltv": 31.700927574562527,
+          "median_ltv": 0.0,
+          "positive_rate": 0.4540139696606049,
+          "mean_d0_d7_revenue": 19.111341073658863,
+          "mean_event_count": 296.95535247238377
+        },
+        {
+          "install_week": "1",
+          "users": 15858,
+          "mean_ltv": 4.400180081660183,
+          "median_ltv": 0.0,
+          "positive_rate": 0.3441165342413924,
+          "mean_d0_d7_revenue": 5.641184893194379,
+          "mean_event_count": 256.48095598436123
+        },
+        {
+          "install_week": "2",
+          "users": 12335,
+          "mean_ltv": 4.085619888069304,
+          "median_ltv": 0.0,
+          "positive_rate": 0.3890555330360762,
+          "mean_d0_d7_revenue": 2.966248616293329,
+          "mean_event_count": 273.088609647345
+        },
+        {
+          "install_week": "3",
+          "users": 10373,
+          "mean_ltv": 5.8809554258818295,
+          "median_ltv": 0.0,
+          "positive_rate": 0.3864841415212571,
+          "mean_d0_d7_revenue": 2.628422404136427,
+          "mean_event_count": 252.6627783669141
+        },
+        {
+          "install_week": "4",
+          "users": 4399,
+          "mean_ltv": 5.079548418917258,
+          "median_ltv": 0.0,
+          "positive_rate": 0.4255512616503751,
+          "mean_d0_d7_revenue": 3.210468750501126,
+          "mean_event_count": 295.24710161400316
+        }
+      ]
+    }
+  },
+  "test": {
+    "member": "test.csv",
+    "row_count": 5192340,
+    "column_count": 14,
+    "columns": [
+      "user_id",
+      "platform",
+      "country_tier",
+      "channel_tier",
+      "install_day",
+      "install_week",
+      "day_since_install",
+      "event_hour",
+      "event_type",
+      "event_name",
+      "product_id",
+      "network",
+      "ad_placement",
+      "revenue_usd"
+    ],
+    "user_count": 31399,
+    "rows_per_user": {
+      "count": 31399,
+      "mean": 165.36641294308737,
+      "std": 865.2854402425304,
+      "min": 1.0,
+      "p01": 1.0,
+      "p05": 2.0,
+      "p25": 3.0,
+      "p50": 9.0,
+      "p75": 87.0,
+      "p95": 860.0,
+      "p99": 1591.0800000000017,
+      "max": 96075.0,
+      "zero_rate": 0.0
+    },
+    "null_counts": {
+      "user_id": 0,
+      "platform": 0,
+      "country_tier": 0,
+      "channel_tier": 0,
+      "install_day": 0,
+      "install_week": 0,
+      "day_since_install": 0,
+      "event_hour": 0,
+      "event_type": 0,
+      "event_name": 0,
+      "product_id": 5177112,
+      "network": 573872,
+      "ad_placement": 573872,
+      "revenue_usd": 558644
+    },
+    "null_rates": {
+      "user_id": 0.0,
+      "platform": 0.0,
+      "country_tier": 0.0,
+      "channel_tier": 0.0,
+      "install_day": 0.0,
+      "install_week": 0.0,
+      "day_since_install": 0.0,
+      "event_hour": 0.0,
+      "event_type": 0.0,
+      "event_name": 0.0,
+      "product_id": 0.9970672182484198,
+      "network": 0.11052280859882058,
+      "ad_placement": 0.11052280859882058,
+      "revenue_usd": 0.10759002684724035
+    },
+    "empty_string_counts": {
+      "platform": 0,
+      "country_tier": 0,
+      "channel_tier": 0,
+      "event_type": 0,
+      "event_name": 0,
+      "product_id": 5177112,
+      "network": 573872,
+      "ad_placement": 573872
+    },
+    "categorical_top_values": {
+      "platform": [
+        {
+          "value": "android",
+          "count": 4660736,
+          "share": 0.8976176444531753
+        },
+        {
+          "value": "ios",
+          "count": 531604,
+          "share": 0.10238235554682475
+        }
+      ],
+      "country_tier": [
+        {
+          "value": "RU",
+          "count": 1065355,
+          "share": 0.20517820481709595
+        },
+        {
+          "value": "OTHER",
+          "count": 739338,
+          "share": 0.14239013623915228
+        },
+        {
+          "value": "VN",
+          "count": 730037,
+          "share": 0.14059884368126896
+        },
+        {
+          "value": "UA",
+          "count": 595862,
+          "share": 0.11475789335829317
+        },
+        {
+          "value": "TR",
+          "count": 315878,
+          "share": 0.06083538443168206
+        },
+        {
+          "value": "UZ",
+          "count": 269390,
+          "share": 0.05188219569596752
+        },
+        {
+          "value": "US",
+          "count": 242785,
+          "share": 0.04675830165204898
+        },
+        {
+          "value": "IR",
+          "count": 231057,
+          "share": 0.04449958978033026
+        },
+        {
+          "value": "DE",
+          "count": 227394,
+          "share": 0.043794127503206645
+        },
+        {
+          "value": "NL",
+          "count": 136647,
+          "share": 0.026317036249552225
+        },
+        {
+          "value": "PL",
+          "count": 106458,
+          "share": 0.02050289464865552
+        },
+        {
+          "value": "IN",
+          "count": 103335,
+          "share": 0.019901431724424826
+        },
+        {
+          "value": "FR",
+          "count": 88475,
+          "share": 0.01703952360592719
+        },
+        {
+          "value": "UK",
+          "count": 81923,
+          "share": 0.015777664790826488
+        },
+        {
+          "value": "IT",
+          "count": 51763,
+          "share": 0.00996910834036292
+        },
+        {
+          "value": "ES",
+          "count": 49316,
+          "share": 0.009497837198642617
+        },
+        {
+          "value": "CZ",
+          "count": 39144,
+          "share": 0.007538797536370885
+        },
+        {
+          "value": "JP",
+          "count": 38060,
+          "share": 0.00733002846500807
+        },
+        {
+          "value": "BR",
+          "count": 21228,
+          "share": 0.004088330117057049
+        },
+        {
+          "value": "BY",
+          "count": 21156,
+          "share": 0.0040744635366713276
+        }
+      ],
+      "channel_tier": [
+        {
+          "value": "92247aa9",
+          "count": 4053068,
+          "share": 0.7805860170944121
+        },
+        {
+          "value": "bb16a88d",
+          "count": 703829,
+          "share": 0.13555140842086613
+        },
+        {
+          "value": "8ad56f16",
+          "count": 187472,
+          "share": 0.036105493862112266
+        },
+        {
+          "value": "0487c9df",
+          "count": 80826,
+          "share": 0.015566392031338472
+        },
+        {
+          "value": "3bc36bb9",
+          "count": 50388,
+          "share": 0.009704295173274478
+        },
+        {
+          "value": "1e3b259e",
+          "count": 44234,
+          "share": 0.008519087733083734
+        },
+        {
+          "value": "0a1068d4",
+          "count": 28164,
+          "share": 0.005424144027548273
+        },
+        {
+          "value": "62eb5cc1",
+          "count": 16690,
+          "share": 0.0032143503699680683
+        },
+        {
+          "value": "0a0ae9c4",
+          "count": 10568,
+          "share": 0.0020353058543932023
+        },
+        {
+          "value": "other",
+          "count": 9873,
+          "share": 0.0019014548353921354
+        },
+        {
+          "value": "96e2a77d",
+          "count": 3563,
+          "share": 0.000686203137698995
+        },
+        {
+          "value": "be8c018e",
+          "count": 1632,
+          "share": 0.0003143091554096997
+        },
+        {
+          "value": "c7b4e5c9",
+          "count": 1294,
+          "share": 0.0002492132641545045
+        },
+        {
+          "value": "249fc9c1",
+          "count": 260,
+          "share": 5.007376250399627e-05
+        },
+        {
+          "value": "a9603bc5",
+          "count": 241,
+          "share": 4.641452601331962e-05
+        },
+        {
+          "value": "a4ec9600",
+          "count": 238,
+          "share": 4.58367518305812e-05
+        }
+      ],
+      "event_type": [
+        {
+          "value": "ad_impression",
+          "count": 4618468,
+          "share": 0.8894771914011794
+        },
+        {
+          "value": "session",
+          "count": 558644,
+          "share": 0.10759002684724035
+        },
+        {
+          "value": "iap",
+          "count": 15228,
+          "share": 0.0029327817515802123
+        }
+      ],
+      "event_name": [
+        {
+          "value": "ad_reward",
+          "count": 4618468,
+          "share": 0.8894771914011794
+        },
+        {
+          "value": "session_start",
+          "count": 558644,
+          "share": 0.10759002684724035
+        },
+        {
+          "value": "af_purchase",
+          "count": 15228,
+          "share": 0.0029327817515802123
+        }
+      ],
+      "product_id": [
+        {
+          "value": "<NA>",
+          "count": 5177112,
+          "share": 0.9970672182484198
+        },
+        {
+          "value": "4b938d57",
+          "count": 1964,
+          "share": 0.000378249498299418
+        },
+        {
+          "value": "bcc00833",
+          "count": 1627,
+          "share": 0.000313346198438469
+        },
+        {
+          "value": "7fb6e686",
+          "count": 825,
+          "share": 0.0001588879002530651
+        },
+        {
+          "value": "e782250a",
+          "count": 730,
+          "share": 0.00014059171779968183
+        },
+        {
+          "value": "d032a5fe",
+          "count": 681,
+          "share": 0.000131154739481621
+        },
+        {
+          "value": "c38a022a",
+          "count": 581,
+          "share": 0.00011189560005700705
+        },
+        {
+          "value": "a36c6fbf",
+          "count": 521,
+          "share": 0.00010034011640223868
+        },
+        {
+          "value": "3221acdd",
+          "count": 495,
+          "share": 9.533274015183906e-05
+        },
+        {
+          "value": "ba0e1e7b",
+          "count": 481,
+          "share": 9.263646063239311e-05
+        },
+        {
+          "value": "9ae70675",
+          "count": 480,
+          "share": 9.244386923814697e-05
+        },
+        {
+          "value": "c0ce49e2",
+          "count": 468,
+          "share": 9.013277250719329e-05
+        },
+        {
+          "value": "9d93913c",
+          "count": 426,
+          "share": 8.204393394885543e-05
+        },
+        {
+          "value": "b1dd1c41",
+          "count": 390,
+          "share": 7.511064375599441e-05
+        },
+        {
+          "value": "68a9307c",
+          "count": 371,
+          "share": 7.145140726531776e-05
+        },
+        {
+          "value": "0cf337e5",
+          "count": 320,
+          "share": 6.162924615876464e-05
+        },
+        {
+          "value": "e43d08a6",
+          "count": 307,
+          "share": 5.9125558033564826e-05
+        },
+        {
+          "value": "aed93981",
+          "count": 260,
+          "share": 5.007376250399627e-05
+        },
+        {
+          "value": "28eb399a",
+          "count": 237,
+          "share": 4.564416043633506e-05
+        },
+        {
+          "value": "b2dabc4c",
+          "count": 214,
+          "share": 4.121455836867386e-05
+        }
+      ],
+      "network": [
+        {
+          "value": "b98072a5",
+          "count": 872759,
+          "share": 0.16808587265086647
+        },
+        {
+          "value": "8ef7ca0d",
+          "count": 707168,
+          "share": 0.136194471086254
+        },
+        {
+          "value": "<NA>",
+          "count": 573872,
+          "share": 0.11052280859882058
+        },
+        {
+          "value": "c2b68400",
+          "count": 562738,
+          "share": 0.10837849601528406
+        },
+        {
+          "value": "54b36581",
+          "count": 538024,
+          "share": 0.10361879229788497
+        },
+        {
+          "value": "4710c070",
+          "count": 419224,
+          "share": 0.08073893466144359
+        },
+        {
+          "value": "ba78355e",
+          "count": 375506,
+          "share": 0.07231922408779086
+        },
+        {
+          "value": "29a106dd",
+          "count": 303346,
+          "share": 0.058421829078989435
+        },
+        {
+          "value": "0f95c3e4",
+          "count": 292470,
+          "share": 0.05632720507516842
+        },
+        {
+          "value": "48dbfa82",
+          "count": 181555,
+          "share": 0.034965930582357856
+        },
+        {
+          "value": "62865ca7",
+          "count": 172552,
+          "share": 0.03323203025995986
+        },
+        {
+          "value": "6fa365a1",
+          "count": 116093,
+          "share": 0.022358512732217072
+        },
+        {
+          "value": "72ffa408",
+          "count": 77033,
+          "share": 0.014835892872962865
+        }
+      ],
+      "ad_placement": [
+        {
+          "value": "6fc118c8",
+          "count": 879720,
+          "share": 0.16942650134621384
+        },
+        {
+          "value": "9e17b867",
+          "count": 857199,
+          "share": 0.16508915055639653
+        },
+        {
+          "value": "<NA>",
+          "count": 573872,
+          "share": 0.11052280859882058
+        },
+        {
+          "value": "02674f0c",
+          "count": 559607,
+          "share": 0.10777549235989939
+        },
+        {
+          "value": "e7146d79",
+          "count": 503437,
+          "share": 0.09695763374509374
+        },
+        {
+          "value": "018933a5",
+          "count": 384588,
+          "share": 0.0740683391303343
+        },
+        {
+          "value": "6a75a998",
+          "count": 351108,
+          "share": 0.06762037925097356
+        },
+        {
+          "value": "2401f920",
+          "count": 296354,
+          "share": 0.05707523005042043
+        },
+        {
+          "value": "db2fa9e8",
+          "count": 260401,
+          "share": 0.05015099165308897
+        },
+        {
+          "value": "27792d2d",
+          "count": 166361,
+          "share": 0.03203969693818202
+        },
+        {
+          "value": "05f3136b",
+          "count": 87981,
+          "share": 0.0169443834571696
+        },
+        {
+          "value": "eb5f6d53",
+          "count": 77033,
+          "share": 0.014835892872962865
+        },
+        {
+          "value": "e1e6dcbc",
+          "count": 34636,
+          "share": 0.006670595531109288
+        },
+        {
+          "value": "262e10fd",
+          "count": 34587,
+          "share": 0.006661158552791227
+        },
+        {
+          "value": "5c3d47b6",
+          "count": 32069,
+          "share": 0.006176213422079448
+        },
+        {
+          "value": "11abab9b",
+          "count": 28112,
+          "share": 0.005414129275047474
+        },
+        {
+          "value": "64c99e5c",
+          "count": 24398,
+          "share": 0.004698844836817311
+        },
+        {
+          "value": "2b2982d0",
+          "count": 15560,
+          "share": 0.002996722094469931
+        },
+        {
+          "value": "00216aa2",
+          "count": 15194,
+          "share": 0.0029262336441758436
+        },
+        {
+          "value": "1e4b064c",
+          "count": 6992,
+          "share": 0.0013465990285690074
+        }
+      ]
+    },
+    "numeric_min": {
+      "install_day": 0.0,
+      "install_week": 0.0,
+      "day_since_install": 0.0,
+      "event_hour": 0.0,
+      "revenue_usd": 0.0
+    },
+    "numeric_max": {
+      "install_day": 30.0,
+      "install_week": 4.0,
+      "day_since_install": 7.0,
+      "event_hour": 23.0,
+      "revenue_usd": 140.18014650046146
+    },
+    "validation_checks": {
+      "negative_revenue_rows": 0,
+      "session_revenue_non_null_rows": 0,
+      "non_session_revenue_null_rows": 0,
+      "invalid_day_rows": 0,
+      "invalid_hour_rows": 0,
+      "invalid_event_type_rows": 0,
+      "inconsistent_static_users": {
+        "platform": 1578,
+        "country_tier": 5957,
+        "channel_tier": 3655,
+        "install_day": 5904,
+        "install_week": 3395
+      },
+      "inconsistent_target_users": null
+    },
+    "rows_by_install_week": {
+      "0": 1461882,
+      "1": 1084023,
+      "2": 1142533,
+      "3": 1057811,
+      "4": 446091
+    },
+    "users_by_install_week": {
+      "0": 10159,
+      "1": 7853,
+      "2": 7334,
+      "3": 7194,
+      "4": 2545
+    },
+    "event_type_by_day": [
+      {
+        "day_since_install": 0,
+        "event_type": "ad_impression",
+        "rows": 637798
+      },
+      {
+        "day_since_install": 0,
+        "event_type": "iap",
+        "rows": 2671
+      },
+      {
+        "day_since_install": 0,
+        "event_type": "session",
+        "rows": 164083
+      },
+      {
+        "day_since_install": 1,
+        "event_type": "ad_impression",
+        "rows": 618010
+      },
+      {
+        "day_since_install": 1,
+        "event_type": "iap",
+        "rows": 1877
+      },
+      {
+        "day_since_install": 1,
+        "event_type": "session",
+        "rows": 78988
+      },
+      {
+        "day_since_install": 2,
+        "event_type": "ad_impression",
+        "rows": 597895
+      },
+      {
+        "day_since_install": 2,
+        "event_type": "iap",
+        "rows": 1756
+      },
+      {
+        "day_since_install": 2,
+        "event_type": "session",
+        "rows": 65039
+      },
+      {
+        "day_since_install": 3,
+        "event_type": "ad_impression",
+        "rows": 574744
+      },
+      {
+        "day_since_install": 3,
+        "event_type": "iap",
+        "rows": 2410
+      },
+      {
+        "day_since_install": 3,
+        "event_type": "session",
+        "rows": 57721
+      },
+      {
+        "day_since_install": 4,
+        "event_type": "ad_impression",
+        "rows": 565008
+      },
+      {
+        "day_since_install": 4,
+        "event_type": "iap",
+        "rows": 1701
+      },
+      {
+        "day_since_install": 4,
+        "event_type": "session",
+        "rows": 55036
+      },
+      {
+        "day_since_install": 5,
+        "event_type": "ad_impression",
+        "rows": 551923
+      },
+      {
+        "day_since_install": 5,
+        "event_type": "iap",
+        "rows": 1605
+      },
+      {
+        "day_since_install": 5,
+        "event_type": "session",
+        "rows": 47940
+      },
+      {
+        "day_since_install": 6,
+        "event_type": "ad_impression",
+        "rows": 540291
+      },
+      {
+        "day_since_install": 6,
+        "event_type": "iap",
+        "rows": 1408
+      },
+      {
+        "day_since_install": 6,
+        "event_type": "session",
+        "rows": 45571
+      },
+      {
+        "day_since_install": 7,
+        "event_type": "ad_impression",
+        "rows": 532799
+      },
+      {
+        "day_since_install": 7,
+        "event_type": "iap",
+        "rows": 1800
+      },
+      {
+        "day_since_install": 7,
+        "event_type": "session",
+        "rows": 44266
+      }
+    ],
+    "user_feature_summaries": {
+      "event_count": {
+        "count": 31399,
+        "mean": 165.36641294308737,
+        "std": 865.2854402425305,
+        "min": 1.0,
+        "p01": 1.0,
+        "p05": 2.0,
+        "p25": 3.0,
+        "p50": 9.0,
+        "p75": 87.0,
+        "p95": 860.0,
+        "p99": 1591.0800000000017,
+        "max": 96075.0,
+        "zero_rate": 0.0
+      },
+      "session_count": {
+        "count": 31399,
+        "mean": 17.791776808178604,
+        "std": 105.86742948697261,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 3.0,
+        "p75": 7.0,
+        "p95": 63.0,
+        "p99": 244.0,
+        "max": 5445.0,
+        "zero_rate": 0.30797159145195707
+      },
+      "iap_count": {
+        "count": 31399,
+        "mean": 0.48498359820376447,
+        "std": 17.28686436730762,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "p99": 6.0,
+        "max": 2736.0,
+        "zero_rate": 0.9521322335106214
+      },
+      "ad_impression_count": {
+        "count": 31399,
+        "mean": 147.089652536705,
+        "std": 850.0735999023327,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 1.0,
+        "p75": 47.0,
+        "p95": 830.0999999999985,
+        "p99": 1528.0600000000013,
+        "max": 96075.0,
+        "zero_rate": 0.47488773527819356
+      },
+      "active_days": {
+        "count": 31399,
+        "mean": 3.629828975445078,
+        "std": 2.932226486535765,
+        "min": 1.0,
+        "p01": 1.0,
+        "p05": 1.0,
+        "p25": 1.0,
+        "p50": 2.0,
+        "p75": 7.0,
+        "p95": 8.0,
+        "p99": 8.0,
+        "max": 8.0,
+        "zero_rate": 0.0
+      },
+      "last_event_day": {
+        "count": 31399,
+        "mean": 3.3204879136278227,
+        "std": 3.163334648538162,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 3.0,
+        "p75": 7.0,
+        "p95": 7.0,
+        "p99": 7.0,
+        "max": 7.0,
+        "zero_rate": 0.39733749482467595
+      },
+      "unique_event_names": {
+        "count": 31399,
+        "mean": 1.265008439759228,
+        "std": 0.47290645086218697,
+        "min": 1.0,
+        "p01": 1.0,
+        "p05": 1.0,
+        "p25": 1.0,
+        "p50": 1.0,
+        "p75": 2.0,
+        "p95": 2.0,
+        "p99": 3.0,
+        "max": 3.0,
+        "zero_rate": 0.0
+      },
+      "unique_ad_networks": {
+        "count": 31399,
+        "mean": 2.6996082677792286,
+        "std": 3.5082764799165185,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 1.0,
+        "p75": 5.0,
+        "p95": 10.0,
+        "p99": 11.0,
+        "max": 12.0,
+        "zero_rate": 0.47488773527819356
+      },
+      "unique_products": {
+        "count": 31399,
+        "mean": 0.13618268097710118,
+        "std": 0.9558320830011857,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "p99": 4.0,
+        "max": 39.0,
+        "zero_rate": 0.9521322335106214
+      },
+      "revenue_d0_d7": {
+        "count": 31399,
+        "mean": 5.8855682040193384,
+        "std": 154.1238208680729,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 0.017764,
+        "p75": 0.40426850000000003,
+        "p95": 4.940405699999994,
+        "p99": 63.98028712780313,
+        "max": 17199.264788691085,
+        "zero_rate": 0.454887098315233
+      },
+      "iap_revenue_d0_d7": {
+        "count": 31399,
+        "mean": 5.2774841352910355,
+        "std": 153.5324103740373,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p95": 0.0,
+        "p99": 54.77998631641548,
+        "max": 17199.264788691085,
+        "zero_rate": 0.9521322335106214
+      },
+      "ad_revenue_d0_d7": {
+        "count": 31399,
+        "mean": 0.6080840687283036,
+        "std": 3.9383949815616233,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 0.008606,
+        "p75": 0.32858050000000005,
+        "p95": 2.0471017999999988,
+        "p99": 8.406001780000002,
+        "max": 291.2,
+        "zero_rate": 0.47488773527819356
+      },
+      "revenue_d0": {
+        "count": 31399,
+        "mean": 0.9465247341238375,
+        "std": 17.095555378695323,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.055656,
+        "p95": 0.775882999999999,
+        "p99": 14.51003336353416,
+        "max": 1515.1465846754409,
+        "zero_rate": 0.5748590719449664
+      },
+      "revenue_d1": {
+        "count": 31399,
+        "mean": 0.6983186004862209,
+        "std": 15.197783840493749,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0273625,
+        "p95": 0.3701319999999999,
+        "p99": 7.95865429240072,
+        "max": 1445.7993555464159,
+        "zero_rate": 0.661358641994968
+      },
+      "revenue_d2_d3": {
+        "count": 31399,
+        "mean": 1.7574395246878647,
+        "std": 56.46349047598056,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.054288,
+        "p95": 0.6226999999999999,
+        "p99": 12.12152966154052,
+        "max": 6842.015893512314,
+        "zero_rate": 0.6373769865282334
+      },
+      "revenue_d4_d7": {
+        "count": 31399,
+        "mean": 2.4832853447214154,
+        "std": 99.93051309636148,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.102592,
+        "p95": 1.0583459999999991,
+        "p99": 20.253878919067205,
+        "max": 13335.641269252463,
+        "zero_rate": 0.6217713939934393
+      },
+      "days_to_first_iap": {
+        "count": 1503,
+        "mean": 1.3612774451097804,
+        "std": 1.811125983589311,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 1.0,
+        "p75": 2.0,
+        "p95": 5.0,
+        "p99": 7.0,
+        "max": 7.0,
+        "zero_rate": 0.48968729208250167
+      },
+      "days_to_first_ad": {
+        "count": 16488,
+        "mean": 0.5541606016496846,
+        "std": 1.3596270923357292,
+        "min": 0.0,
+        "p01": 0.0,
+        "p05": 0.0,
+        "p25": 0.0,
+        "p50": 0.0,
+        "p75": 0.0,
+        "p95": 4.0,
+        "p99": 7.0,
+        "max": 7.0,
+        "zero_rate": 0.7854803493449781
+      }
+    },
+    "target_summary": null,
+    "segment_summary_top20": null
+  }
+}

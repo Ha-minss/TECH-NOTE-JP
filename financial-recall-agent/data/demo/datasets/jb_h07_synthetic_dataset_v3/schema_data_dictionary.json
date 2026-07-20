@@ -1,0 +1,354 @@
+{
+  "card_contracts.csv": [
+    {
+      "column": "card_id",
+      "dtype": "str"
+    },
+    {
+      "column": "customer_id",
+      "dtype": "str"
+    },
+    {
+      "column": "product_id",
+      "dtype": "str"
+    },
+    {
+      "column": "product_name",
+      "dtype": "str"
+    },
+    {
+      "column": "card_opened_at",
+      "dtype": "str"
+    },
+    {
+      "column": "status",
+      "dtype": "str"
+    },
+    {
+      "column": "processing_route",
+      "dtype": "str"
+    },
+    {
+      "column": "settlement_account_id",
+      "dtype": "str"
+    }
+  ],
+  "card_purchases.csv": [
+    {
+      "column": "purchase_id",
+      "dtype": "str"
+    },
+    {
+      "column": "card_id",
+      "dtype": "str"
+    },
+    {
+      "column": "customer_id",
+      "dtype": "str"
+    },
+    {
+      "column": "product_id",
+      "dtype": "str"
+    },
+    {
+      "column": "purchase_date",
+      "dtype": "str"
+    },
+    {
+      "column": "purchase_month",
+      "dtype": "str"
+    },
+    {
+      "column": "amount",
+      "dtype": "int64"
+    },
+    {
+      "column": "merchant_id",
+      "dtype": "str"
+    },
+    {
+      "column": "status",
+      "dtype": "str"
+    },
+    {
+      "column": "cancelled_at",
+      "dtype": "str"
+    },
+    {
+      "column": "processing_route",
+      "dtype": "str"
+    },
+    {
+      "column": "source_system",
+      "dtype": "str"
+    }
+  ],
+  "complaints.csv": [
+    {
+      "column": "complaint_id",
+      "dtype": "str"
+    },
+    {
+      "column": "customer_id",
+      "dtype": "str"
+    },
+    {
+      "column": "received_at",
+      "dtype": "str"
+    },
+    {
+      "column": "channel",
+      "dtype": "str"
+    },
+    {
+      "column": "product_id_claimed",
+      "dtype": "str"
+    },
+    {
+      "column": "narrative_ko",
+      "dtype": "str"
+    },
+    {
+      "column": "claim_label_for_demo",
+      "dtype": "str"
+    },
+    {
+      "column": "source_system",
+      "dtype": "str"
+    }
+  ],
+  "customers.csv": [
+    {
+      "column": "customer_id",
+      "dtype": "str"
+    },
+    {
+      "column": "customer_name_masked",
+      "dtype": "str"
+    },
+    {
+      "column": "customer_segment",
+      "dtype": "str"
+    },
+    {
+      "column": "age_band",
+      "dtype": "str"
+    },
+    {
+      "column": "home_region",
+      "dtype": "str"
+    },
+    {
+      "column": "created_at",
+      "dtype": "str"
+    },
+    {
+      "column": "is_synthetic",
+      "dtype": "bool"
+    }
+  ],
+  "expected_rewards.csv": [
+    {
+      "column": "reward_id",
+      "dtype": "str"
+    },
+    {
+      "column": "purchase_id",
+      "dtype": "str"
+    },
+    {
+      "column": "customer_id",
+      "dtype": "str"
+    },
+    {
+      "column": "card_id",
+      "dtype": "str"
+    },
+    {
+      "column": "product_id",
+      "dtype": "str"
+    },
+    {
+      "column": "purchase_month",
+      "dtype": "str"
+    },
+    {
+      "column": "expected_payment_date",
+      "dtype": "str"
+    },
+    {
+      "column": "reward_batch_id",
+      "dtype": "str"
+    },
+    {
+      "column": "purchase_amount",
+      "dtype": "int64"
+    },
+    {
+      "column": "merchant_category",
+      "dtype": "str"
+    },
+    {
+      "column": "purchase_status",
+      "dtype": "str"
+    },
+    {
+      "column": "reward_rate",
+      "dtype": "float64"
+    },
+    {
+      "column": "gross_reward_amount",
+      "dtype": "int64"
+    },
+    {
+      "column": "expected_reward_amount",
+      "dtype": "int64"
+    },
+    {
+      "column": "monthly_cap_amount",
+      "dtype": "int64"
+    },
+    {
+      "column": "eligibility_reason",
+      "dtype": "str"
+    },
+    {
+      "column": "included_in_monthly_cap",
+      "dtype": "bool"
+    },
+    {
+      "column": "processing_route",
+      "dtype": "str"
+    },
+    {
+      "column": "source_system",
+      "dtype": "str"
+    },
+    {
+      "column": "v3_anomaly_flag",
+      "dtype": "bool"
+    },
+    {
+      "column": "v3_original_expected_reward_amount",
+      "dtype": "int64"
+    }
+  ],
+  "merchant_master.csv": [
+    {
+      "column": "merchant_id",
+      "dtype": "str"
+    },
+    {
+      "column": "merchant_name",
+      "dtype": "str"
+    },
+    {
+      "column": "merchant_category",
+      "dtype": "str"
+    },
+    {
+      "column": "is_cashback_excluded",
+      "dtype": "bool"
+    },
+    {
+      "column": "merchant_region",
+      "dtype": "str"
+    }
+  ],
+  "reward_batch_logs.csv": [
+    {
+      "column": "reward_batch_id",
+      "dtype": "str"
+    },
+    {
+      "column": "batch_date",
+      "dtype": "str"
+    },
+    {
+      "column": "purchase_month",
+      "dtype": "str"
+    },
+    {
+      "column": "product_id",
+      "dtype": "str"
+    },
+    {
+      "column": "processing_route",
+      "dtype": "str"
+    },
+    {
+      "column": "status",
+      "dtype": "str"
+    },
+    {
+      "column": "incident_id",
+      "dtype": "str"
+    },
+    {
+      "column": "error_message",
+      "dtype": "str"
+    },
+    {
+      "column": "source_system",
+      "dtype": "str"
+    }
+  ],
+  "reward_ledger.csv": [
+    {
+      "column": "ledger_id",
+      "dtype": "str"
+    },
+    {
+      "column": "reward_id",
+      "dtype": "str"
+    },
+    {
+      "column": "purchase_id",
+      "dtype": "str"
+    },
+    {
+      "column": "customer_id",
+      "dtype": "str"
+    },
+    {
+      "column": "card_id",
+      "dtype": "str"
+    },
+    {
+      "column": "product_id",
+      "dtype": "str"
+    },
+    {
+      "column": "reward_batch_id",
+      "dtype": "str"
+    },
+    {
+      "column": "processing_route",
+      "dtype": "str"
+    },
+    {
+      "column": "expected_payment_date",
+      "dtype": "str"
+    },
+    {
+      "column": "paid_reward_amount",
+      "dtype": "int64"
+    },
+    {
+      "column": "paid_at",
+      "dtype": "str"
+    },
+    {
+      "column": "payment_status",
+      "dtype": "str"
+    },
+    {
+      "column": "incident_id",
+      "dtype": "str"
+    },
+    {
+      "column": "source_system",
+      "dtype": "str"
+    }
+  ]
+}

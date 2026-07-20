@@ -1,0 +1,107 @@
+{
+  "dataset_id": "offline_payment_ops_synthetic_50",
+  "created_for": "StoreOps Incident Agent synthetic evaluation",
+  "total_cases": 50,
+  "files": {
+    "data/evaluation/planner_cases_50.json": {
+      "bytes": 23865,
+      "sha256": "43bdb8636ffcfbb2f1ee28f31c2c4aed883735d425292379d74f940ed2beaaaa"
+    },
+    "data/evaluation/retrieval_cases_50.json": {
+      "bytes": 18598,
+      "sha256": "a6dc04b7d6b18898ec265ddd989bdf2edfcd42db49e4edf16e9e054c6e7ddab5"
+    },
+    "data/fixtures/offline_payment_ops_synthetic_50.sqlite3": {
+      "bytes": 208896,
+      "sha256": "cb81ed8ca88bc0befc7a37aa1331e5098e5c10817c6faa6b0eb833e79670d05b"
+    },
+    "data/golden/offline_payment_ops_cases_50.json": {
+      "bytes": 38167,
+      "sha256": "19aa9027ddbf3a217dbb2927803183602fbc584fa192c7540170a8b2e5cc909a"
+    },
+    "data/synthetic/offline_payment_ops/README.md": {
+      "bytes": 1134,
+      "sha256": "f2e6a1e550fb669689a7f864ed00b434b0ede0d77fce29861c2129bd25517fe1"
+    },
+    "data/synthetic/offline_payment_ops/raw/activation_events.csv": {
+      "bytes": 3624,
+      "sha256": "08cd79d058cb8510b3c4bf36dab99f88ec99c7ddd98381b741aabc82d5cd05cd"
+    },
+    "data/synthetic/offline_payment_ops/raw/approval_events.csv": {
+      "bytes": 10519,
+      "sha256": "58a000a272aeafa657199f35203a22d548e817ba47c61ce38431a1fe2a36db85"
+    },
+    "data/synthetic/offline_payment_ops/raw/installation_events.csv": {
+      "bytes": 2269,
+      "sha256": "f193a18f2f2aa9ffa947528a91f934acd936b783423c84652b54c206e214a382"
+    },
+    "data/synthetic/offline_payment_ops/raw/pos_front_connection_events.csv": {
+      "bytes": 1557,
+      "sha256": "0b1c55ceaf9bdccab795deaf0c4442dcefda6c4f111d75574997e13c6762e927"
+    },
+    "data/synthetic/offline_payment_ops/raw/pos_front_links.csv": {
+      "bytes": 982,
+      "sha256": "15ac63b108b77b284d2ad21634f781beb41ef1332c5802ef4281209d481c1232"
+    },
+    "data/synthetic/offline_payment_ops/raw/scenario_stores.csv": {
+      "bytes": 1072,
+      "sha256": "ff95b38779535663157691c31012c7c17439c0cd4441d696a04e4c13e12ba3ad"
+    },
+    "data/synthetic/offline_payment_ops/raw/scenarios.csv": {
+      "bytes": 7169,
+      "sha256": "323c832f012f3e5dbcf4f687a56eecb144b14d2bd8c586987995b138c46acf27"
+    },
+    "data/synthetic/offline_payment_ops/raw/store_operator_access.csv": {
+      "bytes": 1792,
+      "sha256": "9d04320c11dd4d39b8142ad2331f91604d4439234fd843b13d9f50fa95592655"
+    },
+    "data/synthetic/offline_payment_ops/raw/stores.csv": {
+      "bytes": 2697,
+      "sha256": "3ea8a95bca32239513fb91f939cd5740d649b2d48665fe89d0484757fff74d12"
+    },
+    "data/synthetic/offline_payment_ops/raw/support_routes.csv": {
+      "bytes": 3739,
+      "sha256": "3a80a6c275835b5c0c4c1d472979b800ce95b9e7923e1201321443d9d780a3a0"
+    },
+    "data/synthetic/offline_payment_ops/raw/terminal_identities.csv": {
+      "bytes": 17824,
+      "sha256": "0915c044f0c6f60c279d18494d898590b32c376caca495e745935eab4ef65c35"
+    },
+    "data/synthetic/offline_payment_ops/raw/terminals.csv": {
+      "bytes": 12540,
+      "sha256": "72318819bfb5fcbff0b7e370302b948067fc31b83b9e1fba45e701e11c6baf01"
+    },
+    "data/synthetic/offline_payment_ops/raw/tid_assignments.csv": {
+      "bytes": 15642,
+      "sha256": "2afcb59cdb7529d47df8e6c8f4823b1d1349b3b0fbbcaa836e67f0e6c6c4a881"
+    },
+    "data/synthetic/offline_payment_ops/raw/tool_failure_injections.csv": {
+      "bytes": 841,
+      "sha256": "81e6b7b54559800899a72d8067a0e64c6557236da55e4400dfcaa89968d0accc"
+    },
+    "data/synthetic/offline_payment_ops/raw/van_registrations.csv": {
+      "bytes": 2174,
+      "sha256": "3ee58570c056e483aeb0ad6fed5b597dd18232d6b53666605109c15b2c47c541"
+    },
+    "data/synthetic/offline_payment_ops/synthetic_case_plan_50.json": {
+      "bytes": 25327,
+      "sha256": "88d91f211b12511655ef1678b5fa74f99d66b00b19185b596de83821b384a65a"
+    },
+    "reports/synthetic_50_validation_matrix.csv": {
+      "bytes": 4479,
+      "sha256": "762b9815a294e5465d58a1f318050aa64ed62b298320fc26a19dcf13cb41ef75"
+    },
+    "reports/synthetic_50_validation_report.json": {
+      "bytes": 56344,
+      "sha256": "224c986b4a89cf40b66ff06ab38ad4e4f1ba94130786a9fe67349b292277c0d3"
+    },
+    "reports/synthetic_50_validation_report.md": {
+      "bytes": 869,
+      "sha256": "6c374bcf7903469579b79b26c0a214c166a40ce000ec03dadd42169996c0e9ca"
+    },
+    "scripts/generate_offline_payment_synthetic_50.py": {
+      "bytes": 41296,
+      "sha256": "d29dd30c09310c7fbd7f067c5c1cd129bf57b2fd92eac89fbadd6ad9781e87b8"
+    }
+  }
+}

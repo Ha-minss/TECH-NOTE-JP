@@ -1,0 +1,46 @@
+{
+  "auto_update_threshold": 0.86,
+  "human_review_threshold": 0.6,
+  "source_reliability": {
+    "NPI Registry": 0.9,
+    "CMS/NPPES": 0.92,
+    "CMS Care Compare": 0.92,
+    "State Medical Board": 0.93,
+    "NPI Checksum": 0.95,
+    "CMS Medicare FFS Public Provider Enrollment": 0.92,
+    "CMS Hospital Enrollments": 0.91,
+    "CMS FQHC Enrollments": 0.91,
+    "CMS Hospice Enrollments": 0.9,
+    "CMS Opioid Treatment Program Providers": 0.91,
+    "CMS Revoked Medicare Providers and Suppliers": 0.94,
+    "Weak Source": 0.1
+  },
+  "field_safety": {
+    "provider_name": 0.65,
+    "npi": 0.2,
+    "specialty": 0.5,
+    "practice_name": 0.35,
+    "address": 0.55,
+    "phone": 0.85,
+    "website": 0.75,
+    "active_status": 0.1
+  },
+  "high_risk_fields": [
+    "active_status",
+    "practice_name",
+    "provider_name",
+    "specialty"
+  ],
+  "auto_update_allowed_fields": [
+    "address",
+    "phone",
+    "website"
+  ],
+  "stale_after_days": 365,
+  "cms_max_rows_per_npi": 10,
+  "cms_doctors_clinicians_data_url": "",
+  "cms_max_candidate_endpoints": 12,
+  "cms_connector_mode": "whitelist_v08_aggregate",
+  "cms_source_mode": "minimal",
+  "cms_source_mode_note": "minimal=FFS+Revoked. Use --cms-source all for full CMS location enrichment, or facility for org/location datasets."
+}

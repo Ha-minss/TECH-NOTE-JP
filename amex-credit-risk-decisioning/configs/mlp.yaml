@@ -1,0 +1,23 @@
+run_name: mlp_residual_gelu_bnln_onecycle_5fold
+source_notebook_section: Untitled41.ipynb cell 38
+input_table: train_feat_no_diffmono_v1.parquet
+rows: 458913
+features_after_cleaning: 3409
+preprocessing:
+  imputation: median
+  scaling: standard
+architecture:
+  blocks: residual_mlp
+  activation: GELU
+  normalization:
+    - BatchNorm
+    - LayerNorm
+optimizer:
+  type: AdamW
+  scheduler: OneCycleLR
+cv:
+  type: StratifiedKFold
+  n_splits: 5
+  shuffle: true
+  random_state: 42
+

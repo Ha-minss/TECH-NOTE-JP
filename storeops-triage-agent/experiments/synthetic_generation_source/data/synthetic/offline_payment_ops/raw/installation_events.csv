@@ -1,0 +1,13 @@
+installation_event_id,store_id,terminal_id,event_type,configuration_summary,observed_at,recorded_at,available_at
+INST-SYN-011,STR-SYN-011,TERM-SYN-011-NEW,installed,"{""source"":""synthetic_identity_check""}",2026-06-20T14:00:00+09:00,2026-06-20T14:01:00+09:00,2026-06-20T14:01:01+09:00
+INST-SYN-012,STR-SYN-012,TERM-SYN-012-NEW,installed,"{""source"":""synthetic_identity_check""}",2026-06-21T14:00:00+09:00,2026-06-21T14:01:00+09:00,2026-06-21T14:01:01+09:00
+INST-SYN-013,STR-SYN-013,TERM-SYN-013-NEW,installed,"{""source"":""synthetic_identity_check""}",2026-06-22T14:00:00+09:00,2026-06-22T14:01:00+09:00,2026-06-22T14:01:01+09:00
+INST-SYN-014,STR-SYN-014,TERM-SYN-014-NEW,installed,"{""source"":""synthetic_identity_check""}",2026-06-23T14:00:00+09:00,2026-06-23T14:01:00+09:00,2026-06-23T14:01:01+09:00
+INST-SYN-015,STR-SYN-015,TERM-SYN-015-NEW,installed,"{""source"":""synthetic_identity_check""}",2026-06-24T14:00:00+09:00,2026-06-24T14:01:00+09:00,2026-06-24T14:01:01+09:00
+INST-SYN-016,STR-SYN-016,TERM-SYN-016-NEW,installed,"{""source"":""synthetic_identity_check""}",2026-06-25T14:00:00+09:00,2026-06-25T14:01:00+09:00,2026-06-25T14:01:01+09:00
+INST-SYN-017,STR-SYN-017,TERM-SYN-017-NEW,installed,"{""source"":""synthetic_identity_check""}",2026-06-26T14:00:00+09:00,2026-06-26T14:01:00+09:00,2026-06-26T14:01:01+09:00
+INST-SYN-046-RECONFIG,STR-SYN-046,TERM-SYN-046-NEW,configured,"{""history"":""post_incident_tid_change""}",2026-06-20T23:10:00+09:00,2026-06-20T23:11:00+09:00,2026-06-20T23:11:01+09:00
+INST-SYN-047-RECONFIG,STR-SYN-047,TERM-SYN-047-NEW,configured,"{""history"":""post_incident_tid_change""}",2026-06-21T23:10:00+09:00,2026-06-21T23:11:00+09:00,2026-06-21T23:11:01+09:00
+INST-SYN-048-RECONFIG,STR-SYN-048,TERM-SYN-048-NEW,configured,"{""history"":""post_incident_tid_change""}",2026-06-22T23:10:00+09:00,2026-06-22T23:11:00+09:00,2026-06-22T23:11:01+09:00
+INST-SYN-049-RECONFIG,STR-SYN-049,TERM-SYN-049-NEW,configured,"{""history"":""post_incident_tid_change""}",2026-06-23T23:10:00+09:00,2026-06-23T23:11:00+09:00,2026-06-23T23:11:01+09:00
+INST-SYN-050-RECONFIG,STR-SYN-050,TERM-SYN-050-NEW,configured,"{""history"":""post_incident_tid_change""}",2026-06-24T23:10:00+09:00,2026-06-24T23:11:00+09:00,2026-06-24T23:11:01+09:00

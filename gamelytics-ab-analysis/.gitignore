@@ -1,0 +1,20 @@
+# Python cache and test artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local data and archives
+*.csv
+*.zip
+!reports/tables/*.csv
+
+# Local generated backup folders
+reports_backup_*/
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+*.tmp
+*.log

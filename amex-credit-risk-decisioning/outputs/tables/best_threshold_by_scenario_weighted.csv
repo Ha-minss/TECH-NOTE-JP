@@ -1,0 +1,5 @@
+scenario,policy,review_rate,tp,fp,effective_review_count,avoided_loss,review_cost_total,friction_cost_total,net_benefit,net_benefit_per_effective_review,source_notebook_section
+Aggressive,Top 28%,0.28,101611,26885,639311,21338.31,3196.555,1075.4,17066.355,0.026695,"Untitled41.ipynb cell 45 Best Threshold by Scenario"
+Base,Top 17%,0.17,71205,6811,207425,7120.5,2074.25,681.1,4365.15,0.021044,"Untitled41.ipynb cell 45 Best Threshold by Scenario"
+Conservative,Top 4%,0.04,18245,112,20485,547.35,409.7,22.4,115.25,0.005626,"Untitled41.ipynb cell 45 Best Threshold by Scenario"
+

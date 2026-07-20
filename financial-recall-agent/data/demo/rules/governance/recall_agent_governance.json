@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0",
+  "governance_id": "FINANCIAL_RECALL_AGENT_MVP",
+  "llm_policy": {
+    "allowed_actions": [
+      "route_complaint",
+      "summarize_evidence",
+      "recommend_rule_id"
+    ],
+    "forbidden_actions": [
+      "generate_sql",
+      "calculate_refund_amount",
+      "finalize_customer_compensation",
+      "override_product_policy_config",
+      "read_private_ground_truth"
+    ]
+  },
+  "rag_policy": {
+    "usage": "POLICY_BASIS_RETRIEVAL_ONLY",
+    "may_determine_harm": false,
+    "may_calculate_refund": false
+  },
+  "calculation_policy": {
+    "owner": "DETERMINISTIC_RULE_ENGINE",
+    "approved_rule_registry_only": true,
+    "approved_product_config_only": true,
+    "free_form_sql_allowed": false
+  },
+  "controls": {
+    "human_review_required_before_refund": true,
+    "human_review_required_before_customer_contact": true,
+    "audit_log_required": true,
+    "input_data_snapshot_required": true,
+    "rule_version_capture_required": true,
+    "product_config_version_capture_required": true,
+    "policy_basis_capture_required": true
+  },
+  "failure_policy": {
+    "on_missing_config": "STOP_AND_ESCALATE",
+    "on_unapproved_config": "STOP_AND_ESCALATE",
+    "on_data_contract_violation": "STOP_AND_ESCALATE",
+    "on_calculation_error": "STOP_AND_ESCALATE"
+  }
+}

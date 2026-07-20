@@ -1,0 +1,22 @@
+# Runtime
+.tmp/
+**/.ipynb_checkpoints/
+**/__pycache__/
+*.pyc
+
+# Local environments
+.env
+.venv/
+venv/
+
+# Raw or heavy local data
+**/data/raw/
+**/data/processed/
+**/processed/
+*.zip
+*.pkl
+*.joblib
+
+# OS/editor
+.DS_Store
+Thumbs.db

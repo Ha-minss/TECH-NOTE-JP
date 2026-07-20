@@ -1,0 +1,5 @@
+pandas==3.0.1
+numpy==2.3.5
+matplotlib==3.11.0
+seaborn==0.13.2
+pytest==9.1.0

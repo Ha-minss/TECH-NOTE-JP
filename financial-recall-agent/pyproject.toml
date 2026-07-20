@@ -1,0 +1,28 @@
+[project]
+name = "financial-recall-agent"
+version = "0.1.0"
+description = "Safety-first LLM workflow for financial complaint investigation."
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+  { name = "Dongha Park" }
+]
+dependencies = [
+  "duckdb>=1.0.0",
+  "pandas>=2.0.0",
+  "pydantic>=2.0.0",
+  "pytest>=8.0.0"
+]
+
+[project.optional-dependencies]
+llm = [
+  "google-genai>=0.8.0"
+]
+
+[tool.pytest.ini_options]
+markers = [
+  "core: lightweight tests without external LLM/RAG dependencies",
+  "duckdb: requires duckdb",
+  "llm: requires LLM client dependencies/API-compatible setup",
+  "rag: requires optional RAG dependencies"
+]

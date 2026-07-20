@@ -1,0 +1,8 @@
+model_name,validation_type,roc_auc,amex_metric,source_notebook_section,n_models,notes
+Ridge stacking,OOF stacking,0.962718,0.797538,"Untitled41.ipynb cell 40 stacking comparison",6,"Ridge stack over six OOF score columns"
+Logistic stacking,OOF stacking,0.962570,0.796561,"Untitled41.ipynb cell 40 stacking comparison",6,"Logistic stack over six OOF score columns"
+Equal blend all six,OOF equal blend,0.962688,0.797310,"Untitled41.ipynb cell 40 stacking comparison",6,"Equal blend over six base OOF scores"
+Best 4 plus MLP equal,OOF equal blend,0.962780,0.797507,"Untitled41.ipynb cell 39 MLP add-on comparison",5,"Best four base models plus MLP"
+All 6 plus MLP equal,OOF equal blend,0.962806,0.797433,"Untitled41.ipynb cell 39 MLP add-on comparison",7,"Six base models plus MLP"
+Equal blend 8 models,OOF equal blend,0.962782,0.797631,"Untitled41.ipynb cell 21 pivot add-on blend comparison",8,"Final public score version best_equal_8models"
+

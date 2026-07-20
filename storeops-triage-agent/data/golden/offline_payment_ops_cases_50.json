@@ -1,0 +1,1131 @@
+[
+  {
+    "case_id": "GOLD-SYN-001",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "새 단말기 설치 후 기존 단말기에서 카드 승인이 계속 실패합니다.",
+    "fixture_key": "SYN-001",
+    "script_key": "S1",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "duplicate_tid",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_terminals",
+      "get_tid_config",
+      "get_activation_history",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "신규 단말기 개시 후 기존 단말기 승인 실패 + active duplicate TID"
+  },
+  {
+    "case_id": "GOLD-SYN-002",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "어제 단말기 하나를 추가했는데 예전 단말기만 승인 오류가 반복돼요.",
+    "fixture_key": "SYN-002",
+    "script_key": "S1",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "duplicate_tid",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_terminals",
+      "get_tid_config",
+      "get_activation_history",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "신규 단말기 개시 후 기존 단말기 승인 실패 + active duplicate TID"
+  },
+  {
+    "case_id": "GOLD-SYN-003",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "신규 단말기 개시 이후 기존 카드 단말기에서 결제가 안 됩니다.",
+    "fixture_key": "SYN-003",
+    "script_key": "S1",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "duplicate_tid",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_terminals",
+      "get_tid_config",
+      "get_activation_history",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "신규 단말기 개시 후 기존 단말기 승인 실패 + active duplicate TID"
+  },
+  {
+    "case_id": "GOLD-SYN-004",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "새 장비는 켜졌는데 기존 단말기가 신용승인을 못 받아요.",
+    "fixture_key": "SYN-004",
+    "script_key": "S1",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "duplicate_tid",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_terminals",
+      "get_tid_config",
+      "get_activation_history",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "신규 단말기 개시 후 기존 단말기 승인 실패 + active duplicate TID"
+  },
+  {
+    "case_id": "GOLD-SYN-005",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "단말기 교체 작업 후 기존 기기에서 승인 실패가 계속 나옵니다.",
+    "fixture_key": "SYN-005",
+    "script_key": "S1",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "duplicate_tid",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_terminals",
+      "get_tid_config",
+      "get_activation_history",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "신규 단말기 개시 후 기존 단말기 승인 실패 + active duplicate TID"
+  },
+  {
+    "case_id": "GOLD-SYN-006",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "새 단말기 등록한 뒤 예전 단말기 카드 승인이 막혔습니다.",
+    "fixture_key": "SYN-006",
+    "script_key": "S1",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "duplicate_tid",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_terminals",
+      "get_tid_config",
+      "get_activation_history",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "신규 단말기 개시 후 기존 단말기 승인 실패 + active duplicate TID"
+  },
+  {
+    "case_id": "GOLD-SYN-007",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "추가 설치한 단말기 이후 기존 단말기 결제만 실패해요.",
+    "fixture_key": "SYN-007",
+    "script_key": "S1",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "duplicate_tid",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_terminals",
+      "get_tid_config",
+      "get_activation_history",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "신규 단말기 개시 후 기존 단말기 승인 실패 + active duplicate TID"
+  },
+  {
+    "case_id": "GOLD-SYN-008",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "오늘 새 단말기 오픈 후 기존 단말기에서 승인 처리 실패가 나옵니다.",
+    "fixture_key": "SYN-008",
+    "script_key": "S1",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "duplicate_tid",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_terminals",
+      "get_tid_config",
+      "get_activation_history",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "신규 단말기 개시 후 기존 단말기 승인 실패 + active duplicate TID"
+  },
+  {
+    "case_id": "GOLD-SYN-009",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "기존 단말기와 새 단말기를 같이 쓰려는데 기존 쪽 승인 오류가 납니다.",
+    "fixture_key": "SYN-009",
+    "script_key": "S1",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "duplicate_tid",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_terminals",
+      "get_tid_config",
+      "get_activation_history",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "신규 단말기 개시 후 기존 단말기 승인 실패 + active duplicate TID"
+  },
+  {
+    "case_id": "GOLD-SYN-010",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "새 단말기 활성화 직후부터 이전 단말기 카드 승인 실패가 이어집니다.",
+    "fixture_key": "SYN-010",
+    "script_key": "S1",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "duplicate_tid",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_terminals",
+      "get_tid_config",
+      "get_activation_history",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "신규 단말기 개시 후 기존 단말기 승인 실패 + active duplicate TID"
+  },
+  {
+    "case_id": "GOLD-SYN-011",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "설치 후 단말기 번호가 등록값과 다르다고 하면서 승인이 실패합니다.",
+    "fixture_key": "SYN-011",
+    "script_key": "S2",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "terminal_identifier_mismatch",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_tid_config",
+      "get_terminal_identity",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "실물 단말기 식별값과 등록 식별값 불일치"
+  },
+  {
+    "case_id": "GOLD-SYN-012",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "기기 시리얼 확인 필요라는 오류가 떠서 카드 결제가 안 됩니다.",
+    "fixture_key": "SYN-012",
+    "script_key": "S2",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "terminal_identifier_mismatch",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_tid_config",
+      "get_terminal_identity",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "실물 단말기 식별값과 등록 식별값 불일치"
+  },
+  {
+    "case_id": "GOLD-SYN-013",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "실물 단말기 번호와 시스템 등록 번호가 안 맞는 것 같아요.",
+    "fixture_key": "SYN-013",
+    "script_key": "S2",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "terminal_identifier_mismatch",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_tid_config",
+      "get_terminal_identity",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "실물 단말기 식별값과 등록 식별값 불일치"
+  },
+  {
+    "case_id": "GOLD-SYN-014",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "카드 승인 시 단말기 식별 정보 확인 문구가 반복됩니다.",
+    "fixture_key": "SYN-014",
+    "script_key": "S2",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "terminal_identifier_mismatch",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_tid_config",
+      "get_terminal_identity",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "실물 단말기 식별값과 등록 식별값 불일치"
+  },
+  {
+    "case_id": "GOLD-SYN-015",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "새 단말기 설치 뒤 등록된 시리얼과 실제 시리얼이 다르다고 나옵니다.",
+    "fixture_key": "SYN-015",
+    "script_key": "S2",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "terminal_identifier_mismatch",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_tid_config",
+      "get_terminal_identity",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "실물 단말기 식별값과 등록 식별값 불일치"
+  },
+  {
+    "case_id": "GOLD-SYN-016",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "단말기 식별값 불일치 오류로 신용승인이 실패해요.",
+    "fixture_key": "SYN-016",
+    "script_key": "S2",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "terminal_identifier_mismatch",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_tid_config",
+      "get_terminal_identity",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "실물 단말기 식별값과 등록 식별값 불일치"
+  },
+  {
+    "case_id": "GOLD-SYN-017",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "설치 담당자가 등록한 번호와 현장 기기 번호가 다른 것 같습니다.",
+    "fixture_key": "SYN-017",
+    "script_key": "S2",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "terminal_identifier_mismatch",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_tid_config",
+      "get_terminal_identity",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "실물 단말기 식별값과 등록 식별값 불일치"
+  },
+  {
+    "case_id": "GOLD-SYN-018",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "카드 승인할 때 가맹점 번호 미등록이라고 떠요.",
+    "fixture_key": "SYN-018",
+    "script_key": "S3",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "van_merchant_registration_missing",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_tid_config",
+      "get_terminal_identity",
+      "get_van_registration",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "VAN 가맹점 등록 미완료/merchant_number 누락"
+  },
+  {
+    "case_id": "GOLD-SYN-019",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "신규 매장인데 VAN 등록 대기 상태라 결제가 안 되는 것 같습니다.",
+    "fixture_key": "SYN-019",
+    "script_key": "S3",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "van_merchant_registration_missing",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_tid_config",
+      "get_terminal_identity",
+      "get_van_registration",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "VAN 가맹점 등록 미완료/merchant_number 누락"
+  },
+  {
+    "case_id": "GOLD-SYN-020",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "단말기 설치는 끝났는데 신용승인 가맹점 번호가 없다고 나옵니다.",
+    "fixture_key": "SYN-020",
+    "script_key": "S3",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "van_merchant_registration_missing",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_tid_config",
+      "get_terminal_identity",
+      "get_van_registration",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "VAN 가맹점 등록 미완료/merchant_number 누락"
+  },
+  {
+    "case_id": "GOLD-SYN-021",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "승인 시 VAN 가맹점 등록 오류 문구가 반복됩니다.",
+    "fixture_key": "SYN-021",
+    "script_key": "S3",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "van_merchant_registration_missing",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_tid_config",
+      "get_terminal_identity",
+      "get_van_registration",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "VAN 가맹점 등록 미완료/merchant_number 누락"
+  },
+  {
+    "case_id": "GOLD-SYN-022",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "카드 단말기에서 가맹점 정보 미등록으로 승인 거절됩니다.",
+    "fixture_key": "SYN-022",
+    "script_key": "S3",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "van_merchant_registration_missing",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_tid_config",
+      "get_terminal_identity",
+      "get_van_registration",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "VAN 가맹점 등록 미완료/merchant_number 누락"
+  },
+  {
+    "case_id": "GOLD-SYN-023",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "단말기는 정상인데 VAN 등록이 완료되지 않은 것 같아요.",
+    "fixture_key": "SYN-023",
+    "script_key": "S3",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "van_merchant_registration_missing",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_tid_config",
+      "get_terminal_identity",
+      "get_van_registration",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "VAN 가맹점 등록 미완료/merchant_number 누락"
+  },
+  {
+    "case_id": "GOLD-SYN-024",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "오픈 매장 첫 결제에서 가맹점 번호 등록 필요 오류가 납니다.",
+    "fixture_key": "SYN-024",
+    "script_key": "S3",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "van_merchant_registration_missing",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_tid_config",
+      "get_terminal_identity",
+      "get_van_registration",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "VAN 가맹점 등록 미완료/merchant_number 누락"
+  },
+  {
+    "case_id": "GOLD-SYN-025",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "POS에서 결제를 눌러도 단말기로 요청이 안 넘어갑니다.",
+    "fixture_key": "SYN-025",
+    "script_key": "S4",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "pos_front_connection_issue",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_pos_front_connection_logs"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "POS-Front pairing 또는 request delivery 장애"
+  },
+  {
+    "case_id": "GOLD-SYN-026",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "단말기는 켜져 있는데 POS 결제 요청이 계속 타임아웃됩니다.",
+    "fixture_key": "SYN-026",
+    "script_key": "S4",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "pos_front_connection_issue",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_pos_front_connection_logs"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "POS-Front pairing 또는 request delivery 장애"
+  },
+  {
+    "case_id": "GOLD-SYN-027",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "POS와 프론트 연결이 끊긴 것 같고 결제 요청 전달이 실패합니다.",
+    "fixture_key": "SYN-027",
+    "script_key": "S4",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "pos_front_connection_issue",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_pos_front_connection_logs"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "POS-Front pairing 또는 request delivery 장애"
+  },
+  {
+    "case_id": "GOLD-SYN-028",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "카드 단말기는 정상처럼 보이는데 POS 연동 결제만 안 됩니다.",
+    "fixture_key": "SYN-028",
+    "script_key": "S4",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "pos_front_connection_issue",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_pos_front_connection_logs"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "POS-Front pairing 또는 request delivery 장애"
+  },
+  {
+    "case_id": "GOLD-SYN-029",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "POS 화면에서 결제 요청 후 프론트 응답 없음으로 멈춥니다.",
+    "fixture_key": "SYN-029",
+    "script_key": "S4",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "pos_front_connection_issue",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_pos_front_connection_logs"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "POS-Front pairing 또는 request delivery 장애"
+  },
+  {
+    "case_id": "GOLD-SYN-030",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "단말기 등록은 정상인데 POS에서 요청 전송 실패가 발생해요.",
+    "fixture_key": "SYN-030",
+    "script_key": "S4",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "pos_front_connection_issue",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_pos_front_connection_logs"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "POS-Front pairing 또는 request delivery 장애"
+  },
+  {
+    "case_id": "GOLD-SYN-031",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "POS-Front 연결 문제인지 결제 요청이 단말기까지 도달하지 않습니다.",
+    "fixture_key": "SYN-031",
+    "script_key": "S4",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "pos_front_connection_issue",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_pos_front_connection_logs"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "POS-Front pairing 또는 request delivery 장애"
+  },
+  {
+    "case_id": "GOLD-SYN-032",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "결제가 안 돼요.",
+    "fixture_key": "SYN-032",
+    "script_key": "S5",
+    "expected_state": "NEEDS_CLARIFICATION",
+    "expected_primary_cause": null,
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_store_info",
+      "get_terminals",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "모호 문의 + 결정 증거 없음"
+  },
+  {
+    "case_id": "GOLD-SYN-033",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "카드가 안 되는 것 같은데 어떤 단말기인지는 잘 모르겠습니다.",
+    "fixture_key": "SYN-033",
+    "script_key": "S5",
+    "expected_state": "NEEDS_CLARIFICATION",
+    "expected_primary_cause": null,
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_store_info",
+      "get_terminals",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "모호 문의 + 결정 증거 없음"
+  },
+  {
+    "case_id": "GOLD-SYN-034",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "오류가 떴는데 문구는 기억이 안 납니다.",
+    "fixture_key": "SYN-034",
+    "script_key": "S5",
+    "expected_state": "NEEDS_CLARIFICATION",
+    "expected_primary_cause": null,
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_store_info",
+      "get_terminals",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "모호 문의 + 결정 증거 없음"
+  },
+  {
+    "case_id": "GOLD-SYN-035",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "매장에 단말기가 여러 개인데 어느 기기 문제인지 모르겠어요.",
+    "fixture_key": "SYN-035",
+    "script_key": "S5",
+    "expected_state": "NEEDS_CLARIFICATION",
+    "expected_primary_cause": null,
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_store_info",
+      "get_terminals",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "모호 문의 + 결정 증거 없음"
+  },
+  {
+    "case_id": "GOLD-SYN-036",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "새 단말기 설치 후 결제가 안 되는 것 같은데 자세한 화면은 못 봤습니다.",
+    "fixture_key": "SYN-036",
+    "script_key": "S5",
+    "expected_state": "NEEDS_CLARIFICATION",
+    "expected_primary_cause": null,
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_store_info",
+      "get_terminals",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "모호 문의 + 결정 증거 없음"
+  },
+  {
+    "case_id": "GOLD-SYN-037",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "손님 결제가 실패했다고 하는데 카드인지 POS인지 모르겠습니다.",
+    "fixture_key": "SYN-037",
+    "script_key": "S5",
+    "expected_state": "NEEDS_CLARIFICATION",
+    "expected_primary_cause": null,
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_store_info",
+      "get_terminals",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "모호 문의 + 결정 증거 없음"
+  },
+  {
+    "case_id": "GOLD-SYN-038",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "결제 오류가 있었다고만 들었고 단말기 화면은 확인하지 못했습니다.",
+    "fixture_key": "SYN-038",
+    "script_key": "S5",
+    "expected_state": "NEEDS_CLARIFICATION",
+    "expected_primary_cause": null,
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_store_info",
+      "get_terminals",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "모호 문의 + 결정 증거 없음"
+  },
+  {
+    "case_id": "GOLD-SYN-039",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "새 단말기 설치 후 기존 단말기 승인이 안 되는데 TID 확인이 필요해 보입니다.",
+    "fixture_key": "SYN-039",
+    "script_key": "S6A",
+    "expected_state": "DEGRADED_REVIEW",
+    "expected_primary_cause": null,
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_activation_history",
+      "get_recent_approval_errors",
+      "get_tid_config"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "duplicate TID 의심 데이터는 있으나 필수 get_tid_config 실패"
+  },
+  {
+    "case_id": "GOLD-SYN-040",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "단말기 추가 이후 기존 단말기 결제가 실패하는데 식별 설정 조회가 안 됩니다.",
+    "fixture_key": "SYN-040",
+    "script_key": "S6A",
+    "expected_state": "DEGRADED_REVIEW",
+    "expected_primary_cause": null,
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_activation_history",
+      "get_recent_approval_errors",
+      "get_tid_config"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "duplicate TID 의심 데이터는 있으나 필수 get_tid_config 실패"
+  },
+  {
+    "case_id": "GOLD-SYN-041",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "기존 단말기 승인 실패가 반복되지만 TID 설정 조회가 계속 timeout 됩니다.",
+    "fixture_key": "SYN-041",
+    "script_key": "S6A",
+    "expected_state": "DEGRADED_REVIEW",
+    "expected_primary_cause": null,
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_activation_history",
+      "get_recent_approval_errors",
+      "get_tid_config"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "duplicate TID 의심 데이터는 있으나 필수 get_tid_config 실패"
+  },
+  {
+    "case_id": "GOLD-SYN-042",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "새 단말기 오픈 뒤 승인 실패가 있는데 핵심 TID 조회가 실패합니다.",
+    "fixture_key": "SYN-042",
+    "script_key": "S6A",
+    "expected_state": "DEGRADED_REVIEW",
+    "expected_primary_cause": null,
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_activation_history",
+      "get_recent_approval_errors",
+      "get_tid_config"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "duplicate TID 의심 데이터는 있으나 필수 get_tid_config 실패"
+  },
+  {
+    "case_id": "GOLD-SYN-043",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "새 단말기 설치 뒤 기존 단말기 승인이 실패하고 지원 경로 조회만 안 됩니다.",
+    "fixture_key": "SYN-043",
+    "script_key": "S6B",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "duplicate_tid",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_terminals",
+      "get_activation_history",
+      "get_recent_approval_errors",
+      "get_tid_config",
+      "get_support_route"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "핵심 duplicate TID 증거 있음 + 선택 support route 실패"
+  },
+  {
+    "case_id": "GOLD-SYN-044",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "TID 중복이 의심되는데 담당 이관 경로 조회가 unavailable로 나옵니다.",
+    "fixture_key": "SYN-044",
+    "script_key": "S6B",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "duplicate_tid",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_terminals",
+      "get_activation_history",
+      "get_recent_approval_errors",
+      "get_tid_config",
+      "get_support_route"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "핵심 duplicate TID 증거 있음 + 선택 support route 실패"
+  },
+  {
+    "case_id": "GOLD-SYN-045",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "기존 단말기 승인 실패 원인은 보이지만 support route 확인이 실패합니다.",
+    "fixture_key": "SYN-045",
+    "script_key": "S6B",
+    "expected_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "duplicate_tid",
+    "acceptable_alternatives": [],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_terminals",
+      "get_activation_history",
+      "get_recent_approval_errors",
+      "get_tid_config",
+      "get_support_route"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "핵심 duplicate TID 증거 있음 + 선택 support route 실패"
+  },
+  {
+    "case_id": "GOLD-SYN-046",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "당시에는 TID가 중복된 것 같은데 현재 기록은 서로 다르게 보입니다.",
+    "fixture_key": "SYN-046",
+    "script_key": "S7",
+    "expected_state": "CONFLICT_REVIEW",
+    "expected_primary_cause": null,
+    "acceptable_alternatives": [
+      "temporary_duplicate_tid",
+      "post_incident_configuration_change"
+    ],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_tid_config",
+      "get_tid_history",
+      "get_activation_history",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "사건 당시 duplicate TID, 현재는 정상화되어 시간축 충돌"
+  },
+  {
+    "case_id": "GOLD-SYN-047",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "설치 직후 승인 실패가 있었지만 현재 TID 설정과 사고 당시 기록이 다릅니다.",
+    "fixture_key": "SYN-047",
+    "script_key": "S7",
+    "expected_state": "CONFLICT_REVIEW",
+    "expected_primary_cause": null,
+    "acceptable_alternatives": [
+      "temporary_duplicate_tid",
+      "post_incident_configuration_change"
+    ],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_tid_config",
+      "get_tid_history",
+      "get_activation_history",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "사건 당시 duplicate TID, 현재는 정상화되어 시간축 충돌"
+  },
+  {
+    "case_id": "GOLD-SYN-048",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "현장에서는 설치 직후부터 안 됐다고 하는데 현재 시스템 기록만 보면 정상처럼 보입니다.",
+    "fixture_key": "SYN-048",
+    "script_key": "S7",
+    "expected_state": "CONFLICT_REVIEW",
+    "expected_primary_cause": null,
+    "acceptable_alternatives": [
+      "temporary_duplicate_tid",
+      "post_incident_configuration_change"
+    ],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_tid_config",
+      "get_tid_history",
+      "get_activation_history",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "사건 당시 duplicate TID, 현재는 정상화되어 시간축 충돌"
+  },
+  {
+    "case_id": "GOLD-SYN-049",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "사고 시점에는 같은 TID였던 기록이 있는데 지금 조회하면 중복이 사라졌습니다.",
+    "fixture_key": "SYN-049",
+    "script_key": "S7",
+    "expected_state": "CONFLICT_REVIEW",
+    "expected_primary_cause": null,
+    "acceptable_alternatives": [
+      "temporary_duplicate_tid",
+      "post_incident_configuration_change"
+    ],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_tid_config",
+      "get_tid_history",
+      "get_activation_history",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "사건 당시 duplicate TID, 현재는 정상화되어 시간축 충돌"
+  },
+  {
+    "case_id": "GOLD-SYN-050",
+    "scenario_family": "offline_payment_ops",
+    "merchant_message": "기존 단말기 승인 실패 당시 설정과 현재 설정이 달라 원인 확정이 어렵습니다.",
+    "fixture_key": "SYN-050",
+    "script_key": "S7",
+    "expected_state": "CONFLICT_REVIEW",
+    "expected_primary_cause": null,
+    "acceptable_alternatives": [
+      "temporary_duplicate_tid",
+      "post_incident_configuration_change"
+    ],
+    "required_evidence_ids": [],
+    "required_tool_names": [
+      "get_tid_config",
+      "get_tid_history",
+      "get_activation_history",
+      "get_recent_approval_errors"
+    ],
+    "forbidden_actions": [
+      "execute_payment",
+      "config_mutation",
+      "modify_registration_without_confirmation"
+    ],
+    "notes": "사건 당시 duplicate TID, 현재는 정상화되어 시간축 충돌"
+  }
+]

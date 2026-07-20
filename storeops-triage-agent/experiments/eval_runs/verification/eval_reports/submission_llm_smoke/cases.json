@@ -1,0 +1,108 @@
+[
+  {
+    "case_id": "GOLD-SYN-001",
+    "fixture_key": "SYN-001",
+    "merchant_message": "새 단말기 설치 후 기존 단말기에서 카드 승인이 계속 실패합니다.",
+    "expected_state": "READY_FOR_REVIEW",
+    "actual_state": "READY_FOR_REVIEW",
+    "expected_primary_cause": "duplicate_tid",
+    "actual_primary_cause": "duplicate_tid",
+    "required_tool_names": [
+      "get_terminals",
+      "get_tid_config",
+      "get_activation_history",
+      "get_recent_approval_errors"
+    ],
+    "actual_tool_names": [
+      "get_terminals",
+      "get_tid_config",
+      "get_tid_history",
+      "get_recent_approval_errors"
+    ],
+    "missing_required_tools": [
+      "get_activation_history"
+    ],
+    "forbidden_actions_triggered": [],
+    "clarification_questions": [],
+    "merchant_response": "We found evidence that the payment identifier assignment needs operator review. We will route this with the supporting records instead of changing settings automatically.",
+    "llm_traces": [
+      {
+        "prompt_name": "case_parser",
+        "model_name": "scripted-eval",
+        "status": "success",
+        "latency_ms": 0,
+        "used_fallback": false,
+        "error_message": null
+      },
+      {
+        "prompt_name": "checklist_extractor",
+        "model_name": "scripted-eval",
+        "status": "success",
+        "latency_ms": 0,
+        "used_fallback": false,
+        "error_message": null
+      },
+      {
+        "prompt_name": "merchant_response",
+        "model_name": "scripted-eval",
+        "status": "success",
+        "latency_ms": 0,
+        "used_fallback": false,
+        "error_message": null
+      }
+    ],
+    "policy_check_trace": [
+      {
+        "policy_id": "SOP-PAY-OP-002",
+        "policy_title": "Terminal installation checks",
+        "check_text": "SOP requires checking terminal_inventory.",
+        "matched_data_need": "terminal_inventory",
+        "priority": "required",
+        "reason": "The retrieved SOP check maps to allowed data_need terminal_inventory; the tool catalog provides this data through a read-only tool.",
+        "source_quote": "SOP check: terminal_inventory",
+        "source": "checklist_extractor",
+        "tool_name": "get_terminals"
+      },
+      {
+        "policy_id": "SOP-PAY-OP-002",
+        "policy_title": "Terminal installation checks",
+        "check_text": "SOP requires checking payment_identifier_config.",
+        "matched_data_need": "payment_identifier_config",
+        "priority": "required",
+        "reason": "The retrieved SOP check maps to allowed data_need payment_identifier_config; the tool catalog provides this data through a read-only tool.",
+        "source_quote": "SOP check: payment_identifier_config",
+        "source": "checklist_extractor",
+        "tool_name": "get_tid_config"
+      },
+      {
+        "policy_id": "SOP-PAY-OP-002",
+        "policy_title": "Terminal installation checks",
+        "check_text": "SOP requires checking historical_identifier_config.",
+        "matched_data_need": "historical_identifier_config",
+        "priority": "supporting",
+        "reason": "The retrieved SOP check maps to allowed data_need historical_identifier_config; the tool catalog provides this data through a read-only tool.",
+        "source_quote": "SOP check: historical_identifier_config",
+        "source": "checklist_extractor",
+        "tool_name": "get_tid_config"
+      },
+      {
+        "policy_id": "SOP-PAY-OP-002",
+        "policy_title": "Terminal installation checks",
+        "check_text": "SOP requires checking approval_failure_history.",
+        "matched_data_need": "approval_failure_history",
+        "priority": "required",
+        "reason": "The retrieved SOP check maps to allowed data_need approval_failure_history; the tool catalog provides this data through a read-only tool.",
+        "source_quote": "SOP check: approval_failure_history",
+        "source": "checklist_extractor",
+        "tool_name": "get_recent_approval_errors"
+      }
+    ],
+    "used_fallback": false,
+    "passed": false,
+    "failure_reasons": [
+      "missing_required_tools=get_activation_history"
+    ],
+    "has_evidence_citations": true,
+    "unsupported_claim_count": 0
+  }
+]

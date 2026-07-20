@@ -1,0 +1,11 @@
+model_name,validation_type,roc_auc,amex_metric,source_notebook_section
+LightGBM full,5-fold OOF,0.962049,0.794126,"Untitled41.ipynb cell 37 single model comparison"
+XGBoost full,5-fold OOF,0.962127,0.794472,"Untitled41.ipynb cell 30 OOF RESULTS"
+CatBoost full,5-fold OOF,0.961897,0.794474,"Untitled41.ipynb cell 33 OOF RESULTS"
+LightGBM Top1600 DART,5-fold OOF,0.962346,0.795134,"Untitled41.ipynb cell 34 OOF RESULTS"
+LightGBM Top1600 GOSS,5-fold OOF,0.961815,0.793512,"Untitled41.ipynb cell 35 OOF RESULTS"
+LightGBM recent/change GOSS,5-fold OOF,0.961340,0.792579,"Untitled41.ipynb cell 36 OOF RESULTS"
+MLP residual GELU BN/LN,5-fold OOF,0.958726,0.782614,"Untitled41.ipynb cell 38 OOF RESULTS"
+Ridge stacking,OOF stacking,0.962718,0.797538,"Untitled41.ipynb cell 40 stacking comparison"
+Equal blend 8 models,OOF equal blend,0.962782,0.797631,"Untitled41.ipynb cell 21 pivot add-on blend comparison"
+
